@@ -4,5 +4,5 @@
 @source "../node_modules/flowbite";
 
 body {
-    @apply bg-red-500;
+    @apply bg-gray-200;
   }

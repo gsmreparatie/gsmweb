@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="public/images/gsmReparatiePurmerend.ico" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="public/images/gsmReparatiePurmerend.ico"
+    />
     <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
-    <link rel="stylesheet" href="/public/output.css">
+    <link rel="stylesheet" href="/public/output.css" />
     <script src="/public/script.js" defer></script>
     <title>GSM reparatie purmerend</title>
-</head>
-<body class="flex flex-col min-h-screen" x-data="{
+  </head>
+  <body
+    class="flex flex-col min-h-screen"
+    x-data="{
     navContent: '',
     footerContent: '',
     footerContent: '',
@@ -26,22 +32,59 @@
         this.footerContent = await response.text();
     }
   }"
-  x-init="loadContent()">
-
-    <div x-html="navContent">
-  
-    </div>
+    x-init="loadContent()"
+  >
+    <div x-html="navContent"></div>
     <div class="flex-grow">
+      <div
+        class="flex flex-col md:flex-row items-center justify-center h-screen p-8 gap-12 bg-gray-50"
+      >
+        <div class="max-w-xl text-center md:text-left">
+          <h1
+            class="mb-6 text-5xl font-extrabold leading-tight tracking-tight text-gray-900"
+          >
+            Dé specialist in smartphone en tablet reparaties in Purmerend
+          </h1>
+          <p class="mb-6 text-lg font-normal text-gray-600 lg:text-xl">
+            Bij GSM Reparatie Purmerend staan wij klaar om jouw smartphone of
+            tablet snel en vakkundig te repareren. Of het nu gaat om een
+            gebarsten scherm, batterijproblemen of waterschade — wij zorgen
+            ervoor dat jouw toestel weer als nieuw is.
+          </p>
+          <a
+            href="#contact"
+            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-pink-300 rounded-lg hover:bg-pink-400 focus:ring-4 focus:ring-gray-300"
+          >
+            Maak een afspraak
+            <svg
+              class="w-4 h-4 ms-2 rtl:rotate-180"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <figure class="max-w-sm">
+          <img
+            class="h-auto max-w-full rounded-lg"
+            src="public/images/repair.png"
+            alt="Smartphone reparatie in Purmerend"
+          />
+          <figcaption class="mt-3 text-sm text-center text-gray-500">
+            Snelle en betrouwbare smartphone reparaties in Purmerend
+          </figcaption>
+        </figure>
+      </div>
     </div>
 
-
-
-    <div x-html="footerContent" class="mt-10">
-
-    </div>
-
-
-
-    
-</body>
+    <div x-html="footerContent" class="mt-10"></div>
+  </body>
 </html>
