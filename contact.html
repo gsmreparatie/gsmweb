@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="public/images/gsmReparatiePurmerend.ico" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="public/images/gsmReparatiePurmerend.ico"
+    />
     <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
-    <link rel="stylesheet" href="/public/output.css">
+    <link rel="stylesheet" href="/public/output.css" />
     <script src="/public/script.js" defer></script>
     <title>GSM reparatie purmerend</title>
-</head>
-<body class="flex flex-col min-h-screen" x-data="{
+  </head>
+  <body
+    class="flex flex-col min-h-screen"
+    x-data="{
     navContent: '',
     footerContent: '',
     footerContent: '',
@@ -26,66 +32,119 @@
         this.footerContent = await response.text();
     }
   }"
-  x-init="loadContent()">
-
-    <div x-html="navContent">
-  
-    </div>
+    x-init="loadContent()"
+  >
+    <div x-html="navContent"></div>
     <div class="flex-grow">
-        <div class="container mx-auto px-4 py-8">
-          <div class="flex flex-col md:flex-row items-center justify-center gap-8">
-            
-            <!-- Form Section -->
-            <div class="flex-1">
-              <img src="public/images/gsmReparatiePurmerend.ico" alt="GRP Logo" class="mb-4 w-32 h-40 object-cover mx-auto md:mx-0">
-              <h1 class="text-3xl font-bold mb-4 text-gray-800">
-                Neem contact met ons op
-              </h1>
-              <p class="mb-6 text-gray-600 max-w-xl">
-                Wilt u meer weten over uw reparatie of heeft u vragen? Neem gerust contact met ons op via onderstaand formulier, bel ons of stuur een e-mail.
-              </p>
-      
-              <form action="https://formsubmit.co/info@gsmreparatiepurmerend.nl" method="POST" class="w-full max-w-lg space-y-4">
-                <div>
-                  <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Naam</label>
-                  <input type="text" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Uw naam" required>
-                </div>
-                <div>
-                  <label for="email" class="block mb-2 text-sm font-medium text-gray-700">E-mail</label>
-                  <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Uw e-mailadres" required>
-                </div>
-                <div>
-                  <label for="message" class="block mb-2 text-sm font-medium text-gray-700">Bericht</label>
-                  <textarea id="message" rows="4" class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Uw bericht..." required></textarea>
-                </div>
-                <button type="submit" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">
-                  Verstuur
-                </button>
-              </form>
-      
-              <div class="mt-6 text-gray-600">
-                <p>📞 <strong>0299 700 264</strong></p>
-                <p>📧 <a href="mailto:info@gsmreparatiepurmerend.nl" class="text-blue-600 hover:underline">info@gsmreparatiepurmerend.nl</a></p>
-                <p>🌐 <a href="https://www.gsmreparatiepurmerend.nl/" target="_blank" class="text-blue-600 hover:underline">https://www.gsmreparatiepurmerend.nl/</a></p>
+      <div class="container mx-auto px-4 py-8">
+        <div
+          class="flex flex-col md:flex-row items-center justify-center gap-8"
+        >
+          <!-- Form Section -->
+          <div class="flex-1">
+            <img
+              src="public/images/gsmReparatiePurmerend.ico"
+              alt="GRP Logo"
+              class="mb-4 w-32 h-40 object-cover mx-auto md:mx-0"
+            />
+            <h1 class="text-3xl font-bold mb-4 text-gray-800">
+              Neem contact met ons op
+            </h1>
+            <p class="mb-6 text-gray-600 max-w-xl">
+              Wilt u meer weten over uw reparatie of heeft u vragen? Neem gerust
+              contact met ons op via onderstaand formulier, bel ons of stuur een
+              e-mail.
+            </p>
+
+            <form
+              action="https://formsubmit.co/info@gsmreparatiepurmerend.nl"
+              method="POST"
+              class="w-full max-w-lg space-y-4"
+            >
+              <div>
+                <label
+                  for="name"
+                  class="block mb-2 text-sm font-medium text-gray-700"
+                  >Naam</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  placeholder="Uw naam"
+                  required
+                />
               </div>
+              <div>
+                <label
+                  for="email"
+                  class="block mb-2 text-sm font-medium text-gray-700"
+                  >E-mail</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  placeholder="Uw e-mailadres"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="message"
+                  class="block mb-2 text-sm font-medium text-gray-700"
+                  >Bericht</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                  placeholder="Uw bericht..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+              >
+                Verstuur
+              </button>
+            </form>
+
+            <div class="mt-6 text-gray-600">
+              <p>📞 <strong>0299 700 264</strong></p>
+              <p>
+                📧
+                <a
+                  href="mailto:info@gsmreparatiepurmerend.nl"
+                  class="text-blue-600 hover:underline"
+                  >info@gsmreparatiepurmerend.nl</a
+                >
+              </p>
+              <p>
+                🌐
+                <a
+                  href="https://www.gsmreparatiepurmerend.nl/"
+                  target="_blank"
+                  class="text-blue-600 hover:underline"
+                  >https://www.gsmreparatiepurmerend.nl/</a
+                >
+              </p>
             </div>
-      
-            <!-- Image Section (hidden on mobile) -->
-            <div class="flex-1 hidden md:block">
-              <img src="public/images/call.JPG" alt="Contact afbeelding" class="w-full rounded-lg shadow-lg object-cover">
-            </div>
-      
+          </div>
+
+          <!-- Image Section (hidden on mobile) -->
+          <div class="flex-1 hidden md:block">
+            <img
+              src="public/images/call.JPG"
+              alt="Contact afbeelding"
+              class="w-full rounded-lg shadow-lg object-cover"
+            />
           </div>
         </div>
       </div>
-
-
-    <div x-html="footerContent" class="mt-10">
-
     </div>
 
-
-
-    
-</body>
+    <div x-html="footerContent" class="mt-10"></div>
+  </body>
 </html>

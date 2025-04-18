@@ -7,11 +7,10 @@
     <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <link rel="stylesheet" href="/public/output.css">
     <script src="/public/script.js" defer></script>
-    <title>GSM reparatie purmerend</title>
+    <title>GSM Reparatie Purmerend</title>
 </head>
 <body class="flex flex-col min-h-screen" x-data="{
     navContent: '',
-    footerContent: '',
     footerContent: '',
     loadContent() {
         this.fetchNav();
@@ -28,21 +27,61 @@
   }"
   x-init="loadContent()">
 
-    <div x-html="navContent">
-  
-    </div>
+    <div x-html="navContent"></div>
+
     <div class="flex-grow">
+        <!-- Service Section: Repairs for Phones, Tablets, iPads, and Macs -->
+        <section class="py-16">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl sm:text-5xl font-extrabold mb-6">
+                    Onze Reparatie Diensten
+                </h2>
+                <p class="mb-8 text-lg sm:text-xl font-normal max-w-3xl mx-auto">
+                    Wij bieden professionele reparaties voor smartphones, tablets, iPads en Macs. Of het nu gaat om een kapot scherm, batterijproblemen of waterschade, wij zorgen ervoor dat je apparaat snel weer werkt als nieuw.
+                </p>
 
+                <!-- Repair Services Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Phone Repair -->
+                    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+                        <img src="public/images/phone-repair.jpg" alt="Phone Repair" class="w-24 h-24 mx-auto mb-4 object-cover rounded-full">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Telefoon Reparatie</h3>
+                        <p class="text-gray-600 mb-4">Of het nu een gebroken scherm, batterijproblemen of softwarefouten zijn, wij herstellen jouw smartphone snel en vakkundig.</p>
+                    </div>
+
+                    <!-- Tablet Repair -->
+                    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+                        <img src="public/images/tablet-repair.jpg" alt="Tablet Repair" class="w-24 h-24 mx-auto mb-4 object-cover rounded-full">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tablet Reparatie</h3>
+                        <p class="text-gray-600 mb-4">We herstellen jouw tablet bij schade, batterijproblemen of andere hardware- en softwareproblemen. We bieden snelle en efficiënte oplossingen.</p>
+                    </div>
+
+                    <!-- iPad Repair -->
+                    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+                        <img src="public/images/ipad-repair.jpg" alt="iPad Repair" class="w-24 h-24 mx-auto mb-4 object-cover rounded-full">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">iPad Reparatie</h3>
+                        <p class="text-gray-600 mb-4">Van schermreparaties tot batterijvervanging, wij zorgen ervoor dat jouw iPad weer snel functioneert, of het nu gaat om hardware of softwareproblemen.</p>
+                    </div>
+
+                    <!-- Mac Repair -->
+                    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+                        <img src="public/images/mac-repair.jpg" alt="Mac Repair" class="w-24 h-24 mx-auto mb-4 object-cover rounded-full">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Mac Reparatie</h3>
+                        <p class="text-gray-600 mb-4">Van hardwareproblemen tot softwareupgrades, we zorgen ervoor dat jouw Mac snel weer op volle kracht draait met onze professionele reparatieservices.</p>
+                    </div>
+                </div>
+
+                <!-- Meer Informatie Button -->
+                <div class="mt-8">
+                    <a href="repairs.html" class="bg-gray-900 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-950 transition-colors duration-300">
+                        Onze Reparaties Bekijken
+                    </a>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <div x-html="footerContent"></div>
 
-
-    <div x-html="footerContent" class="mt-10">
-
-    </div>
-
-
-
-    
 </body>
 </html>

@@ -7,11 +7,20 @@
     <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <link rel="stylesheet" href="/public/output.css">
     <script src="/public/script.js" defer></script>
-    <title>GSM reparatie purmerend</title>
+    <title>GSM Reparatie Purmerend</title>
+    <style>
+        /* Additional styles for modern card effects */
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px); /* Hover lift effect */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+        }
+    </style>
 </head>
 <body class="flex flex-col min-h-screen" x-data="{
     navContent: '',
-    footerContent: '',
     footerContent: '',
     loadContent() {
         this.fetchNav();
@@ -28,21 +37,60 @@
   }"
   x-init="loadContent()">
 
-    <div x-html="navContent">
-  
-    </div>
+    <div x-html="navContent"></div>
+
     <div class="flex-grow">
+        <!-- About Me Section -->
+        <section class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 py-16">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-5xl sm:text-6xl font-extrabold leading-tight text-gray-800">
+                        Over Sunny en GSM Reparatie Purmerend
+                    </h2>
+                    <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+                        “Wie goed doet, wie goed ontmoet”, dat is het motto van Sunny, eigenaar van GSM Reparatie Purmerend. Hier staat klanttevredenheid centraal!
+                    </p>
+                </div>
 
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                    <!-- Left Column: About Sunny -->
+                    <div class="card bg-white shadow-lg rounded-xl p-8 text-gray-700 hover:shadow-2xl hover:scale-105 transform transition-all duration-300">
+                        <!-- Owner's Photo -->
+                        <div class="flex justify-center mb-8">
+                            <img src="public/images/owner.jpg" alt="Sunny, owner of GSM Reparatie Purmerend" class="w-40 h-40 object-cover rounded-full shadow-md">
+                        </div>
+                        <h3 class="text-3xl font-semibold text-gray-800 mb-4">
+                            Een passie voor technologie en reparatie
+                        </h3>
+                        <p class="mb-6">
+                            Al sinds zijn studie 'Management en Ondernemerschap' heeft Sunny een enorme interesse in alles wat met technologie te maken heeft. Vooral de ontwikkeling van smartphones heeft zijn aandacht. Was in zijn studietijd zijn iPhone 3 defect of deed er een probleem voor, dan zocht Sunny dit maar al te graag zelf uit.
+                        </p>
+                        <p>
+                            Sunny begon zich steeds meer te verdiepen in de reparatie van smartphones. Zijn afstudeerstage was bij een GSM reparatiepunt in Utrecht, waar hij alles leerde over het draaiende houden van een reparatiepunt. Na zijn studie begon hij voor zichzelf, in eerste instantie in een schuur in een achtertuin. Het succes volgde snel en hij repareerde duizenden telefoons en tablets.
+                        </p>
+                    </div>
+
+                    <!-- Right Column: GSM Reparatie Purmerend -->
+                    <div class="card bg-white shadow-lg rounded-xl p-8 text-gray-700 hover:shadow-2xl hover:scale-105 transform transition-all duration-300">
+                        <h3 class="text-3xl font-semibold text-gray-800 mb-4">
+                            GSM Reparatie Purmerend: De start van iets moois
+                        </h3>
+                        <p class="mb-6">
+                            Sinds 2008 repareert Sunny smartphones en tablets onder de naam 'GSM Reparatie Purmerend'. Zijn bedrijf staat voor vakmanschap, klantgerichtheid en snelle service.
+                        </p>
+                        <p>
+                            GSM Reparatie Purmerend is een betrouwbare speler in de wereld van mobiele telefoonreparaties. Na de overname van GSM Waterland, hebben we onze focus uitgebreid naar de zakelijke markt, waarbij we bedrijven van hoogwaardige reparatiediensten voorzien.
+
+                            Ons team wordt geleid door Sunny, die altijd streeft naar de beste service en klanttevredenheid. Met een passie voor technologie en vakmanschap, zorgen we ervoor dat iedere klant snel weer gebruik kan maken van hun mobiele apparaten.
+                            
+                            Bij GSM Reparatie Purmerend geloven we in groei door kwaliteit, en we blijven ons team uitbreiden om de beste service te leveren aan zowel particuliere klanten als bedrijven.                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
+    <div x-html="footerContent"></div>
 
-
-    <div x-html="footerContent" class="mt-10">
-
-    </div>
-
-
-
-    
 </body>
 </html>

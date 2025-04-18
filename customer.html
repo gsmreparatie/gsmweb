@@ -12,7 +12,6 @@
 <body class="flex flex-col min-h-screen" x-data="{
     navContent: '',
     footerContent: '',
-    footerContent: '',
     loadContent() {
         this.fetchNav();
         this.fetchFooter();
@@ -28,21 +27,51 @@
   }"
   x-init="loadContent()">
 
-    <div x-html="navContent">
-  
-    </div>
-    <div class="flex-grow">
+    <div x-html="navContent"></div>
 
-    </div>
+    <!-- About Section -->
+    <section class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 py-16">
+        <div class="container mx-auto px-6">
+            <!-- Title -->
+            <div class="text-center mb-12">
+                <h2 class="text-5xl sm:text-6xl font-extrabold text-gray-800">
+                    Klantenservice
+                </h2>
+                <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+                    Wij zijn GSM Reparatie Purmerend, een betrouwbaar reparatiebedrijf voor smartphones en tablets. Klanttevredenheid staat bij ons altijd op de eerste plaats.
+                </p>
+            </div>
 
+            <!-- About Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Left Column: Information about the shop -->
+                <div class="bg-white shadow-xl rounded-xl p-8 text-gray-700 transform transition-all hover:scale-105 hover:shadow-2xl">
+                    <h3 class="text-3xl font-semibold text-gray-800 mb-4">
+                        De Oorsprong van GSM Reparatie Purmerend
+                    </h3>
+                    <p class="mb-6">
+                        GSM Reparatie Purmerend werd opgericht door Sunny, een ondernemer met een passie voor technologie en smartphone-reparaties. Sinds 2008 bieden wij professionele en snelle reparatiediensten voor smartphones en tablets. Van schermreparaties tot batterijvervanging en waterschade, wij staan voor kwaliteit en klanttevredenheid.
+                    </p>
+                    <p class="mb-6">
+                        Dankzij onze jarenlange ervaring en het enthousiasme voor het vak, zijn wij uitgegroeid tot een vertrouwde naam in Purmerend en omgeving. Onze klanten kunnen rekenen op snelle service en deskundigheid. Elk apparaat krijgt bij ons de aandacht die het verdient, met als doel om het weer als nieuw te maken.
+                    </p>
+                    <p>
+                        Of het nu gaat om een kapot scherm, een batterij die snel leegloopt of waterschade, wij fixen het! Dankzij onze uitgebreide kennis en professionele apparatuur kunnen we de meeste reparaties binnen een korte tijd uitvoeren.
+                    </p>
+                </div>
 
+                <!-- Right Column: Video instead of image -->
+                <div class="flex justify-center items-center">
+                    <video class="w-full max-w-md rounded-lg shadow-md" controls>
+                        <source src="public/images/shop-video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div x-html="footerContent" class="mt-10">
+    <div x-html="footerContent" class="mt-10"></div>
 
-    </div>
-
-
-
-    
 </body>
 </html>

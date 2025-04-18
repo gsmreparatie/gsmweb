@@ -4,5 +4,5 @@
 @source "../node_modules/flowbite";
 
 body {
-    @apply bg-gray-200;
+    @apply bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100;
   }
