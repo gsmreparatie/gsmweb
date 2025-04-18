@@ -9,11 +9,36 @@
     <script src="/public/script.js" defer></script>
     <title>GSM reparatie purmerend</title>
 </head>
-<body class="bg-gray-100">
+<body class="flex flex-col min-h-screen" x-data="{
+    navContent: '',
+    footerContent: '',
+    footerContent: '',
+    loadContent() {
+        this.fetchNav();
+        this.fetchFooter();
+    },
+    async fetchNav() {
+        const response = await fetch('public/imports/navbar.html');
+        this.navContent = await response.text();
+    },
+    async fetchFooter() {
+        const response = await fetch('public/imports/footer.html');
+        this.footerContent = await response.text();
+    }
+  }"
+  x-init="loadContent()">
+
+    <div x-html="navContent">
+  
+    </div>
+    <div class="flex-grow">
+    </div>
 
 
 
+    <div x-html="footerContent" class="mt-10">
 
+    </div>
 
 
 

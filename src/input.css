@@ -3,3 +3,6 @@
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
+body {
+    @apply bg-red-500;
+  }
