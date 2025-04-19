@@ -1,0 +1,349 @@
+{
+    "iPhone Reparaties": {
+      "iPhone 11": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 250,
+          "Montage": 25,
+          "Totaal": 275
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 145,
+          "Montage": 25,
+          "Totaal": 170
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 12": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 320,
+          "Montage": 25,
+          "Totaal": 345
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 180,
+          "Montage": 25,
+          "Totaal": 205
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 12 Mini": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 300,
+          "Montage": 25,
+          "Totaal": 325
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 170,
+          "Montage": 25,
+          "Totaal": 195
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 13": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 400,
+          "Montage": 25,
+          "Totaal": 425
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 230,
+          "Montage": 25,
+          "Totaal": 255
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 13 Pro": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 475,
+          "Montage": 25,
+          "Totaal": 500
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 240,
+          "Montage": 25,
+          "Totaal": 265
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 13 Pro Max": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 525,
+          "Montage": 25,
+          "Totaal": 550
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 275,
+          "Montage": 25,
+          "Totaal": 300
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 14": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 360,
+          "Montage": 25,
+          "Totaal": 385
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 180,
+          "Montage": 25,
+          "Totaal": 205
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 14 Pro": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 470,
+          "Montage": 25,
+          "Totaal": 495
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 230,
+          "Montage": 25,
+          "Totaal": 255
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 14 Pro Max": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 520,
+          "Montage": 25,
+          "Totaal": 545
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 250,
+          "Montage": 25,
+          "Totaal": 275
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 15": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 540,
+          "Montage": 25,
+          "Totaal": 565
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 220,
+          "Montage": 25,
+          "Totaal": 245
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 15 Pro": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 520,
+          "Montage": 25,
+          "Totaal": 545
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 250,
+          "Montage": 25,
+          "Totaal": 275
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 15 Plus": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 580,
+          "Montage": 25,
+          "Totaal": 605
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 270,
+          "Montage": 25,
+          "Totaal": 295
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 16": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 720,
+          "Montage": 25,
+          "Totaal": 745
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 370,
+          "Montage": 25,
+          "Totaal": 395
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 16 Pro": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 800,
+          "Montage": 25,
+          "Totaal": 825
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 420,
+          "Montage": 25,
+          "Totaal": 445
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      },
+      "iPhone 16 Pro Max": {
+        "Scherm vervangen – Origineel": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 1000,
+          "Montage": 25,
+          "Totaal": 1025
+        },
+        "Scherm vervangen – AA+": {
+          "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+          "Tijd": "30 minuten",
+          "Prijs": 500,
+          "Montage": 25,
+          "Totaal": 525
+        },
+        "Batterij vervangen": {
+          "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+          "Tijd": "30 minuten",
+          "Prijs": 95,
+          "Montage": 25,
+          "Totaal": 120
+        }
+      }
+    }
+  }
