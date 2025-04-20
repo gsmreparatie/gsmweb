@@ -8,6 +8,7 @@
   },
   "scripts": {
     "build-css": "npx @tailwindcss/cli -i ./src/input.css -o ./public/output.css --watch",
-    "build-js": "npx esbuild src/script.js --outfile=public/script.js --bundle --watch "
+    "build-js": "npx esbuild src/script.js --outfile=public/script.js --bundle --watch ",
+    "build": "npm run build-css && npm run build-js"
   }
 }
