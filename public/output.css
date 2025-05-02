@@ -3159,6 +3159,42 @@ body {
   --tw-gradient-to: var(--color-pink-100);
   --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
 }
+@layer utilities {
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  .fade-in {
+    animation: fade-in 1000ms ease-in-out;
+  }
+  @keyframes scale-in {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  .scale-in {
+    animation: scale-in 1000ms ease-in-out;
+  }
+  @keyframes slide-in-up {
+    0% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+}
 @layer base {
   .tooltip-arrow,.tooltip-arrow:before {
     position: absolute;
