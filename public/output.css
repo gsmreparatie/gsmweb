@@ -2642,13 +2642,6 @@
       }
     }
   }
-  .hover\:bg-pink-400 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-pink-400);
-      }
-    }
-  }
   .hover\:bg-pink-500 {
     &:hover {
       @media (hover: hover) {
