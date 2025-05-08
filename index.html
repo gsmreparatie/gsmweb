@@ -1,285 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="public/images/gsmReparatiePurmerend.ico"
-    />
+    <meta name="description" content="GSM Reparatie Purmerend - Snelle en Betrouwbare Smartphone en Tablet Reparatie in Purmerend" />
+    <meta name="keywords" content="GSM reparatie Purmerend, smartphone reparatie Purmerend, tablet reparatie Purmerend, telefoon reparatie Purmerend, scherm reparatie Purmerend, batterij vervangen Purmerend, waterschade reparatie Purmerend" />
+    <meta name="author" content="GSM Reparatie Purmerend" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/x-icon" href="public/images/gsmReparatiePurmerend.ico"/>
     <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
     <link rel="stylesheet" href="public/output.css" />
     <script src="public/script.js" defer></script>
-    <title>GSM reparatie purmerend</title>
-  </head>
-  <body
+    <title>GSM Reparatie Purmerend - Uw Expert voor Smartphone en Tablet Reparatie</title>
+</head>
+<body
     class="flex flex-col min-h-screen"
     x-data="{
-    navContent: '',
-    footerContent: '',
-    footerContent: '',
-    loadContent() {
-        this.fetchNav();
-        this.fetchFooter();
-    },
-    async fetchNav() {
-        const response = await fetch('public/imports/navbar.html');
-        this.navContent = await response.text();
-    },
-    async fetchFooter() {
-        const response = await fetch('public/imports/footer.html');
-        this.footerContent = await response.text();
-    }
-  }"
+        navContent: '',
+        footerContent: '',
+        loadContent() {
+            this.fetchNav();
+            this.fetchFooter();
+        },
+        async fetchNav() {
+            const response = await fetch('public/imports/navbar.html');
+            this.navContent = await response.text();
+        },
+        async fetchFooter() {
+            const response = await fetch('public/imports/footer.html');
+            this.footerContent = await response.text();
+        }
+    }"
     x-init="loadContent()"
-  >
+>
     <div x-html="navContent"></div>
+
     <div class="flex-grow">
-      <!-- Hero Section -->
-      <div
-        class="flex flex-col lg:flex-row items-center justify-center min-h-screen p-6 gap-12 bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100"
-      >
-        <div class="max-w-xl text-center lg:text-left">
-          <h1
-            class="mb-6 text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight text-gray-900"
-          >
-            Dé specialist in smartphone en tablet reparaties in Purmerend
-          </h1>
-          <p class="mb-6 text-base sm:text-lg font-normal text-gray-600">
-            Bij GSM Reparatie Purmerend staan wij klaar om jouw smartphone of
-            tablet snel en vakkundig te repareren. Of het nu gaat om een
-            gebarsten scherm, batterijproblemen of waterschade — wij zorgen
-            ervoor dat jouw toestel weer als nieuw is.
-          </p>
-          <a
-            href="repairs.html"
-            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-pink-300 rounded-lg hover:bg-pink-400 focus:ring-4 focus:ring-gray-300"
-          >
-            Onze reparaties
-            <svg
-              class="w-4 h-4 ms-2 rtl:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
-        </div>
+        <section class="py-16 lg:py-24 bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col items-center justify-center lg:flex-row lg:justify-around gap-12">
+                    <div class="max-w-md text-center lg:text-left">
+                        <h1 class="mb-6 text-4xl sm:text-5xl font-extrabold text-gray-900" 
+                            x-intersect="$el.classList.add('fade-in')">
+                            Snelle en betrouwbare smartphone reparaties in Purmerend
+                        </h1>
+                        <p class="mb-6 text-lg text-gray-600" x-intersect="$el.classList.add('scale-in')">
+                            Is je smartphone kapot? Bij **GSM Reparatie Purmerend** ben je aan het juiste adres voor een snelle en vakkundige reparatie van je smartphone of tablet in Purmerend. Wij begrijpen hoe belangrijk je mobiele apparaat voor je is en zorgen ervoor dat je snel weer bereikbaar bent.
+                        </p>
+                        <a href="repairs.html" class="inline-flex items-center px-6 py-3 text-base text-white bg-pink-400 rounded-lg hover:bg-pink-500" >
+                            Bekijk onze reparaties
+                            <svg class="w-4 h-4 ms-2 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <figure class="hidden lg:block w-48 md:w-64 lg:w-80" x-intersect="$el.classList.add('scale-in')">
+                        <img class="w-full rounded-lg" src="public/images/repair.png" alt="Professionele smartphone reparatie in Purmerend"/>
+                        <figcaption class="mt-3 text-sm text-center text-gray-500">Uw expert voor smartphone reparatie in Purmerend</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
 
-        <figure class="w-full max-w-sm">
-          <img
-            class="h-auto w-full rounded-lg"
-            src="public/images/repair.png"
-            alt="Smartphone reparatie in Purmerend"
-          />
-          <figcaption class="mt-3 text-sm text-center text-gray-500">
-            Snelle en betrouwbare smartphone reparaties in Purmerend
-          </figcaption>
-        </figure>
-      </div>
+        <section class="py-16 lg:py-24 bg-gray-200">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col items-center justify-center lg:flex-row lg:justify-around gap-12">
+                    <div class="max-w-md text-center lg:text-left">
+                        <h2 class="mb-6 text-3xl sm:text-4xl font-extrabold text-gray-900" x-intersect="$el.classList.add('fade-in')">Onze Diensten in Purmerend</h2>
+                        <p class="mb-6 text-lg text-gray-600" x-intersect="$el.classList.add('scale-in')">
+                            Wij bieden een breed scala aan **reparatiediensten** voor zowel smartphones als tablets in Purmerend. Of het nu gaat om een **schermreparatie**, het **vervangen van de batterij**, of complexe problemen zoals **waterschadeherstel**, ons ervaren team staat voor je klaar. Wij gebruiken hoogwaardige onderdelen voor elke reparatie.
+                        </p>
+                        <a href="service.html" class="inline-flex items-center px-6 py-3 text-base text-white bg-pink-400 rounded-lg hover:bg-pink-500">
+                            Bekijk onze diensten
+                            <svg class="w-4 h-4 ms-2 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <figure class="hidden lg:block mt-4" x-intersect="$el.classList.add('scale-in')">
+                            <img class="w-48 md:w-64 lg:w-80 rounded-lg" src="public/images/repair2.png" alt="Overzicht van onze smartphone en tablet reparatie diensten"/>
+                            <figcaption class="mt-3 text-sm text-center text-gray-500">Professionele reparaties voor smartphones en tablets in Purmerend</figcaption>
+                        </figure>
+                    </div>
 
-      <!-- Diensten Section -->
-      <div
-        class="flex flex-col lg:flex-row-reverse items-center justify-center min-h-screen p-6 gap-12 bg-gray-200"
-      >
-        <div class="max-w-xl text-center lg:text-left">
-          <h2
-            class="mb-6 text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight text-gray-900"
-          >
-            Onze Diensten
-          </h2>
-          <p class="mb-6 text-base sm:text-lg font-normal text-gray-600">
-            Bij ons kun je terecht voor snelle en betrouwbare reparaties van je
-            smartphone of tablet. Of het nu gaat om een kapot scherm, een
-            batterij die snel leegloopt of waterschade — wij fixen het!
-          </p>
-          <a
-            href="service.html"
-            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-pink-400 rounded-lg hover:bg-pink-500 focus:ring-4 focus:ring-gray-300"
-          >
-            Onze diensten bekijken
-            <svg
-              class="w-4 h-4 ms-2 rtl:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
-        </div>
+                    <div class="max-w-md text-center lg:text-left">
+                        <h2 class="mb-6 text-3xl sm:text-4xl font-extrabold text-gray-900" x-intersect="$el.classList.add('fade-in')">Supersnelle Reparaties in Purmerend</h2>
+                        <p class="mb-6 text-lg text-gray-600" x-intersect="$el.classList.add('scale-in')">
+                            Bij **GSM Reparatie Purmerend** begrijpen we dat je niet lang zonder je telefoon kunt. Daarom bieden wij **supersnelle reparaties**. In de meeste gevallen is je smartphone of tablet binnen **30 minuten** gerepareerd! Kom langs zonder afspraak en ervaar onze snelle service.
+                        </p>
+                        <a href="faq.html" class="inline-flex items-center px-6 py-3 text-base text-white bg-pink-400 rounded-lg hover:bg-pink-500">
+                            Veelgestelde vragen
+                            <svg class="w-4 h-4 ms-2 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <figure class="hidden lg:block mt-4" x-intersect="$el.classList.add('scale-in')">
+                            <img class="w-48 md:w-64 lg:w-80 rounded-lg" src="public/images/repair3.png" alt="Snelle smartphone reparatie service in Purmerend"/>
+                            <figcaption class="mt-3 text-sm text-center text-gray-500">Reparaties klaar terwijl je wacht in Purmerend</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <figure class="w-full max-w-sm">
-          <img
-            class="h-auto w-full rounded-lg"
-            src="public/images/repair2.png"
-            alt="Diensten overzicht"
-          />
-          <figcaption class="mt-3 text-sm text-center text-gray-500">
-            Onze professionele smartphone reparatie diensten
-          </figcaption>
-        </figure>
-      </div>
+        <section class="py-16 lg:py-24 bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col items-center justify-center lg:flex-row lg:justify-around gap-12">
+                    <div class="max-w-md text-center lg:text-left">
+                        <h2 class="mb-6 text-3xl sm:text-4xl font-extrabold text-gray-900" x-intersect="$el.classList.add('fade-in')">Uitstekende Klantenservice in Purmerend</h2>
+                        <p class="mb-6 text-lg text-gray-600" x-intersect="$el.classList.add('fade-in')">
+                            Bij **GSM Reparatie Purmerend** staat een **vriendelijke en professionele klantenservice** voor je klaar. Heb je vragen over je reparatie, de kosten, of heb je advies nodig? Neem gerust contact met ons op of kom langs in onze winkel in Purmerend. Wij helpen je graag verder!
+                        </p>
+                        <a href="customer.html" class="inline-flex items-center px-6 py-3 text-base text-white bg-pink-400 rounded-lg hover:bg-pink-500">
+                            Lees meer over onze klantenservice
+                            <svg class="w-4 h-4 ms-2 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <figure class="hidden lg:block mt-4" x-intersect="$el.classList.add('fade-in')">
+                            <img class="w-48 md:w-64 lg:w-80 rounded-lg" src="public/images/helper.png" alt="Vriendelijke klantenservice van GSM Reparatie Purmerend"/>
+                            <figcaption class="mt-3 text-sm text-center text-gray-500">Onze vriendelijke klantenservice in Purmerend staat voor je klaar</figcaption>
+                        </figure>
+                    </div>
 
-      <div
-        class="flex flex-col lg:flex-row items-center justify-center min-h-screen p-6 gap-12 bg-pink-200"
-      >
-        <div class="max-w-xl text-center lg:text-left">
-          <h2
-            class="mb-6 text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight text-white-900"
-          >
-            Onze Klantenservice
-          </h2>
-          <p class="mb-6 text-base sm:text-lg font-normal text-gray-600">
-            Wij staan altijd voor je klaar met vriendelijke en professionele
-            klantenservice. Heb je vragen, zorgen of hulp nodig? Ons team helpt
-            je snel en persoonlijk, zodat jij zonder zorgen verder kunt.
-          </p>
-          <a
-            href="customer.html"
-            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-pink-400 rounded-lg hover:bg-pink-500 focus:ring-4 focus:ring-gray-300"
-          >
-            lees meer
-            <svg
-              class="w-4 h-4 ms-2 rtl:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <figure class="w-full max-w-sm">
-          <img
-            class="h-auto w-full rounded-lg"
-            src="public/images/helper.png"
-            alt="Klantenservice overzicht"
-          />
-          <figcaption class="mt-3 text-sm text-center text-gray-500">
-            Onze vriendelijke klantenservice staat voor je klaar
-          </figcaption>
-        </figure>
-      </div>
-
-      <div
-        class="flex flex-col lg:flex-row-reverse items-center justify-center min-h-screen p-6 gap-12 bg-gray-200"
-      >
-        <div class="max-w-xl text-center lg:text-left">
-          <h2
-            class="mb-6 text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight text-white-900"
-          >
-            Supersnelle Reparaties
-          </h2>
-          <p class="mb-6 text-base sm:text-lg font-normal text-gray-600">
-            Bij ons hoef je nooit lang te wachten. De meeste smartphone en
-            tablet reparaties zijn binnen 30 minuten klaar! Zo kun je snel weer
-            verder met je dag, zonder gedoe.
-          </p>
-          <a
-            href="faq.html"
-            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-pink-400 rounded-lg hover:bg-pink-500 focus:ring-4 focus:ring-gray-300"
-          >
-            Veelgestelde vragen
-            <svg
-              class="w-4 h-4 ms-2 rtl:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <figure class="w-full max-w-sm">
-          <img
-            class="h-auto w-full rounded-lg"
-            src="public/images/repair3.png"
-            alt="Snelste reparaties"
-          />
-          <figcaption class="mt-3 text-sm text-center text-gray-500">
-            Reparaties klaar terwijl je wacht
-          </figcaption>
-        </figure>
-      </div>
-
-      <div
-        class="flex flex-col lg:flex-row items-center justify-center min-h-screen p-6 gap-12 bg-gray-50"
-      >
-        <div class="max-w-xl text-center lg:text-left">
-          <h2
-            class="mb-6 text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight text-white-900"
-          >
-            Openingstijden
-          </h2>
-          <p class="mb-4 text-base sm:text-lg font-normal text-gray-600">
-            Onze openingstijden:
-          </p>
-          <div class="mb-6 text-base sm:text-lg font-normal text-gray-600">
-            <p>Woensdag: 10:00 - 19:00</p>
-            <p>Donderdag: 10:00 - 19:00</p>
-            <p>Vrijdag: 10:00 - 19:00</p>
-            <p>Zaterdag: 10:00 - 19:00</p>
-            <p>Zondag t/m Dinsdag: Gesloten</p>
-          </div>
-          <a
-            href="contact.html"
-            class="inline-flex items-center justify-center px-6 py-3 text-base font-medium text-white bg-pink-400 rounded-lg hover:bg-pink-500 focus:ring-4 focus:ring-gray-300"
-          >
-            Plan je bezoek
-            <svg
-              class="w-4 h-4 ms-2 rtl:rotate-180"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <figure class="w-full max-w-sm">
-          <img
-            class="h-auto w-full rounded-lg"
-            src="public/images/time.png"
-            alt="Openingstijden overzicht"
-          />
-          <figcaption class="mt-3 text-sm text-center text-gray-500">
-            Geopend van woensdag t/m zaterdag
-          </figcaption>
-        </figure>
-      </div>
+                    <div class="max-w-md text-center lg:text-left">
+                        <h2 class="mb-6 text-3xl sm:text-4xl font-extrabold text-gray-900" x-intersect="$el.classList.add('fade-in')">Openingstijden in Purmerend</h2>
+                        <p class="mb-4 text-lg text-gray-600">Onze openingstijden in Purmerend:</p>
+                        <div x-intersect="$el.classList.add('fade-in')">
+                            <div class="mb-6 text-lg text-gray-600">
+                                <p><span class="font-semibold">Woensdag:</span> 10:00 - 19:00</p>
+                                <p><span class="font-semibold">Donderdag:</span> 10:00 - 19:00</p>
+                                <p><span class="font-semibold">Vrijdag:</span> 10:00 - 19:00</p>
+                                <p><span class="font-semibold">Zaterdag:</span> 10:00 - 19:00</p>
+                                <p><span class="font-semibold">Zondag t/m Dinsdag:</span> Gesloten</p>
+                            </div>
+                            <p class="mb-4 text-lg text-gray-600">Plan je bezoek aan onze winkel in Purmerend tijdens onze openingstijden.</p>
+                        </div>
+                        <a href="contact.html" class="inline-flex items-center px-6 py-3 text-base text-white bg-pink-400 rounded-lg hover:bg-pink-500">
+                            Plan je bezoek
+                            <svg class="w-4 h-4 ms-2 rtl:rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                        <figure class="hidden lg:block mt-4" x-intersect="$el.classList.add('fade-in')">
+                            <img class="w-48 md:w-64 lg:w-80 rounded-lg" src="public/images/time.png" alt="Openingstijden van GSM Reparatie Purmerend"/>
+                            <figcaption class="mt-3 text-sm text-center text-gray-500">Geopend van woensdag t/m zaterdag in Purmerend</figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <div x-html="footerContent"></div>
-  </body>
+</body>
 </html>

@@ -1,26 +1,55 @@
 <script src="/public/script.js" defer></script>
+
+<!-- Navbar -->
 <nav class="bg-white border-gray-200">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    
+    <!-- Logo -->
     <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">
       <div class="w-10 rounded-full">
         <a href="/index.html" class="flex items-center space-x-3 rtl:space-x-reverse">
           <img src="/public/images/gsmReparatiePurmerend.ico" class="h-8" alt="GRP Logo" />
-          <span class="self-center text-2xl font-semibold whitespace-nowrap hidden md:inline">GSM reparatie purmerend</span>
+          <span class="self-center text-2xl font-semibold whitespace-nowrap hidden md:inline">
+            GSM reparatie purmerend
+          </span>
         </a>
       </div>
     </div>
+
+    <!-- Mobile Menu Button -->
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="navbar-default" aria-expanded="false">
       <span class="sr-only">Open main menu</span>
       <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
       </svg>
     </button>
+
+    <!-- Navbar Links -->
     <div class="hidden w-full md:block md:w-auto" id="navbar-default">
       <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white">
         <li class="nav-item">
-          <a href="contact.html" class="text-white bg-gray-900 hover:bg-gray-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">Neem contact op</a>
+          <a href="contact.html" class="text-white bg-gray-900 hover:bg-gray-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">
+            Neem contact op
+          </a>
         </li>
       </ul>
+    </div>
+  </div>
+
+  <!-- Desktop-Only Info Row Under Navbar -->
+  <div class="hidden md:flex flex-col items-center w-full mt-2">
+    <!-- Text Row -->
+    <div class="flex justify-center items-center flex-row flex-wrap gap-4 text-black">
+      <p>Apple iPhone</p>
+      <p>2 Jaar Garantie</p>
+      <p>Samsung</p>
+      <p>iPad & Tablet</p>
+      <p>Vakkundig getest</p>
+      <p>MacBook & Laptop</p>
+    </div>
+    <!-- HR Line Under Text -->
+    <div class="w-auto mt-2">
+      <hr class="border-gray-500 w-full" />
     </div>
   </div>
 </nav>
