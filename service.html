@@ -9,13 +9,14 @@
     <meta name="robots" content="index, follow">
     <link rel="icon" type="image/x-icon" href="public/images/gsmReparatiePurmerend.ico" />
     <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
-    <link rel="stylesheet" href="/public/output.css">
-    <script src="/public/script.js" defer></script>
+    <link rel="stylesheet" href="public/output.css">
+    <script src="public/script.js" defer></script>
     <title>GSM Reparatie Purmerend</title>
 </head>
 <body class="flex flex-col min-h-screen" x-data="{
     navContent: '',
     footerContent: '',
+    cookieContent: '',
     loadContent() {
         this.fetchNav();
         this.fetchFooter();
@@ -55,23 +56,51 @@
 
                     <!-- Tablet Repair -->
                     <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-                        <img src="public/images/tablet.jpg" alt="Tablet Repair" class="w-24 h-24 mx-auto mb-4 object-cover rounded-full">
+                        <img src="public/images/tablet.jpg" alt="Tablet Repair" class="w-44 h-34 mx-auto mb-4">
                         <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tablet Reparatie</h3>
                         <p class="text-gray-600 mb-4">We herstellen jouw tablet bij schade, batterijproblemen of andere hardware- en softwareproblemen. We bieden snelle en efficiënte oplossingen.</p>
                     </div>
 
                     <!-- iPad Repair -->
                     <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-                        <img src="public/images/ipad.jpg" alt="iPad Repair" class="w-24 h-24 mx-auto mb-4 object-cover rounded-full">
+                        <img src="public/images/ipad.jpg" alt="iPad Repair" class="w-44 h-34 mx-auto mb-4 ">
                         <h3 class="text-2xl font-semibold text-gray-800 mb-4">iPad Reparatie</h3>
                         <p class="text-gray-600 mb-4">Van schermreparaties tot batterijvervanging, wij zorgen ervoor dat jouw iPad weer snel functioneert, of het nu gaat om hardware of softwareproblemen.</p>
                     </div>
 
                     <!-- Mac Repair -->
                     <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-                        <img src="public/images/mac.png" alt="Mac Repair" class=" mx-auto mb-4 object-cover rounded-full">
+                        <img src="public/images/mac.png" alt="Mac Repair" class="w-44 h-34 mx-auto mb-4 ">
                         <h3 class="text-2xl font-semibold text-gray-800 mb-4">Mac Reparatie</h3>
                         <p class="text-gray-600 mb-4">Van hardwareproblemen tot softwareupgrades, we zorgen ervoor dat jouw Mac snel weer op volle kracht draait met onze professionele reparatieservices.</p>
+                    </div>
+
+                    <!-- Windows Repair -->
+                    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+                        <img src="public/images/windows.jpg" alt="Windows Repair" class="w-44 h-34 mx-auto mb-4">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Windows Reparatie</h3>
+                        <p class="text-gray-600 mb-4">Wij bieden deskundige reparaties voor Windows-laptops en -pc's. Van trage prestaties tot hardwareproblemen – wij lossen het snel en professioneel op.</p>
+                    </div>
+
+                    <!-- Samsung Repair -->
+                    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+                        <img src="public/images/samsung-logo.png" alt="Samsung Repair" class="w-24 h-24 mx-auto mb-4 object-cover rounded-full">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Samsung Reparatie</h3>
+                        <p class="text-gray-600 mb-4">Snelle en betrouwbare reparaties voor Samsung smartphones en tablets, inclusief scherm- en batterijvervanging.</p>
+                    </div>
+
+                    <!-- Huawei Repair -->
+                    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+                        <img src="public/images/Huawei.png" alt="Huawei Repair" class="w-44 h-34 mx-auto mb-4 ">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Huawei Reparatie</h3>
+                        <p class="text-gray-600 mb-4">Wij repareren Huawei toestellen professioneel, van schermschade tot softwareproblemen.</p>
+                    </div>
+
+                    <!-- Laptop Repair -->
+                    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+                        <img src="public/images/laptop.jpg" alt="Laptop Repair" class="w-44 h-34 mx-auto mb-4 ">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Laptop Reparatie</h3>
+                        <p class="text-gray-600 mb-4">Of het nu gaat om trage prestaties, virusinfecties of hardwareproblemen – wij maken jouw laptop weer snel en betrouwbaar.</p>
                     </div>
                 </div>
 
