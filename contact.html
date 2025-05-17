@@ -3,8 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="GSM Reparatie Purmerend - Klantenservice" />
-    <meta name="keywords" content="GSM, reparatie, Purmerend, smartphone, tablet, klantenservice" />
+    <meta
+      name="description"
+      content="GSM Reparatie Purmerend - Klantenservice"
+    />
+    <meta
+      name="keywords"
+      content="GSM, reparatie, Purmerend, smartphone, tablet, klantenservice"
+    />
     <meta name="author" content="GSM Reparatie Purmerend" />
     <meta name="robots" content="index, follow" />
     <link
@@ -30,6 +36,12 @@
     async fetchNav() {
         const response = await fetch('public/imports/navbar.html');
         this.navContent = await response.text();
+            this.$nextTick(() => {
+            if (window.initFlowbite) {
+                window.initFlowbite();
+            }
+        });
+        
     },
     async fetchFooter() {
         const response = await fetch('public/imports/footer.html');
@@ -59,61 +71,86 @@
               contact met ons op via onderstaand formulier, bel ons of stuur een
               e-mail.
             </p>
-
-            <form
-              action="https://formsubmit.co/info@gsmreparatiepurmerend.nl"
-              method="POST"
-              class="w-full max-w-lg space-y-4"
+            <div
+              class="relative"
+              x-data="{
+                        cookiesAccepted: localStorage.getItem('cookiesAccepted') === 'true',
+                        acceptCookies() {
+                            localStorage.setItem('cookiesAccepted', 'true');
+                            this.cookiesAccepted = true;
+                        }
+                    }"
             >
-              <div>
-                <label
-                  for="name"
-                  class="block mb-2 text-sm font-medium text-gray-700"
-                  >Naam</label
-                >
-                <input
-                  type="text"
-                  id="name"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="Uw naam"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  for="email"
-                  class="block mb-2 text-sm font-medium text-gray-700"
-                  >E-mail</label
-                >
-                <input
-                  type="email"
-                  id="email"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="Uw e-mailadres"
-                  required
-                />
-              </div>
-              <div>
-                <label
-                  for="message"
-                  class="block mb-2 text-sm font-medium text-gray-700"
-                  >Bericht</label
-                >
-                <textarea
-                  id="message"
-                  rows="4"
-                  class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                  placeholder="Uw bericht..."
-                  required
-                ></textarea>
-              </div>
-              <button
-                type="submit"
-                class="text-white bg-gray-900 hover:bg-gray-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+              <form
+                action="https://formsubmit.co/info@gsmreparatiepurmerend.nl"
+                method="POST"
+                class="w-full max-w-lg space-y-4"
               >
-                Verstuur
-              </button>
-            </form>
+                <div>
+                  <label
+                    for="name"
+                    class="block mb-2 text-sm font-medium text-gray-700"
+                    >Naam</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Uw naam"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="email"
+                    class="block mb-2 text-sm font-medium text-gray-700"
+                    >E-mail</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Uw e-mailadres"
+                    required
+                  />
+                </div>
+                <div>
+                  <label
+                    for="message"
+                    class="block mb-2 text-sm font-medium text-gray-700"
+                    >Bericht</label
+                  >
+                  <textarea
+                    id="message"
+                    rows="4"
+                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+                    placeholder="Uw bericht..."
+                    required
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="text-white bg-gray-900 hover:bg-gray-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+                >
+                  Verstuur
+                </button>
+              </form>
+              <template x-if="!cookiesAccepted">
+                <div
+                  class="absolute inset-0 bg-white bg-opacity-90 flex flex-col items-center justify-center text-center p-4 rounded-lg shadow-lg z-10"
+                >
+                  <p class="text-gray-700 mb-4">
+                    Om dit formulier te gebruiken, moet je cookies accepteren.
+                  </p>
+                  <button
+                    @click="acceptCookies"
+                    class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600"
+                  >
+                    Cookies accepteren
+                  </button>
+                </div>
+              </template>
+            </div>
 
             <div class="mt-6 text-gray-600">
               <p>📞 <strong>0299 700 264</strong></p>

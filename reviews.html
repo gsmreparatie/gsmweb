@@ -31,6 +31,11 @@
     async fetchNav() {
         const response = await fetch('public/imports/navbar.html');
         this.navContent = await response.text();
+        this.$nextTick(()=> {
+          if (window.initFlowbite) {
+            window.initFlowbite();
+          }
+        });
     },
     async fetchFooter() {
         const response = await fetch('public/imports/footer.html');
@@ -44,7 +49,7 @@
 
     <div class="w-full max-w-4xl mx-auto px-4">
   <div class="elfsight-app-dd5e8546-1363-4d7f-9deb-648de07bf315" data-elfsight-app-lazy></div>
-</div>
+  </div>
     </div>
     <div x-html="footerContent" class="mt-10"></div>
   </body>
