@@ -36,6 +36,12 @@
     async fetchNav() {
         const response = await fetch('public/imports/navbar.html');
         this.navContent = await response.text();
+            this.$nextTick(() => {
+            if (window.initFlowbite) {
+                window.initFlowbite();
+            }
+        });
+        
     },
     async fetchFooter() {
         const response = await fetch('public/imports/footer.html');

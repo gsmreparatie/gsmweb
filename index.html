@@ -20,11 +20,9 @@
 <body class="flex flex-col min-h-screen" x-data="{
         navContent: '',
         footerContent: '',
-        cookiesContent: '',
         loadContent() {
             this.fetchNav();
             this.fetchFooter();
-            this.fetchCookies();
         },
         async fetchNav() {
             const response = await fetch('public/imports/navbar.html');
@@ -40,15 +38,8 @@
             const response = await fetch('public/imports/footer.html');
             this.footerContent = await response.text();
         },
-        async fetchCookies() {
-            const response = await fetch('public/imports/cookies.html');
-            const cookiesContent = await response.text();
-            document.body.insertAdjacentHTML('beforeend', cookiesContent);
-        }
     }" x-init="loadContent()">
     <div x-html="navContent"></div>
-
-    <div x-html="cookiesContent"></div>
 
 
     <div class="flex-grow">
