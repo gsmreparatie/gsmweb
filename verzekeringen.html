@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GSM Reparatie Purmerend - Klantenservice" />
+  <meta name="keywords" content="GSM, reparatie, Purmerend, smartphone, tablet, klantenservice" />
+  <meta name="author" content="GSM Reparatie Purmerend" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/x-icon" href="public/images/gsmReparatiePurmerend.ico" />
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
+  <link rel="stylesheet" href="public/output.css" />
+  <script src="public/script.js" defer></script>
+  <title>GSM reparatie purmerend</title>
+</head>
+
+<body class="flex flex-col min-h-screen" x-data="{
+    navContent: '',
+    footerContent: '',
+    loadContent() {
+        this.fetchNav();
+        this.fetchFooter();
+    },
+    async fetchNav() {
+        const response = await fetch('public/imports/navbar.html');
+        this.navContent = await response.text();
+        this.$nextTick(()=> {
+          if (window.initFlowbite) {
+            window.initFlowbite();
+          }
+        });
+    },
+    async fetchFooter() {
+        const response = await fetch('public/imports/footer.html');
+        this.footerContent = await response.text();
+    }
+  }" x-init="loadContent()">
+  <div x-html="navContent"></div>
+
+  <div class="flex-grow">
+    <section class="max-w-3xl mx-auto px-4 py-12">
+      <h1 class="text-3xl font-bold mb-4 text-center">Verzekering Terugbetaling Aanvragen</h1>
+      <p class="mb-8 text-gray-600 text-center">
+        Heb je je toestel laten repareren en wil je de kosten terugvragen via je verzekering? Vul onderstaand formulier
+        in met je gegevens en upload je bon of factuur.
+      </p>
+
+      <div class="relative" x-data="{
+        cookiesAccepted: localStorage.getItem('cookiesAccepted') === 'true',
+          acceptCookies()
+          {
+            localStorage.setItem('cookiesAccepted', 'true');
+            this.cookiesAccepted = true;
+                        }
+                    }">
+        <div class="bg-white p-8 shadow-md rounded-2xl">
+          <form class="space-y-6" action="https://formsubmit.co/info@gsmreparatiepurmerend.nl" method="POST"
+            :class="{ 'pointer-events-none opacity-40': !cookiesAccepted }">
+            <div>
+              <label class="block mb-1 font-medium">Naam</label>
+              <input type="text" placeholder="Jouw volledige naam" class="w-full border-gray-300 rounded-lg shadow-sm"
+                required />
+            </div>
+
+            <div>
+              <label class="block mb-1 font-medium">E-mailadres</label>
+              <input type="email" placeholder="voorbeeld@provider.nl"
+                class="w-full border-gray-300 rounded-lg shadow-sm" required />
+            </div>
+
+            <div>
+              <label class="block mb-1 font-medium">Telefoonnummer</label>
+              <input type="tel" placeholder="06 12345678" class="w-full border-gray-300 rounded-lg shadow-sm" />
+            </div>
+
+            <div>
+              <label class="block mb-1 font-medium">Factuurnummer / Reparatiebon</label>
+              <input type="text" placeholder="Bijv. #12345" class="w-full border-gray-300 rounded-lg shadow-sm" />
+            </div>
+
+            <div>
+              <label class="block mb-1 font-medium">Upload je factuur</label>
+              <input type="file" class="w-full border-gray-300 rounded-lg shadow-sm" />
+            </div>
+
+            <div>
+              <label class="block mb-1 font-medium">Opmerkingen (optioneel)</label>
+              <textarea rows="4" placeholder="Extra informatie over je aanvraag..."
+                class="w-full border-gray-300 rounded-lg shadow-sm"></textarea>
+            </div>
+
+            <button type="submit"
+              class="text-white bg-gray-900 hover:bg-gray-400 md:block focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 focus:outline-none">
+              Aanvraag indienen
+            </button>
+          </form>
+        </div>
+      </div>
+
+
+    </section>
+  </div>
+  <div x-html="footerContent" class="mt-10"></div>
+</body>
+</html>

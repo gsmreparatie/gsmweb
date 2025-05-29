@@ -28,7 +28,7 @@
             const response = await fetch('public/imports/navbar.html');
             this.navContent = await response.text();
 
-            this.$nextTick(() => {
+        this.$nextTick(() => {
         if (window.initFlowbite) {
             window.initFlowbite();
         }
@@ -219,6 +219,5 @@
         </div>
     </div>
     <div x-html="footerContent"></div>
-    <!-- Cookie Consent Modal -->
 </body>
 </html>
