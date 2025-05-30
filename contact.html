@@ -1,190 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="GSM Reparatie Purmerend - Klantenservice"
-    />
-    <meta
-      name="keywords"
-      content="GSM, reparatie, Purmerend, smartphone, tablet, klantenservice"
-    />
-    <meta name="author" content="GSM Reparatie Purmerend" />
-    <meta name="robots" content="index, follow" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="public/images/gsmReparatiePurmerend.ico"
-    />
-    <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
-    <link rel="stylesheet" href="public/output.css" />
-    <script src="public/script.js" defer></script>
-    <title>GSM reparatie purmerend</title>
-  </head>
-  <body
-    class="flex flex-col min-h-screen"
-    x-data="{
-    navContent: '',
-    footerContent: '',
-    loadContent() {
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GSM Reparatie Purmerend - Klantenservice" />
+  <meta name="keywords" content="GSM, reparatie, Purmerend, smartphone, tablet, klantenservice" />
+  <meta name="author" content="GSM Reparatie Purmerend" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/x-icon" href="public/images/gsmReparatiePurmerend.ico" />
+  <link rel="stylesheet" href="public/output.css" />
+  <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
+  <script src="public/script.js" defer></script>
+  <title>GSM Reparatie Purmerend</title>
+</head>
+<body
+        class="flex flex-col min-h-screen"
+        x-data="{
+      navContent: '',
+      footerContent: '',
+      loadContent() {
         this.fetchNav();
         this.fetchFooter();
-    },
-    async fetchNav() {
+      },
+      async fetchNav() {
         const response = await fetch('public/imports/navbar.html');
         this.navContent = await response.text();
-            this.$nextTick(() => {
-            if (window.initFlowbite) {
-                window.initFlowbite();
-            }
-        });
-        
-    },
-    async fetchFooter() {
+        this.$nextTick(() => window.initFlowbite?.());
+      },
+      async fetchFooter() {
         const response = await fetch('public/imports/footer.html');
         this.footerContent = await response.text();
-    }
-  }"
-    x-init="loadContent()"
-  >
-    <div x-html="navContent"></div>
-    <div class="flex-grow">
-      <div class="container mx-auto px-4 py-8">
+      }
+    }"
+        x-init="loadContent()"
+>
+<div x-html="navContent"></div>
+
+<main class="flex-grow">
+  <section class="container mx-auto px-4 py-12">
+    <div class="flex flex-col md:flex-row items-start md:items-center gap-12">
+      <!-- Contact Form -->
+      <div class="flex-1">
+        <img
+                src="public/images/gsmReparatiePurmerend.ico"
+                alt="GRP Logo"
+                class="w-24 h-24 object-cover mb-4 mx-auto md:mx-0"
+        />
+        <h1 class="text-3xl font-bold mb-4 text-gray-800">Neem contact met ons op</h1>
+        <p class="text-gray-600 mb-6">
+          Heeft u vragen over een reparatie? Vul gerust het formulier in, bel of stuur een e-mail.
+        </p>
+        
         <div
-          class="flex flex-col md:flex-row items-center justify-center gap-8"
+                x-data="{
+                cookiesAccepted: localStorage.getItem('cookiesAccepted') === 'true',
+                acceptCookies() {
+                  localStorage.setItem('cookiesAccepted', 'true');
+                  this.cookiesAccepted = true;
+                }
+              }"
+                class="relative"
         >
-          <!-- Form Section -->
-          <div class="flex-1">
-            <img
-              src="public/images/gsmReparatiePurmerend.ico"
-              alt="GRP Logo"
-              class="mb-4 w-32 h-32 object-cover mx-auto md:mx-0"
-            />
-            <h1 class="text-3xl font-bold mb-4 text-gray-800">
-              Neem contact met ons op
-            </h1>
-            <p class="mb-6 text-gray-600 max-w-xl">
-              Wilt u meer weten over uw reparatie of heeft u vragen? Neem gerust
-              contact met ons op via onderstaand formulier, bel ons of stuur een
-              e-mail.
-            </p>
-            <div
-              class="relative"
-              x-data="{
-                        cookiesAccepted: localStorage.getItem('cookiesAccepted') === 'true',
-                        acceptCookies() {
-                            localStorage.setItem('cookiesAccepted', 'true');
-                            this.cookiesAccepted = true;
-                        }
-                    }"
+          <form
+                  action="https://formsubmit.co/info@gsmreparatiepurmerend.nl"
+                  method="POST"
+                  class="w-full max-w-lg space-y-4"
+          >
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Naam</label>
+              <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      class="w-full p-2.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Uw naam"
+                      required
+              />
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-700 mb-1">E-mail</label>
+              <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      class="w-full p-2.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Uw e-mailadres"
+                      required
+              />
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Bericht</label>
+              <textarea
+                      id="message"
+                      name="message"
+                      rows="4"
+                      class="w-full p-2.5 border border-gray-300 rounded-lg bg-gray-50 text-gray-900 focus:ring-blue-500 focus:border-blue-500"
+                      placeholder="Uw bericht..."
+                      required
+              ></textarea>
+            </div>
+            <button
+                    type="submit"
+                    class="bg-gray-900 text-white hover:bg-gray-700 rounded-lg px-5 py-2.5 text-sm font-medium"
             >
-              <form
-                action="https://formsubmit.co/info@gsmreparatiepurmerend.nl"
-                method="POST"
-                class="w-full max-w-lg space-y-4"
+              Verstuur
+            </button>
+          </form>
+          
+          <template x-if="!cookiesAccepted">
+            <div class="absolute inset-0 bg-white bg-opacity-95 flex flex-col items-center justify-center text-center p-6 rounded-lg shadow-xl z-10">
+              <p class="text-gray-800 mb-4">Om dit formulier te gebruiken, moet je cookies accepteren.</p>
+              <button
+                      @click="acceptCookies"
+                      class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600"
               >
-                <div>
-                  <label
-                    for="name"
-                    class="block mb-2 text-sm font-medium text-gray-700"
-                    >Naam</label
-                  >
-                  <input
-                    type="text"
-                    id="name"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                    placeholder="Uw naam"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    for="email"
-                    class="block mb-2 text-sm font-medium text-gray-700"
-                    >E-mail</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                    placeholder="Uw e-mailadres"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    for="message"
-                    class="block mb-2 text-sm font-medium text-gray-700"
-                    >Bericht</label
-                  >
-                  <textarea
-                    id="message"
-                    rows="4"
-                    class="bg-gray-50 border border-gray-300 text-gray-900 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-                    placeholder="Uw bericht..."
-                    required
-                  ></textarea>
-                </div>
+                Cookies accepteren
+              </button>
+            </div>
+          </template>
+        </div>
+        
+        <div class="mt-6 text-gray-700 space-y-1">
+          <p>📞 <strong>0299 700 264</strong></p>
+          <p>
+            📧
+            <a href="mailto:info@gsmreparatiepurmerend.nl" class="text-blue-600 hover:underline">
+              info@gsmreparatiepurmerend.nl
+            </a>
+          </p>
+          <p>
+            🌐
+            <a href="https://www.gsmreparatiepurmerend.nl/" target="_blank" class="text-blue-600 hover:underline">
+              www.gsmreparatiepurmerend.nl
+            </a>
+          </p>
+        </div>
+      </div>
+      
+      <!-- Location Info -->
+      <div class="flex-1 text-center md:text-left">
+        <h2 class="text-3xl font-extrabold text-gray-900 mb-4" x-intersect="$el.classList.add('fade-in')">
+          Locatie in Purmerend
+        </h2>
+        <p class="text-gray-600 mb-6" x-intersect="$el.classList.add('fade-in')">
+          Bezoek onze winkel in het hart van Purmerend aan <strong>Wormerplein 42, 1442 CB Purmerend</strong>. Wij staan klaar om je snel en vakkundig te helpen.
+        </p>
+        <div x-data="{ accepted: localStorage.getItem('cookiesAccepted') === 'true' }">
+          <template x-if="accepted">
+            <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5988.098542476364!2d4.956902277015508!3d52.51316353673516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c6014ae44179f9%3A0xc1cc6928e3e02e99!2sTelefoon%20reparatie%20Purmerend%20GRP!5e1!3m2!1snl!2snl!4v1747044187029!5m2!1snl!2snl"
+                    width="100%"
+                    height="450"
+                    class="rounded-lg border-0 w-full"
+                    allowfullscreen=""
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </template>
+          <template x-if="!accepted">
+            <div class="bg-gray-100 p-6 rounded-lg text-center text-gray-700">
+              Activeer cookies om de kaart te bekijken.
+              <div class="mt-4">
                 <button
-                  type="submit"
-                  class="text-white bg-gray-900 hover:bg-gray-400 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
+                        @click="accepted = true; localStorage.setItem('cookiesAccepted', 'true');"
+                        class="bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600"
                 >
-                  Verstuur
+                  Accepteer cookies
                 </button>
-              </form>
-              <template x-if="!cookiesAccepted">
-                <div
-                  class="absolute inset-0 bg-white bg-opacity-90 flex flex-col items-center justify-center text-center p-4 rounded-lg shadow-lg z-10"
-                >
-                  <p class="text-gray-700 mb-4">
-                    Om dit formulier te gebruiken, moet je cookies accepteren.
-                  </p>
-                  <button
-                    @click="acceptCookies"
-                    class="px-4 py-2 bg-pink-500 text-white rounded hover:bg-pink-600"
-                  >
-                    Cookies accepteren
-                  </button>
-                </div>
-              </template>
+              </div>
             </div>
-
-            <div class="mt-6 text-gray-600">
-              <p>📞 <strong>0299 700 264</strong></p>
-              <p>
-                📧
-                <a
-                  href="mailto:info@gsmreparatiepurmerend.nl"
-                  class="text-blue-600 hover:underline"
-                  >info@gsmreparatiepurmerend.nl</a
-                >
-              </p>
-              <p>
-                🌐
-                <a
-                  href="https://www.gsmreparatiepurmerend.nl/"
-                  target="_blank"
-                  class="text-blue-600 hover:underline"
-                  >https://www.gsmreparatiepurmerend.nl/</a
-                >
-              </p>
-            </div>
-          </div>
-
-          <!-- Image Section (hidden on mobile) -->
-          <div class="flex-1 hidden md:block">
-            <img
-              src="public/images/call.jpg"
-              alt="Contact afbeelding"
-              class="w-full rounded-lg shadow-lg object-cover"
-            />
-          </div>
+          </template>
         </div>
       </div>
     </div>
+  </section>
+</main>
 
-    <div x-html="footerContent" class="mt-10"></div>
-  </body>
+<div x-html="footerContent" class="mt-10"></div>
+</body>
 </html>
