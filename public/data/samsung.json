@@ -24,6 +24,30 @@
                 "Prijs": 95,
                 "Montage": 25,
                 "Totaal": 120
+            },
+            "Camera vervanging": {
+                "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
+                "image": "public/images/galaxy-a20e.png",
+                "Tijd": "30 minuten",
+                "Prijs": 65,
+                "Montage": 25,
+                "Totaal": 90
+            },
+            "Speaker vervanging": {
+                "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
+                "image": "public/images/galaxy-a20e.png",
+                "Tijd": "30 minuten",
+                "Prijs": 55,
+                "Montage": 25,
+                "Totaal": 80
+            },
+            "Waterschade reparatie": {
+                "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
+                "image": "public/images/galaxy-a20e.png",
+                "Tijd": "1-2 werkdagen",
+                "Prijs": 35,
+                "Montage": 0,
+                "Totaal": 35
             }
         },
         "Samsung Galaxy A30": {
@@ -50,6 +74,30 @@
                 "Prijs": 95,
                 "Montage": 25,
                 "Totaal": 120
+            },
+            "Camera vervanging": {
+                "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
+                "image": "public/images/galaxy-a30.jpg",
+                "Tijd": "30 minuten",
+                "Prijs": 65,
+                "Montage": 25,
+                "Totaal": 90
+            },
+            "Speaker vervanging": {
+                "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
+                "image": "public/images/galaxy-a30.jpg",
+                "Tijd": "30 minuten",
+                "Prijs": 55,
+                "Montage": 25,
+                "Totaal": 80
+            },
+            "Waterschade reparatie": {
+                "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
+                "image": "public/images/galaxy-a30.jpg",
+                "Tijd": "1-2 werkdagen",
+                "Prijs": 35,
+                "Montage": 0,
+                "Totaal": 35
             }
         },
         "Samsung Galaxy A50": {
@@ -76,6 +124,30 @@
                 "Prijs": 95,
                 "Montage": 25,
                 "Totaal": 120
+            },
+            "Camera vervanging": {
+                "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
+                "image": "public/images/galaxy-a50.jpg",
+                "Tijd": "30 minuten",
+                "Prijs": 65,
+                "Montage": 25,
+                "Totaal": 90
+            },
+            "Speaker vervanging": {
+                "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
+                "image": "public/images/galaxy-a50.jpg",
+                "Tijd": "30 minuten",
+                "Prijs": 55,
+                "Montage": 25,
+                "Totaal": 80
+            },
+            "Waterschade reparatie": {
+                "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
+                "image": "public/images/galaxy-a50.jpg",
+                "Tijd": "1-2 werkdagen",
+                "Prijs": 35,
+                "Montage": 0,
+                "Totaal": 35
             }
         },
         "Samsung Galaxy A70": {
@@ -102,6 +174,30 @@
                 "Prijs": 95,
                 "Montage": 25,
                 "Totaal": 120
+            },
+            "Camera vervanging": {
+                "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
+                "image": "public/images/galaxy-a70.jpg",
+                "Tijd": "30 minuten",
+                "Prijs": 65,
+                "Montage": 25,
+                "Totaal": 90
+            },
+            "Speaker vervanging": {
+                "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
+                "image": "public/images/galaxy-a70.jpg",
+                "Tijd": "30 minuten",
+                "Prijs": 55,
+                "Montage": 25,
+                "Totaal": 80
+            },
+            "Waterschade reparatie": {
+                "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
+                "image": "public/images/galaxy-a70.jpg",
+                "Tijd": "1-2 werkdagen",
+                "Prijs": 35,
+                "Montage": 0,
+                "Totaal": 35
             }
         },
         "Samsung Galaxy S20": {
@@ -128,6 +224,30 @@
                 "Prijs": 95,
                 "Montage": 25,
                 "Totaal": 120
+            },
+            "Camera vervanging": {
+                "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
+                "image": "public/images/galaxy-s20.jpg",
+                "Tijd": "30 minuten",
+                "Prijs": 65,
+                "Montage": 25,
+                "Totaal": 90
+            },
+            "Speaker vervanging": {
+                "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
+                "image": "public/images/galaxy-s20.jpg",
+                "Tijd": "30 minuten",
+                "Prijs": 55,
+                "Montage": 25,
+                "Totaal": 80
+            },
+            "Waterschade reparatie": {
+                "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
+                "image": "public/images/galaxy-s20.jpg",
+                "Tijd": "1-2 werkdagen",
+                "Prijs": 35,
+                "Montage": 0,
+                "Totaal": 35
             }
         },
         "Samsung Galaxy S21": {
@@ -154,6 +274,30 @@
                 "Prijs": 95,
                 "Montage": 25,
                 "Totaal": 120
+            },
+            "Camera vervanging": {
+                "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
+                "image": "public/images/galaxy-s21.png",
+                "Tijd": "30 minuten",
+                "Prijs": 65,
+                "Montage": 25,
+                "Totaal": 90
+            },
+            "Speaker vervanging": {
+                "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
+                "image": "public/images/galaxy-s21.png",
+                "Tijd": "30 minuten",
+                "Prijs": 55,
+                "Montage": 25,
+                "Totaal": 80
+            },
+            "Waterschade reparatie": {
+                "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
+                "image": "public/images/galaxy-s21.png",
+                "Tijd": "1-2 werkdagen",
+                "Prijs": 35,
+                "Montage": 0,
+                "Totaal": 35
             }
         }
     }

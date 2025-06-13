@@ -123,7 +123,7 @@
         </h1>
 
         <template x-if="!loading && !error && Object.keys(repairsForModel).length > 0">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="fade-in grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <template x-for="(details, repairType) in repairsForModel" :key="repairType">
                     <a :href="getRepairDetailsUrl(repairType, details)" class="block">
                         <div

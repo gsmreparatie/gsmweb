@@ -1,13 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../node_modules/flowbite";
 
 body {
-    @apply bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100;
+    @apply font-montserrat bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100;
+
   }
 
-  
+  @theme {
+    --font-montserrat: 'Montserrat', sans-serif;
+  }
 
   @layer utilities {
     @keyframes fade-in {

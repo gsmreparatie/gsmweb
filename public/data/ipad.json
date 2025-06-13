@@ -24,6 +24,70 @@
         "Prijs": 109,
         "Montage": 0,
         "Totaal": 0
+      },
+      "Home knop vervangen": {
+        "Beschrijving": "De home knop werkt niet meer, deze is defect of losgekomen.",
+        "image": "public/images/ipad-7-2019.jpg",
+        "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Camera vervangen": {
+        "Beschrijving": "De camera werkt niet meer, deze is defect of losgekomen.",
+        "image": "public/images/ipad-7-2019.jpg",
+        "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Volume knop vervangen": {
+        "Beschrijving": "De volume knop werkt niet meer, deze is defect of losgekomen.",
+        "image": "public/images/ipad-7-2019.jpg",
+        "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Oplaadpoort vervangen": {
+        "Beschrijving": "De oplaadpoort werkt niet meer, deze is defect of losgekomen.",
+        "image": "public/images/ipad-7-2019.jpg",
+        "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Speaker vervangen": {
+        "Beschrijving": "De speaker werkt niet meer, deze is defect of losgekomen.",
+        "image": "public/images/ipad-7-2019.jpg",
+        "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Microfoon vervangen": {
+        "Beschrijving": "De microfoon werkt niet meer, deze is defect of losgekomen.",
+        "image": "public/images/ipad-7-2019.jpg",
+        "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Achterkant vervangen": {
+        "Beschrijving": "De achterkant van uw iPad is gebarsten of beschadigd.",
+        "image": "public/images/ipad-7-2019.jpg",
+        "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-7-2019.jpg",
+        "Tijd": "Op aanvraag",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
       }
     },
     "iPad 8 (2020)": {
@@ -47,6 +111,14 @@
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
         "image": "public/images/ipad-8-2020.jpg",
         "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-8-2020.jpg",
+        "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
@@ -76,6 +148,14 @@
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-9-2021.jpeg",
+        "Tijd": "Op aanvraag",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
       }
     },
     "iPad 10 (2022)": {
@@ -96,6 +176,13 @@
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
         "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
@@ -125,6 +212,14 @@
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-air-4-2020.jpg",
+        "Tijd": "Op aanvraag",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
       }
     },
     "iPad Air 5 (2022)": {
@@ -148,6 +243,14 @@
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
         "image": "public/images/ipad-air-5-2022.jpeg",
         "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-air-5-2022.jpeg",
+        "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
@@ -177,6 +280,14 @@
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-m2-2024.jpg",
+        "Tijd": "Op aanvraag",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
       }
     },
     "iPad mini 6 (2021)": {
@@ -200,6 +311,14 @@
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
         "image": "public/images/ipad-mini-6-2021.jpg",
         "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-mini-6-2021.jpg",
+        "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
@@ -229,6 +348,14 @@
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-pro-11-2021.jpg",
+        "Tijd": "Op aanvraag",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
       }
     },
     "iPad Pro 12.9-inch (5th gen 2021)": {
@@ -252,6 +379,14 @@
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
         "image": "public/images/ipad-pro-12-2021.png",
         "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-pro-12-2021.png",
+        "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
@@ -281,6 +416,14 @@
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-pro-11-in-4th.jpg",
+        "Tijd": "Op aanvraag",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
       }
     },
     "iPad Pro 12.9-inch (6th gen 2022)": {
@@ -307,6 +450,14 @@
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-pro-12.9.jpg",
+        "Tijd": "Op aanvraag",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
       }
     },
     "iPad Pro M4 (2024)": {
@@ -330,6 +481,14 @@
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
         "image": "public/images/ipad-pro-13-zilver.jpg",
         "Tijd": "30 minuten",
+        "Prijs": 0,
+        "Montage": 0,
+        "Totaal": 0
+      },
+      "Waterschade herstel": {
+        "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/ipad-pro-13-zilver.jpg",
+        "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
         "Totaal": 0

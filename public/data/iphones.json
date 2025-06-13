@@ -24,6 +24,39 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-11.png",
+          "Tijd": "30 minuten",
+          "Prijs": 120,
+          "Montage": 25,
+          "Totaal": 145
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-11.png",
+          "Tijd": "30 minuten",
+          "Prijs": 100,
+          "Montage": 25,
+          "Totaal": 125
+        },
+
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-11.png",
+          "Tijd": "30 minuten",
+          "Prijs": 80,
+          "Montage": 25,
+          "Totaal": 105
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-11.png",
+          "Tijd": "30 minuten",
+          "Prijs": 150,
+          "Montage": 25,
+          "Totaal": 175
         }
       },
       "iPhone 12": {
@@ -50,6 +83,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-12.png",
+          "Tijd": "30 minuten",
+          "Prijs": 130,
+          "Montage": 25,
+          "Totaal": 155
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-12.png",
+          "Tijd": "30 minuten",
+          "Prijs": 110,
+          "Montage": 25,
+          "Totaal": 135
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-12.png",
+          "Tijd": "30 minuten",
+          "Prijs": 90,
+          "Montage": 25,
+          "Totaal": 115
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-12.png",
+          "Tijd": "30 minuten",
+          "Prijs": 160,
+          "Montage": 25,
+          "Totaal": 185
         }
       },
       "iPhone 12 Mini": {
@@ -76,6 +141,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-12-mini.png",
+          "Tijd": "30 minuten",
+          "Prijs": 120,
+          "Montage": 25,
+          "Totaal": 145
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-12-mini.png",
+          "Tijd": "30 minuten",
+          "Prijs": 100,
+          "Montage": 25,
+          "Totaal": 125
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-12-mini.png",
+          "Tijd": "30 minuten",
+          "Prijs": 80,
+          "Montage": 25,
+          "Totaal": 105
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-12-mini.png",
+          "Tijd": "30 minuten",
+          "Prijs": 150,
+          "Montage": 25,
+          "Totaal": 175
         }
       },
       "iPhone 13": {
@@ -102,6 +199,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-13.png",
+          "Tijd": "30 minuten",
+          "Prijs": 140,
+          "Montage": 25,
+          "Totaal": 165
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-13.png",
+          "Tijd": "30 minuten",
+          "Prijs": 120,
+          "Montage": 25,
+          "Totaal": 145
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-13.png",
+          "Tijd": "30 minuten",
+          "Prijs": 100,
+          "Montage": 25,
+          "Totaal": 125
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-13.png",
+          "Tijd": "30 minuten",
+          "Prijs": 170,
+          "Montage": 25,
+          "Totaal": 195
         }
       },
       "iPhone 13 Pro": {
@@ -128,6 +257,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-13-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 150,
+          "Montage": 25,
+          "Totaal": 175
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-13-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 130,
+          "Montage": 25,
+          "Totaal": 155
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-13-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 110,
+          "Montage": 25,
+          "Totaal": 135
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-13-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 180,
+          "Montage": 25,
+          "Totaal": 205
         }
       },
       "iPhone 13 Pro Max": {
@@ -154,6 +315,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-13-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 160,
+          "Montage": 25,
+          "Totaal": 185
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-13-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 140,
+          "Montage": 25,
+          "Totaal": 165
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-13-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 120,
+          "Montage": 25,
+          "Totaal": 145
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-13-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 200,
+          "Montage": 25,
+          "Totaal": 225
         }
       },
       "iPhone 14": {
@@ -180,6 +373,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-14.png",
+          "Tijd": "30 minuten",
+          "Prijs": 130,
+          "Montage": 25,
+          "Totaal": 155
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-14.png",
+          "Tijd": "30 minuten",
+          "Prijs": 110,
+          "Montage": 25,
+          "Totaal": 135
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-14.png",
+          "Tijd": "30 minuten",
+          "Prijs": 90,
+          "Montage": 25,
+          "Totaal": 115
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-14.png",
+          "Tijd": "30 minuten",
+          "Prijs": 160,
+          "Montage": 25,
+          "Totaal": 185
         }
       },
       "iPhone 14 Pro": {
@@ -206,6 +431,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-14-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 150,
+          "Montage": 25,
+          "Totaal": 175
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-14-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 130,
+          "Montage": 25,
+          "Totaal": 155
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-14-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 110,
+          "Montage": 25,
+          "Totaal": 135
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-14-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 180,
+          "Montage": 25,
+          "Totaal": 205
         }
       },
       "iPhone 14 Pro Max": {
@@ -232,6 +489,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-14-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 160,
+          "Montage": 25,
+          "Totaal": 185
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-14-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 140,
+          "Montage": 25,
+          "Totaal": 165
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-14-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 120,
+          "Montage": 25,
+          "Totaal": 145
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-14-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 200,
+          "Montage": 25,
+          "Totaal": 225
         }
       },
       "iPhone 15": {
@@ -258,6 +547,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-15.png",
+          "Tijd": "30 minuten",
+          "Prijs": 120,
+          "Montage": 25,
+          "Totaal": 145
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-15.png",
+          "Tijd": "30 minuten",
+          "Prijs": 100,
+          "Montage": 25,
+          "Totaal": 125
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-15.png",
+          "Tijd": "30 minuten",
+          "Prijs": 80,
+          "Montage": 25,
+          "Totaal": 105
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-15.png",
+          "Tijd": "30 minuten",
+          "Prijs": 150,
+          "Montage": 25,
+          "Totaal": 175
         }
       },
       "iPhone 15 Pro": {
@@ -284,6 +605,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-15-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 150,
+          "Montage": 25,
+          "Totaal": 175
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-15-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 130,
+          "Montage": 25,
+          "Totaal": 155
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-15-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 110,
+          "Montage": 25,
+          "Totaal": 135
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-15-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 180,
+          "Montage": 25,
+          "Totaal": 205
         }
       },
       "iPhone 15 Plus": {
@@ -310,6 +663,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-15-plus.png",
+          "Tijd": "30 minuten",
+          "Prijs": 120,
+          "Montage": 25,
+          "Totaal": 145
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-15-plus.png",
+          "Tijd": "30 minuten",
+          "Prijs": 100,
+          "Montage": 25,
+          "Totaal": 125
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-15-plus.png",
+          "Tijd": "30 minuten",
+          "Prijs": 80,
+          "Montage": 25,
+          "Totaal": 105
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-15-plus.png",
+          "Tijd": "30 minuten",
+          "Prijs": 150,
+          "Montage": 25,
+          "Totaal": 175
         }
       },
       "iPhone 16": {
@@ -336,6 +721,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-16.png",
+          "Tijd": "30 minuten",
+          "Prijs": 150,
+          "Montage": 25,
+          "Totaal": 175
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-16.png",
+          "Tijd": "30 minuten",
+          "Prijs": 130,
+          "Montage": 25,
+          "Totaal": 155
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-16.png",
+          "Tijd": "30 minuten",
+          "Prijs": 110,
+          "Montage": 25,
+          "Totaal": 135
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-16.png",
+          "Tijd": "30 minuten",
+          "Prijs": 200,
+          "Montage": 25,
+          "Totaal": 225
         }
       },
       "iPhone 16 Pro": {
@@ -362,6 +779,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-16-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 160,
+          "Montage": 25,
+          "Totaal": 185
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-16-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 140,
+          "Montage": 25,
+          "Totaal": 165
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-16-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 120,
+          "Montage": 25,
+          "Totaal": 145
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-16-pro.png",
+          "Tijd": "30 minuten",
+          "Prijs": 200,
+          "Montage": 25,
+          "Totaal": 225
         }
       },
       "iPhone 16 Pro Max": {
@@ -388,6 +837,38 @@
           "Prijs": 95,
           "Montage": 25,
           "Totaal": 120
+        },
+        "Camera vervangen": {
+          "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
+          "image": "public/images/iphone-16-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 170,
+          "Montage": 25,
+          "Totaal": 195
+        },
+        "Oplaadpoort vervangen": {
+          "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
+          "image": "public/images/iphone-16-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 160,
+          "Montage": 25,
+          "Totaal": 185
+        },
+        "Speaker vervangen": {
+          "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
+          "image": "public/images/iphone-16-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 140,
+          "Montage": 25,
+          "Totaal": 165
+        },
+        "water schade": {
+          "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
+          "image": "public/images/iphone-16-pro-max.png",
+          "Tijd": "30 minuten",
+          "Prijs": 250,
+          "Montage": 25,
+          "Totaal": 275
         }
       }
     }
