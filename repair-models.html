@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reparatie Opties</title>
+    <link rel="stylesheet" href="public/output.css" />
+    <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
+    <script src="//unpkg.com/alpinejs" defer></script>
+</head>
+
+<body class="flex flex-col min-h-screen" x-data="{
+        navContent: '',
+        footerContent: '',
+        selectedBrand: '',
+        selectedModel: '',
+        repairsForModel: {},
+        loading: true,
+        error: null,
+
+        loadContent() {
+            this.fetchNav();
+            this.fetchFooter();
+            this.parseUrlParams();
+            this.fetchRepairData();
+        },
+
+        async fetchNav() {
+            const response = await fetch('public/imports/navbar.html');
+            this.navContent = await response.text();
+            this.$nextTick(() => {
+                if (window.initFlowbite) {
+                    window.initFlowbite();
+                }
+            });
+        },
+
+        async fetchFooter() {
+            const response = await fetch('public/imports/footer.html');
+            this.footerContent = await response.text();
+        },
+
+        parseUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            this.selectedBrand = params.get('brand');
+            this.selectedModel = params.get('model');
+        },
+
+        async fetchRepairData() {
+            this.loading = true;
+            this.error = null;
+            try {
+                let filePath = '';
+                if (this.selectedBrand === 'iPhone') {
+                    filePath = 'public/data/iphones.json';
+                } else if (this.selectedBrand === 'Samsung') {
+                    filePath = 'public/data/samsung.json';
+                } else if (this.selectedBrand === 'iPad') {
+                    filePath = 'public/data/ipad.json';
+                } else {
+                    throw new Error('Onbekend merk geselecteerd.');
+                }
+
+                const response = await fetch(filePath);
+                if (!response.ok) {
+                    throw new Error(`Bestand niet gevonden of fout bij het ophalen van ${filePath}`);
+                }
+                const data = await response.json();
+
+                const brandKey = this.selectedBrand + ' Reparaties';
+                if (data[brandKey] && data[brandKey][this.selectedModel]) {
+                    this.repairsForModel = data[brandKey][this.selectedModel];
+                } else {
+                    this.repairsForModel = {};
+                    this.error = `Geen reparatiegegevens gevonden voor ${this.selectedBrand} ${this.selectedModel}.`;
+                }
+                this.loading = false;
+
+            } catch (e) {
+                console.error('Fout bij het laden van reparatiegegevens:', e);
+                this.error = 'Kon reparatiegegevens niet laden. Probeer het later opnieuw.';
+                this.loading = false;
+            }
+        },
+
+        getRepairImage(repairType) {
+            const repairDetails = this.repairsForModel[repairType];
+            if (repairDetails && repairDetails.image) {
+                return repairDetails.image;
+            }
+
+            if (this.selectedBrand === 'iPhone') {
+                return 'public/images/iphone.jpg';
+            } else if (this.selectedBrand === 'Samsung') {
+                return 'public/images/samsung.jpg';
+            } else if (this.selectedBrand === 'iPad') {
+                return 'public/images/ipad.jpg';
+            }
+            return 'public/images/default-phone.jpg';
+        },
+
+        getRepairDetailsUrl(repairType, details) {
+            const params = new URLSearchParams({
+                brand: this.selectedBrand,
+                model: this.selectedModel,
+                repairType: repairType,
+                description: details.Beschrijving,
+                time: details.Tijd,
+                price: details.Prijs,
+                assembly: details.Montage,
+                total: details.Totaal,
+                image: this.getRepairImage(repairType)
+            }).toString();
+            return `repair-details.html?${params}`;
+        }
+    }" x-init="loadContent()">
+
+    <div x-html="navContent"></div>
+
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <h1 class="text-4xl font-bold text-center mb-12 text-gray-900" x-text="selectedModel + ' Reparatie Opties'">
+        </h1>
+
+        <template x-if="!loading && !error && Object.keys(repairsForModel).length > 0">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <template x-for="(details, repairType) in repairsForModel" :key="repairType">
+                    <a :href="getRepairDetailsUrl(repairType, details)" class="block">
+                        <div
+                            class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center text-center hover:shadow-xl transition-shadow duration-300 h-full">
+                            <img :src="getRepairImage(repairType)" alt="Reparatie afbeelding"
+                                class="rounded-lg shadow-md mb-4 w-32 h-32 object-contain">
+                            <h2 class="text-xl font-semibold text-gray-800 mb-2" x-text="repairType"></h2>
+                            <p class="text-gray-700 mb-4 flex-grow" x-text="details.Beschrijving"></p>
+                            <div class="space-y-1 text-gray-800 w-full mt-auto">
+                                <p><strong class="font-medium">Duur:</strong> <span x-text="details.Tijd"></span></p>
+                                <p><strong class="font-medium">Kosten onderdelen:</strong> €<span
+                                        x-text="details.Prijs.toFixed(2)"></span></p>
+                                <p><strong class="font-medium">Montagekosten:</strong> €<span
+                                        x-text="details.Montage.toFixed(2)"></span></p>
+                                <p class="text-lg font-bold"><strong class="font-medium">Totaalprijs:</strong> €<span
+                                        x-text="details.Totaal.toFixed(2)"></span></p>
+                            </div>
+                        </div>
+                    </a>
+                </template>
+            </div>
+        </template>
+
+        <template x-if="!loading && !error && Object.keys(repairsForModel).length === 0">
+            <div class="text-center text-gray-600 text-xl">
+                Geen reparatie opties gevonden voor dit model.
+                <a href="/" class="block mt-4 text-pink-500 hover:underline">Terug naar homepage</a>
+            </div>
+        </template>
+
+        <template x-if="error">
+            <div class="text-center text-red-500 text-xl">
+                <p x-text="error"></p>
+                <a href="/" class="block mt-4 text-pink-500 hover:underline">Terug naar homepage</a>
+            </div>
+        </template>
+    </main>
+
+    <div x-html="footerContent"></div>
+</body>
+
+</html>
