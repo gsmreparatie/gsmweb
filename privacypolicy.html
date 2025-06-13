@@ -1,31 +1,21 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="GSM Reparatie Purmerend - Klantenservice"
-    />
-    <meta
-      name="keywords"
-      content="GSM, reparatie, Purmerend, smartphone, tablet, klantenservice"
-    />
-    <meta name="author" content="GSM Reparatie Purmerend" />
-    <meta name="robots" content="index, follow" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="public/images/gsmReparatiePurmerend.ico"
-    />
-    <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
-    <link rel="stylesheet" href="public/output.css" />
-    <script src="public/script.js" defer></script>
-    <title>GSM Reparatie Purmerend</title>
-  </head>
-  <body
-    class="flex flex-col min-h-screen"
-    x-data="{
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="GSM Reparatie Purmerend - Klantenservice" />
+  <meta name="keywords" content="GSM, reparatie, Purmerend, smartphone, tablet, klantenservice" />
+  <meta name="author" content="GSM Reparatie Purmerend" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/x-icon" href="public/images/gsmReparatiePurmerend.ico" />
+  <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
+  <link rel="stylesheet" href="public/output.css" />
+  <script src="public/script.js" defer></script>
+  <title>GSM Reparatie Purmerend</title>
+</head>
+
+<body class="flex flex-col min-h-screen" x-data="{
     navContent: '',
     footerContent: '',
     loadContent() {
@@ -46,155 +36,120 @@
         const response = await fetch('public/imports/footer.html');
         this.footerContent = await response.text();
     }
-  }"
-    x-init="loadContent()"
-  >
-    <div x-html="navContent"></div>
+  }" x-init="loadContent()">
+  <div x-html="navContent"></div>
 
-    <div class="flex-grow p-6 max-w-4xl mx-auto space-y-6">
-      <h1 class="text-3xl font-bold mb-6 text-center">Privacy Policy</h1>
+  <div class="flex-grow p-6 max-w-4xl mx-auto space-y-6">
+    <h1 class="text-3xl font-bold mb-6 text-center">Privacy Policy</h1>
 
-      <div class="grid gap-4 md:grid-cols-2">
-        <!-- Card 1 -->
-        <div class="flex items-start bg-white rounded-lg shadow p-4">
-          <svg
-            class="w-6 h-6 text-blue-500 mr-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z"
-            />
-          </svg>
-          <div>
-            <h2 class="text-lg font-semibold mb-1">
-              1. Gegevens die wij verzamelen
-            </h2>
-            <ul class="list-disc list-inside text-gray-700">
-              <li>Naam, adres, telefoonnummer en e-mailadres</li>
-              <li>Gegevens over het toestel (merk, type, serienummer)</li>
-              <li>Reparatiegeschiedenis en afspraken</li>
-              <li>Betaalgegevens (voor facturering)</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="flex items-start bg-white rounded-lg shadow p-4">
-          <svg
-            class="w-6 h-6 text-green-500 mr-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11H9v4H5v2h4v4h2v-4h4v-2h-4V7z"
-            />
-          </svg>
-          <div>
-            <h2 class="text-lg font-semibold mb-1">
-              2. Waarom wij deze gegevens gebruiken
-            </h2>
-            <ul class="list-disc list-inside text-gray-700">
-              <li>Voor het correct uitvoeren van reparaties en diensten</li>
-              <li>Voor contact bij vragen, updates of problemen</li>
-              <li>Voor facturering en administratie</li>
-              <li>Voor bescherming van onze rechten bij conflicten</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="flex items-start bg-white rounded-lg shadow p-4">
-          <svg
-            class="w-6 h-6 text-yellow-500 mr-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 7h4v2H8V7zm0 4h4v2H8v-2z"
-            />
-          </svg>
-          <div>
-            <h2 class="text-lg font-semibold mb-1">3. Delen van gegevens</h2>
-            <p class="text-gray-700">
-              Wij delen geen persoonsgegevens met derden, tenzij dit wettelijk
-              verplicht is of noodzakelijk voor de uitvoering van een dienst
-              (bijvoorbeeld bij garantieafhandeling). In geval van een zakelijk
-              conflict kunnen gegevens worden gebruikt als bewijs.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="flex items-start bg-white rounded-lg shadow p-4">
-          <svg
-            class="w-6 h-6 text-red-500 mr-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M10 2a8 8 0 018 8v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4a8 8 0 018-8zM5 12a1 1 0 102 0 1 1 0 00-2 0zm8-1a1 1 0 11-2 0 1 1 0 012 0z"
-            />
-          </svg>
-          <div>
-            <h2 class="text-lg font-semibold mb-1">4. Beveiliging</h2>
-            <p class="text-gray-700">
-              Wij zorgen ervoor dat alle gegevens veilig worden bewaard en
-              beschermen deze tegen ongeoorloofde toegang of misbruik.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 5 -->
-        <div class="flex items-start bg-white rounded-lg shadow p-4">
-          <svg
-            class="w-6 h-6 text-purple-500 mr-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M9 12h2V9H9v3zm1-10a8 8 0 100 16 8 8 0 000-16zM8 5h4v2H8V5z"
-            />
-          </svg>
-          <div>
-            <h2 class="text-lg font-semibold mb-1">5. Inzage en wijziging</h2>
-            <p class="text-gray-700">
-              Klanten hebben het recht om hun gegevens in te zien, te wijzigen
-              of te laten verwijderen. Dit kan door contact met ons op te nemen
-              via de contactgegevens op onze website.
-            </p>
-          </div>
-        </div>
-
-        <!-- Nieuw: Card 6 -->
-        <div class="flex items-start bg-white rounded-lg shadow p-4">
-          <svg
-            class="w-6 h-6 text-orange-500 mr-3"
-            fill="currentColor"
-            viewBox="0 0 20 20"
-          >
-            <path
-              d="M6 2a1 1 0 000 2h8a1 1 0 100-2H6zM4 6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V8a2 2 0 00-2-2H4zm2 2h8v2H6V8zm0 4h5v2H6v-2z"
-            />
-          </svg>
-          <div>
-            <h2 class="text-lg font-semibold mb-1">
-              6. Bewaartermijn van gegevens
-            </h2>
-            <p class="text-gray-700">
-              Wij bewaren persoonsgegevens niet langer dan noodzakelijk voor de
-              uitvoering van onze diensten en de wettelijke bewaartermijnen.
-              Daarna worden de gegevens veilig verwijderd.
-            </p>
-          </div>
+    <div class="grid gap-4 md:grid-cols-2">
+      <!-- Card 1 -->
+      <div class="flex items-start bg-white rounded-lg shadow p-4">
+        <svg class="w-6 h-6 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5z" />
+        </svg>
+        <div>
+          <h2 class="text-lg font-semibold mb-1">
+            1. Gegevens die wij verzamelen
+          </h2>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Naam, adres, telefoonnummer en e-mailadres</li>
+            <li>Gegevens over het toestel (merk, type, serienummer)</li>
+            <li>Reparatiegeschiedenis en afspraken</li>
+            <li>Betaalgegevens (voor facturering)</li>
+          </ul>
         </div>
       </div>
 
-      <p class="text-sm text-gray-500 text-center mt-6">
-        Laatste update: April 2025
-      </p>
+      <!-- Card 2 -->
+      <div class="flex items-start bg-white rounded-lg shadow p-4">
+        <svg class="w-6 h-6 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11H9v4H5v2h4v4h2v-4h4v-2h-4V7z" />
+        </svg>
+        <div>
+          <h2 class="text-lg font-semibold mb-1">
+            2. Waarom wij deze gegevens gebruiken
+          </h2>
+          <ul class="list-disc list-inside text-gray-700">
+            <li>Voor het correct uitvoeren van reparaties en diensten</li>
+            <li>Voor contact bij vragen, updates of problemen</li>
+            <li>Voor facturering en administratie</li>
+            <li>Voor bescherming van onze rechten bij conflicten</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="flex items-start bg-white rounded-lg shadow p-4">
+        <svg class="w-6 h-6 text-yellow-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 7h4v2H8V7zm0 4h4v2H8v-2z" />
+        </svg>
+        <div>
+          <h2 class="text-lg font-semibold mb-1">3. Delen van gegevens</h2>
+          <p class="text-gray-700">
+            Wij delen geen persoonsgegevens met derden, tenzij dit wettelijk
+            verplicht is of noodzakelijk voor de uitvoering van een dienst
+            (bijvoorbeeld bij garantieafhandeling). In geval van een zakelijk
+            conflict kunnen gegevens worden gebruikt als bewijs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="flex items-start bg-white rounded-lg shadow p-4">
+        <svg class="w-6 h-6 text-red-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            d="M10 2a8 8 0 018 8v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4a8 8 0 018-8zM5 12a1 1 0 102 0 1 1 0 00-2 0zm8-1a1 1 0 11-2 0 1 1 0 012 0z" />
+        </svg>
+        <div>
+          <h2 class="text-lg font-semibold mb-1">4. Beveiliging</h2>
+          <p class="text-gray-700">
+            Wij zorgen ervoor dat alle gegevens veilig worden bewaard en
+            beschermen deze tegen ongeoorloofde toegang of misbruik.
+          </p>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="flex items-start bg-white rounded-lg shadow p-4">
+        <svg class="w-6 h-6 text-purple-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path d="M9 12h2V9H9v3zm1-10a8 8 0 100 16 8 8 0 000-16zM8 5h4v2H8V5z" />
+        </svg>
+        <div>
+          <h2 class="text-lg font-semibold mb-1">5. Inzage en wijziging</h2>
+          <p class="text-gray-700">
+            Klanten hebben het recht om hun gegevens in te zien, te wijzigen
+            of te laten verwijderen. Dit kan door contact met ons op te nemen
+            via de contactgegevens op onze website.
+          </p>
+        </div>
+      </div>
+
+      <!-- Nieuw: Card 6 -->
+      <div class="flex items-start bg-white rounded-lg shadow p-4">
+        <svg class="w-6 h-6 text-orange-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
+          <path
+            d="M6 2a1 1 0 000 2h8a1 1 0 100-2H6zM4 6a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V8a2 2 0 00-2-2H4zm2 2h8v2H6V8zm0 4h5v2H6v-2z" />
+        </svg>
+        <div>
+          <h2 class="text-lg font-semibold mb-1">
+            6. Bewaartermijn van gegevens
+          </h2>
+          <p class="text-gray-700">
+            Wij bewaren persoonsgegevens niet langer dan noodzakelijk voor de
+            uitvoering van onze diensten en de wettelijke bewaartermijnen.
+            Daarna worden de gegevens veilig verwijderd.
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div x-html="footerContent" class="mt-10"></div>
-  </body>
+    <p class="text-sm text-gray-500 text-center mt-6">
+      Laatste update: April 2025
+    </p>
+  </div>
+
+  <div x-html="footerContent" class="mt-10"></div>
+</body>
+
 </html>

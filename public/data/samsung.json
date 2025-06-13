@@ -3,6 +3,7 @@
         "Samsung Galaxy A20e": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-a20e.png",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -10,6 +11,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-a20e.png",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -17,6 +19,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+                "image": "public/images/galaxy-a20e.png",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -26,6 +29,7 @@
         "Samsung Galaxy A30": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-a30.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -33,6 +37,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-a30.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -40,6 +45,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+                "image": "public/images/galaxy-a30.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -49,6 +55,7 @@
         "Samsung Galaxy A50": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-a50.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -56,6 +63,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-a50.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -63,6 +71,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+                "image": "public/images/galaxy-a50.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -72,6 +81,7 @@
         "Samsung Galaxy A70": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-a70.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -79,6 +89,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-a70.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -86,6 +97,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+                "image": "public/images/galaxy-a70.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -95,6 +107,7 @@
         "Samsung Galaxy S20": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-s20.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -102,6 +115,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-s20.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -109,6 +123,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+                "image": "public/images/galaxy-s20.jpg",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -118,6 +133,7 @@
         "Samsung Galaxy S21": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-s21.png",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -125,6 +141,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+                "image": "public/images/galaxy-s21.png",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -132,6 +149,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+                "image": "public/images/galaxy-s21.png",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,

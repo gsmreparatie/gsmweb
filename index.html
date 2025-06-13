@@ -1,126 +1,242 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="GSM Reparatie Purmerend - Snelle en Betrouwbare Smartphone en Tablet Reparatie in Purmerend" />
-    <meta name="keywords"
-        content="GSM reparatie Purmerend, smartphone reparatie Purmerend, tablet reparatie Purmerend, telefoon reparatie Purmerend, scherm reparatie Purmerend, batterij vervangen Purmerend, waterschade reparatie Purmerend" />
-    <meta name="author" content="GSM Reparatie Purmerend" />
-    <meta name="robots" content="index, follow" />
-    <link rel="icon" type="image/x-icon" href="public/images/gsmReparatiePurmerend.ico" />
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
-    <link rel="stylesheet" href="public/output.css" />
-    <script src="public/script.js" defer></script>
-    <title>GSM Reparatie Purmerend - Uw Expert voor Smartphone en Tablet Reparatie</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="GSM Reparatie Purmerend - Snelle en Betrouwbare Smartphone en Tablet Reparatie in Purmerend" />
+  <meta name="keywords"
+    content="GSM reparatie Purmerend, smartphone reparatie Purmerend, tablet reparatie Purmerend, telefoon reparatie Purmerend, scherm reparatie Purmerend, batterij vervangen Purmerend, waterschade reparatie Purmerend" />
+  <meta name="author" content="GSM Reparatie Purmerend" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/x-icon" href="public/images/gsmReparatiePurmerend.ico" />
+  <script src="https://static.elfsight.com/platform/platform.js" async></script>
+  <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
+  <link rel="stylesheet" href="public/output.css" />
+  <script src="public/script.js" defer></script>
+  <title>GSM Reparatie Purmerend - Uw Expert voor Smartphone en Tablet Reparatie</title>
 </head>
 
 <body class="flex flex-col min-h-screen" x-data="{
-        navContent: '',
-        footerContent: '',
-        loadContent() {
-            this.fetchNav();
-            this.fetchFooter();
-        },
-        async fetchNav() {
-            const response = await fetch('public/imports/navbar.html');
-            this.navContent = await response.text();
+  navContent: '',
+  footerContent: '',
+  brands: [],
+  selectedBrand: '',
+  models: [],
+  selectedModel: '',
+  allRepairData: {},
+  loading: true,
+  error: null,
 
-        this.$nextTick(() => {
-        if (window.initFlowbite) {
-            window.initFlowbite();
-        }
+  loadContent() {
+    this.fetchNav();
+    this.fetchFooter();
+    this.loadRepairData();
+  },
+
+  async fetchNav() {
+    const response = await fetch('public/imports/navbar.html');
+    this.navContent = await response.text();
+    this.$nextTick(() => {
+      if (window.initFlowbite) {
+        window.initFlowbite();
+      }
     });
-        },
-        async fetchFooter() {
-            const response = await fetch('public/imports/footer.html');
-            this.footerContent = await response.text();
-        },
-    }" x-init="loadContent()">
-    <div x-html="navContent"></div>
+  },
 
+  async fetchFooter() {
+    const response = await fetch('public/imports/footer.html');
+    this.footerContent = await response.text();
+  },
 
-    <div class="flex-grow">
-        <!-- Hero Section -->
-        <section>
-            <div class="grid max-w-screen-xl px-4 py-8 mx-auto gap-8 lg:py-16 lg:grid-cols-12 items-center">
-                <div class="lg:col-span-7 text-center lg:text-left">
-                    <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-black">
-                        Snel en Vakkundig jouw toestel gerepareerd
-                    </h1>
-                    <a href="tel:+310299700264"
-                       class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white rounded-lg bg-pink-300 hover:bg-pink-400 focus:ring-4 focus:ring-offset-pink-950">
-                        +31 0299 700 264
-                        <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20">
-                            <path fill-rule="evenodd"
-                                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                                  clip-rule="evenodd"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="lg:col-span-5 flex justify-center lg:justify-end">
-                    <img src="public/images/phone-girl.png" alt="blije vrouw met telefoon"
-                         class="max-w-full h-auto" />
-                </div>
-            </div>
-        </section>
-        
-        <!-- Overlapping Cards Section -->
-        <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-            <div class="bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-                <img src="public/images/phone.png" alt="telefoon icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
-                <h3 class="text-xl font-semibold">Smart Phone Reparatie</h3>
-            </div>
-            <div class="bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-                <img src="public/images/tablet.png" alt="tablet icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
-                <h3 class="text-xl font-semibold">Tablet Reparatie</h3>
-            </div>
-            <div class="bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-                <img src="public/images/computer.png" alt="computer icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
-                <h3 class="text-xl font-semibold">Computer Reparatie</h3>
-            </div>
+  async loadRepairData() {
+    this.loading = true;
+    this.error = null;
+    try {
+      const [iphonesResp, samsungResp, ipadResp] = await Promise.all([
+        fetch('public/data/iphones.json'),
+        fetch('public/data/samsung.json'),
+        fetch('public/data/ipad.json')
+      ]);
+
+      if (!iphonesResp.ok || !samsungResp.ok || !ipadResp.ok) {
+        throw new Error('Failed to fetch one or more repair data files.');
+      }
+
+      const iphoneData = await iphonesResp.json();
+      const samsungData = await samsungResp.json();
+      const ipadData = await ipadResp.json();
+
+      this.allRepairData = {
+        ...iphoneData,
+        ...samsungData,
+        ...ipadData
+      };
+
+      this.brands = Object.keys(this.allRepairData).map(key => key.replace(' Reparaties', ''));
+      this.loading = false;
+    } catch (e) {
+      console.error('Error loading repair data:', e);
+      this.error = 'Kon reparatiegegevens niet laden. Probeer het later opnieuw.';
+      this.loading = false;
+    }
+  },
+
+  onBrandChange() {
+    this.selectedModel = '';
+    if (this.selectedBrand) {
+      const brandKey = this.selectedBrand + ' Reparaties';
+      if (this.allRepairData[brandKey]) {
+        this.models = Object.keys(this.allRepairData[brandKey]);
+      } else {
+        this.models = [];
+      }
+    } else {
+      this.models = [];
+    }
+  },
+
+  goToModelsPage() {
+    if (this.selectedBrand && this.selectedModel) {
+      window.location.href = `repair-models.html?brand=${encodeURIComponent(this.selectedBrand)}&model=${encodeURIComponent(this.selectedModel)}`;
+    } else {
+      alert('Selecteer alstublieft een merk en een model.');
+    }
+  }
+}" x-init="loadContent()">
+  <div x-html="navContent"></div>
+
+  <div class="flex-grow">
+    <section>
+      <div class="grid max-w-screen-xl px-4 py-8 mx-auto gap-8 lg:py-16 lg:grid-cols-12 items-center">
+        <div class="lg:col-span-7 text-center lg:text-left">
+          <h1
+            class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-black">
+            Snel en Vakkundig jouw toestel gerepareerd
+          </h1>
+          <a href="tel:+310299700264"
+            class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white rounded-lg bg-pink-300 hover:bg-pink-400 focus:ring-4 focus:ring-offset-pink-950">
+            +31 0299 700 264
+            <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"></path>
+            </svg>
+          </a>
         </div>
-        
-        <!-- Second Section (Refurbished) -->
-        <section class=" m-5">
-            <div class="flex flex-col md:flex-row items-center max-w-screen-xl mx-auto px-4 py-8 gap-6 text-center md:text-left">
-                <img src="public/images/refurbish.png" alt="refurbish icon" class="w-16 h-16" />
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900">
-                        Refurbished toestellen?
-                    </h2>
-                    <p class="text-gray-700">
-                        Bekijk ons aanbod van gereviseerde smartphones en tablets.
-                    </p>
-                </div>
-            </div>
-            <div class="flex flex-row justify-center">
-                <div class="mb-10 flex flex-col sm:flex-row sm:items-center gap-4">
-                    <label class="text-xl font-semibold"></label>
-                    <select
-                            id="brandFilter"
-                            x-model="selectedBrand"
-                            @change="filterPhones"
-                            class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black"
-                    >
-                        <template x-for="brand in brands" :key="brand">
-                            <option :value="brand" x-text="brand"></option>
-                        </template>
-                    </select>
-                    <select name="" id=""></select>
-                    <button class=""></button>
-                </div>
-            </div>
-        </section>
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <img src="public/images/phone-girl.png" alt="blije vrouw met telefoon" class="max-w-full h-auto" />
+        </div>
+      </div>
+    </section>
 
-        <section>
-            <div class="w-full max-w-4xl mx-auto px-4">
-                <div class="elfsight-app-dd5e8546-1363-4d7f-9deb-648de07bf315" data-elfsight-app-lazy></div>
-            </div>
-        </section>
+    <div class="max-w-screen-xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
+        class="cursor-pointer bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+        <img src="public/images/phone.png" alt="telefoon icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
+        <h3 class="text-xl font-semibold">Smart Phone Reparatie</h3>
+      </div>
+      <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
+        class="cursor-pointer bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+        <img src="public/images/tablet.png" alt="tablet icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
+        <h3 class="text-xl font-semibold">Tablet Reparatie</h3>
+      </div>
+      <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
+        class="cursor-pointer bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+        <img src="public/images/computer.png" alt="computer icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
+        <h3 class="text-xl font-semibold">Computer Reparatie</h3>
+      </div>
     </div>
-    <div x-html="footerContent"></div>
+
+    <main id="device-form" class="flex-grow container mx-auto px-4 py-8">
+      <h1 class="text-4xl font-bold text-center mb-12 text-gray-900">Kies uw apparaat voor reparatie</h1>
+
+      <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
+        <template x-if="loading">
+          <div class="text-center text-gray-600">Gegevens laden...</div>
+        </template>
+
+        <template x-if="error">
+          <div class="text-center text-red-600">Fout: <span x-text="error"></span></div>
+        </template>
+
+        <div x-show="!loading && !error">
+          <div class="mb-6">
+            <label for="brand-select" class="block text-gray-700 text-sm font-bold mb-2">Selecteer Merk:</label>
+            <select id="brand-select" x-model="selectedBrand" @change="onBrandChange()"
+              class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm">
+              <option value="" disabled>Kies een merk</option>
+              <template x-for="brand in brands" :key="brand">
+                <option :value="brand" x-text="brand"></option>
+              </template>
+            </select>
+          </div>
+
+          <div class="mb-6" x-show="selectedBrand">
+            <label for="model-select" class="block text-gray-700 text-sm font-bold mb-2">Selecteer Model:</label>
+            <select id="model-select" x-model="selectedModel"
+              class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm">
+              <option value="" disabled>Kies een model</option>
+              <template x-for="model in models" :key="model">
+                <option :value="model" x-text="model"></option>
+              </template>
+            </select>
+          </div>
+
+          <button @click="goToModelsPage()" :disabled="!selectedBrand || !selectedModel"
+            class="w-full bg-pink-300 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-150 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
+            Volgende
+          </button>
+
+          <p class="mt-4 text-sm text-gray-600">
+            Staat je toestel niet in de lijst? Geen probleem! Kies 'Ander toestel' en geef de details door, zodat we een
+            offerte op maat kunnen maken.
+          </p>
+          <a href="contact.html" class="text-pink-500 hover:underline mt-2 block text-center">Offerte aanvragen</a>
+        </div>
+      </div>
+    </main>
+
+    <section>
+      <div class="w-full max-w-4xl mx-auto px-4">
+        <div class="elfsight-app-65a4b124-f4cd-4408-943a-0feee5735f56" data-elfsight-app-lazy></div>
+      </div>
+    </section>
+
+    <section class="bg-gray-50 py-20">
+      <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-extrabold text-gray-900">Onze Diensten</h2>
+          <p class="mt-4 text-gray-600 text-lg">Onderdelen met 6 maanden garantie en vakkundig personeel.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <video autoplay loop muted playsinline class="w-full h-auto">
+              <source src="public/images/Phone-Repair-Stock-Video.mp4" type="video/mp4" />
+              Uw browser ondersteunt het video-element niet.
+            </video>
+          </div>
+          <div class="text-left">
+            <h3 class="text-2xl font-semibold text-gray-800 mb-4">Waarom kiezen voor ons?</h3>
+            <ul class="space-y-3 text-gray-600 text-base">
+              <li>✅ 6 maanden garantie op onderdelen</li>
+              <li>✅ Snelle en betrouwbare service</li>
+              <li>✅ Ervaren monteurs met passie</li>
+              <li>✅ Transparante prijzen en duidelijke communicatie</li>
+              <li>✅ Klanttevredenheid staat voorop</li>
+              <li>✅ Gratis diagnose en advies</li>
+            </ul>
+            <a class="text-white rounded-lg bg-pink-300 hover:bg-pink-400 focus:ring-4 focus:ring-offset-pink-950 focus:outline-none focus:ring-pink-300 px-5 py-3 mt-6 inline-block"
+              href="diensten.html">Onze Diensten</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div x-html="footerContent"></div>
 </body>
+
 </html>

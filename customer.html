@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
     <script src="public/script.js" defer></script>
     <title>GSM reparatie purmerend - Klantenservice</title>
 </head>
+
 <body class="flex flex-col min-h-screen" x-data="{
     navContent: '',
     footerContent: '',
@@ -33,57 +35,75 @@
         const response = await fetch('public/imports/footer.html');
         this.footerContent = await response.text();
     }
-}"
-    x-init="loadContent()">
+}" x-init="loadContent()">
 
     <div x-html="navContent"></div>
 
     <section class="bg-gradient-to-r from-blue-100 via-purple-100 to-pink-100 py-16">
         <div class="container mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-5xl sm:text-6xl font-extrabold text-gray-800" x-intersect="$el.classList.add('fade-in')">
+                <h2 class="text-5xl sm:text-6xl font-extrabold text-gray-800"
+                    x-intersect="$el.classList.add('fade-in')">
                     Klantenservice
                 </h2>
-                <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto" x-intersect="$el.classList.add('scale-in')">
-                    Wij zijn GSM Reparatie Purmerend, een betrouwbaar reparatiebedrijf voor smartphones en tablets. Jouw tevredenheid is onze prioriteit.
+                <p class="mt-6 text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto"
+                    x-intersect="$el.classList.add('scale-in')">
+                    Wij zijn GSM Reparatie Purmerend, een betrouwbaar reparatiebedrijf voor smartphones en tablets. Jouw
+                    tevredenheid is onze prioriteit.
                 </p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div class="bg-white shadow-xl rounded-xl p-8 text-gray-700 transform transition-all hover:scale-105 hover:shadow-2xl">
+                <div
+                    class="bg-white shadow-xl rounded-xl p-8 text-gray-700 transform transition-all hover:scale-105 hover:shadow-2xl">
                     <h3 class="text-3xl font-semibold text-gray-800 mb-4">
                         De Oprichting van GSM Reparatie Purmerend
                     </h3>
                     <p class="mb-6">
-                        GSM Reparatie Purmerend is in 2008 gestart door Sunny, gedreven door een passie voor technologie en het oplossen van smartphoneproblemen. Sindsdien zetten wij ons in om snelle en professionele reparaties voor smartphones en tablets te leveren. Van schermreparaties tot batterijvervangingen en complexe waterschadeherstel, wij staan voor kwaliteit en klanttevredenheid.
+                        GSM Reparatie Purmerend is in 2008 gestart door Sunny, gedreven door een passie voor technologie
+                        en het oplossen van smartphoneproblemen. Sindsdien zetten wij ons in om snelle en professionele
+                        reparaties voor smartphones en tablets te leveren. Van schermreparaties tot batterijvervangingen
+                        en complexe waterschadeherstel, wij staan voor kwaliteit en klanttevredenheid.
                     </p>
                     <p class="mb-6">
-                        Onze jarenlange ervaring en toewijding hebben ons tot een gerespecteerde naam in Purmerend en omstreken gemaakt. Klanten vertrouwen op onze snelle service en deskundige aanpak. Elk apparaat wordt met zorg behandeld, met als doel het weer perfect functionerend aan je terug te geven.
+                        Onze jarenlange ervaring en toewijding hebben ons tot een gerespecteerde naam in Purmerend en
+                        omstreken gemaakt. Klanten vertrouwen op onze snelle service en deskundige aanpak. Elk apparaat
+                        wordt met zorg behandeld, met als doel het weer perfect functionerend aan je terug te geven.
                     </p>
                     <p>
-                        Of je nu te maken hebt met een gebarsten scherm, een batterij die snel leeg is, of waterschade, wij hebben de expertise om het te repareren. Dankzij onze uitgebreide kennis en professionele gereedschappen kunnen we de meeste reparaties snel en efficiënt uitvoeren.
+                        Of je nu te maken hebt met een gebarsten scherm, een batterij die snel leeg is, of waterschade,
+                        wij hebben de expertise om het te repareren. Dankzij onze uitgebreide kennis en professionele
+                        gereedschappen kunnen we de meeste reparaties snel en efficiënt uitvoeren.
                     </p>
                 </div>
 
-                <div class="bg-white shadow-xl rounded-xl p-8 text-gray-700 transform transition-all hover:scale-105 hover:shadow-2xl">
+                <div
+                    class="bg-white shadow-xl rounded-xl p-8 text-gray-700 transform transition-all hover:scale-105 hover:shadow-2xl">
                     <h3 class="text-3xl font-semibold text-gray-800 mb-4">
                         Onze Belofte aan Jou: Klanttevredenheid
                     </h3>
                     <p class="mb-6">
-                        Bij GSM Reparatie Purmerend draait alles om jou als klant. Vanaf het moment dat je contact met ons opneemt of onze winkel in Purmerend bezoekt, streven wij naar een uitstekende service-ervaring. Ons team staat klaar om al je vragen te beantwoorden en je te voorzien van helder advies over de beste reparatieoplossing voor jouw apparaat.
+                        Bij GSM Reparatie Purmerend draait alles om jou als klant. Vanaf het moment dat je contact met
+                        ons opneemt of onze winkel in Purmerend bezoekt, streven wij naar een uitstekende
+                        service-ervaring. Ons team staat klaar om al je vragen te beantwoorden en je te voorzien van
+                        helder advies over de beste reparatieoplossing voor jouw apparaat.
                     </p>
                     <p class="mb-6">
-                        Wij geloven in transparantie en eerlijkheid. Daarom informeren wij je altijd duidelijk over de diagnose, de kosten van de reparatie en de verwachte doorlooptijd. Onze ervaren technici gebruiken alleen hoogwaardige onderdelen, zodat je verzekerd bent van een duurzame reparatie.
+                        Wij geloven in transparantie en eerlijkheid. Daarom informeren wij je altijd duidelijk over de
+                        diagnose, de kosten van de reparatie en de verwachte doorlooptijd. Onze ervaren technici
+                        gebruiken alleen hoogwaardige onderdelen, zodat je verzekerd bent van een duurzame reparatie.
                     </p>
                     <p>
-                        Jouw tevredenheid is onze grootste beloning. We doen er alles aan om ervoor te zorgen dat je met een glimlach en een perfect werkend apparaat onze winkel verlaat. Heb je na de reparatie nog vragen of opmerkingen? Aarzel dan niet om contact met onze klantenservice op te nemen. Wij zijn er om je te helpen!
+                        Jouw tevredenheid is onze grootste beloning. We doen er alles aan om ervoor te zorgen dat je met
+                        een glimlach en een perfect werkend apparaat onze winkel verlaat. Heb je na de reparatie nog
+                        vragen of opmerkingen? Aarzel dan niet om contact met onze klantenservice op te nemen. Wij zijn
+                        er om je te helpen!
                     </p>
                 </div>
 
                 <div class="flex justify-center items-center lg:col-span-2">
-                    <img src="public/images/review.jpg"
-                         alt="Klanttevredenheid bij GSM Reparatie Purmerend"
-                         class="w-full max-w-lg rounded-lg shadow-md">
+                    <img src="public/images/review.jpg" alt="Klanttevredenheid bij GSM Reparatie Purmerend"
+                        class="w-full max-w-lg rounded-lg shadow-md">
                 </div>
 
             </div>
@@ -93,4 +113,5 @@
     <div x-html="footerContent" class="mt-10"></div>
 
 </body>
+
 </html>

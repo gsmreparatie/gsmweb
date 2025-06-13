@@ -1,126 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" x-data="repairExplorerTabs()" x-init="initPage()">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="GSM Reparatie Purmerend - Veelgestelde Vragen (FAQ)">
-    <meta name="keywords" content="GSM, reparatie, Purmerend, smartphone, tablet, veelgestelde vragen">
-    <meta name="author" content="GSM Reparatie Purmerend">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" type="image/x-icon" href="public/images/gsmReparatiePurmerend.ico" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reparatie Explorer met Tabs</title>
+    <link rel="stylesheet" href="public/output.css" />
     <script src="node_modules/flowbite/dist/flowbite.min.js" defer></script>
-    <link rel="stylesheet" href="public/output.css">
     <script src="public/script.js" defer></script>
-    <title>GSM Reparatie Purmerend</title>
 </head>
-<body class="flex flex-col min-h-screen" x-data="{
-    navContent: '',
-    footerContent: '',
-    cookieContent: '',
-    loadContent() {
-        this.fetchNav();
-        this.fetchFooter();
-    },
-    async fetchNav() {
-        const response = await fetch('public/imports/navbar.html');
-        this.navContent = await response.text();
-        this.$nextTick(() => {
-            if (window.initFlowbite) {
-                window.initFlowbite();
-            }
-        });
-    },
-    async fetchFooter() {
-        const response = await fetch('public/imports/footer.html');
-        this.footerContent = await response.text();
-    }
-  }"
-  x-init="loadContent()">
+
+<body class="flex flex-col min-h-screen">
 
     <div x-html="navContent"></div>
 
-    <div class="flex-grow">
-        <!-- Service Section: Repairs for Phones, Tablets, iPads, and Macs -->
-        <section class="py-16">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-4xl sm:text-5xl font-extrabold mb-6">
-                    Onze Reparatie Diensten
-                </h2>
-                <p class="mb-8 text-lg sm:text-xl font-normal max-w-3xl mx-auto">
-                    Wij bieden professionele reparaties voor smartphones, tablets, iPads en Macs. Of het nu gaat om een kapot scherm, batterijproblemen of waterschade, wij zorgen ervoor dat je apparaat snel weer werkt als nieuw.
-                </p>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-center mb-8">Selecteer Merk en Model</h1>
 
-                <!-- Repair Services Cards -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-    <!-- Phone Repair -->
-    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-        <img src="public/images/iphone.jpg" alt="Phone Repair" class="w-24 h-24 mx-auto mb-4 object-cover rounded-full">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Telefoon Reparatie</h3>
-        <p class="text-gray-600 mb-4">Of het nu een gebroken scherm, batterijproblemen of softwarefouten zijn, wij herstellen jouw smartphone snel en vakkundig.</p>
-    </div>
+        <nav class="flex justify-center space-x-4 mb-8 border-b">
+            <button @click="selectBrand('All Brands')"
+                :class="selectedBrand === 'All Brands' ? 'border-pink-500 text-pink-600 border-b-2 font-semibold' : 'text-gray-600 hover:text-pink-500'"
+                class="py-2 px-4 focus:outline-none transition">
+                Alle Merken
+            </button>
+            <template x-for="brand in brands" :key="brand">
+                <button @click="selectBrand(brand)"
+                    :class="selectedBrand === brand ? 'border-pink-500 text-pink-600 border-b-2 font-semibold' : 'text-gray-600 hover:text-pink-500'"
+                    class="py-2 px-4 focus:outline-none transition" x-text="brand">
+                </button>
+            </template>
+        </nav>
 
-    <!-- Tablet Repair -->
-    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-        <img src="public/images/tablet.jpg" alt="Tablet Repair" class="w-44 h-34 mx-auto mb-4">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Tablet Reparatie</h3>
-        <p class="text-gray-600 mb-4">We herstellen jouw tablet bij schade, batterijproblemen of andere hardware- en softwareproblemen. We bieden snelle en efficiënte oplossingen.</p>
-    </div>
+        <div class="max-w-md mx-auto mb-10" x-show="selectedBrand !== 'All Brands'">
+            <label class="block mb-2 font-medium text-gray-700">Model</label>
+            <select x-model="selectedModel" @change="loadRepairs()" :disabled="!models.length"
+                class="w-full border-gray-300 rounded-lg shadow-sm">
+                <option value="" disabled selected>Kies een model</option>
+                <template x-for="model in models" :key="model">
+                    <option x-text="model" :value="model"></option>
+                </template>
+            </select>
+        </div>
 
-    <!-- Accessoire Verkoop (vervanging voor iPad) -->
-    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-        <img src="public/images/accesoires.png" alt="Accessoire Verkoop" class="w-24 h-24 mx-auto mb-4">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Accessoire Verkoop</h3>
-        <p class="text-gray-600 mb-4">Bij ons vind je een ruim assortiment aan accessoires zoals hoesjes, opladers, en screenprotectors voor jouw telefoon en tablet.</p>
-    </div>
+        <div x-show="selectedBrand === 'All Brands'" class="max-w-xl mx-auto mb-8">
+            <input type="text" x-model="searchQuery" @input="currentPage = 1; filterRepairs()"
+                placeholder="Zoek reparaties (bijv. scherm, iPhone 12)..."
+                class="w-full border-gray-300 rounded-lg shadow-sm p-3 focus:ring-pink-500 focus:border-pink-500">
+        </div>
 
-    <!-- Mac Repair -->
-    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-        <img src="public/images/mac.png" alt="Mac Repair" class="w-44 h-34 mx-auto mb-4">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Mac Reparatie</h3>
-        <p class="text-gray-600 mb-4">Van hardwareproblemen tot softwareupgrades, we zorgen ervoor dat jouw Mac snel weer op volle kracht draait met onze professionele reparatieservices.</p>
-    </div>
-
-    <!-- Windows Recovery (was Windows Repair) -->
-    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-        <img src="public/images/windows.jpg" alt="Windows Recovery" class="w-44 h-34 mx-auto mb-4">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Windows Herstel</h3>
-        <p class="text-gray-600 mb-4">We helpen bij systeemherstel, data recovery, en het oplossen van opstartproblemen op jouw Windows-pc of laptop.</p>
-    </div>
-
-    <!-- Extra dienst (vervanging voor Samsung) -->
-    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-        <img src="public/images/diagnose.png" alt="Diagnose Service" class="w-24 h-24 mx-auto mb-4">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Diagnose Service</h3>
-        <p class="text-gray-600 mb-4">Niet zeker wat er mis is met je toestel? Wij voeren een snelle en nauwkeurige diagnose uit, zodat je precies weet wat er nodig is.</p>
-    </div>
-
-    <!-- Extra dienst (vervanging voor Huawei/Oppo) -->
-    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-        <img src="public/images/data-recovery.png" alt="Data Recovery" class="w-44 h-34 mx-auto mb-4">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Data Recovery</h3>
-        <p class="text-gray-600 mb-4">Belangrijke bestanden kwijt? Wij helpen met het veilig terughalen van foto's, documenten en andere gegevens van je toestel.</p>
-    </div>
-
-    <!-- Laptop Repair -->
-    <div class="bg-white shadow-xl rounded-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-        <img src="public/images/laptop.jpg" alt="Laptop Repair" class="w-44 h-34 mx-auto mb-4">
-        <h3 class="text-2xl font-semibold text-gray-800 mb-4">Computer & Laptop Reparatie</h3>
-        <p class="text-gray-600 mb-4">Of het nu gaat om trage prestaties, virusinfecties of hardwareproblemen – wij maken jouw laptop weer snel en betrouwbaar.</p>
-    </div>
-</div>
-
-
-                <!-- Meer Informatie Button -->
-                <div class="mt-8">
-                    <a href="repairs.html" class="bg-gray-900 text-white py-3 px-8 rounded-lg text-lg font-semibold hover:bg-white hover:text-gray-950 transition-colors duration-300">
-                        Onze Reparaties Bekijken
-                    </a>
-                </div>
+        <template x-if="paginatedRepairs.length">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <template x-for="item in paginatedRepairs" :key="item.type + (item.model || '') + (item.brand || '')">
+                    <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
+                        <img :src="item.info.image || defaultImage(item.brand || selectedBrand)"
+                            alt="Reparatie afbeelding" class="mb-4 rounded-lg w-32 h-32 object-contain mx-auto" />
+                        <h2 class="text-xl font-semibold text-center mb-2" x-text="item.type"></h2>
+                        <p x-show="selectedBrand === 'All Brands'" class="text-gray-700 text-sm mb-2 text-center">
+                            <span x-text="item.brand"></span> - <span x-text="item.model"></span>
+                        </p>
+                        <p class="text-gray-700 text-sm mb-4 text-center" x-text="item.info.Beschrijving"></p>
+                        <div class="text-sm text-gray-800 space-y-1">
+                            <p><strong>Duur:</strong> <span x-text="item.info.Tijd"></span></p>
+                            <p><strong>Onderdelen:</strong> €<span x-text="item.info.Prijs.toFixed(2)"></span></p>
+                            <p><strong>Montage:</strong> €<span x-text="item.Montage.toFixed(2)"></span></p>
+                            <p class="font-bold text-pink-600"><strong>Totaal:</strong> €<span
+                                    x-text="item.info.Totaal.toFixed(2)"></span></p>
+                        </div>
+                        <a :href="repairDetailsUrl(item.type, item.info, item.brand || selectedBrand, item.model || selectedModel)"
+                            class="block mt-4 text-center text-pink-500 font-medium hover:underline">Bekijk details</a>
+                    </div>
+                </template>
             </div>
-        </section>
-    </div>
+        </template>
 
-    <div x-html="footerContent"></div>
+        <template x-if="selectedBrand !== '' && !paginatedRepairs.length && searchQuery !== ''">
+            <p class="text-center text-gray-500 text-lg mt-6">Geen resultaten gevonden voor uw zoekopdracht.</p>
+        </template>
+        <template
+            x-if="(selectedModel && !Object.keys(repairs).length && selectedBrand !== 'All Brands' && searchQuery === '') || (selectedBrand === 'All Brands' && !Object.keys(allRepairs).length && searchQuery === '')">
+            <p class="text-center text-gray-500 text-lg mt-6">Geen reparatiegegevens gevonden.</p>
+        </template>
 
+
+        <div x-show="totalPages > 1 && filteredRepairs.length > 0" class="flex justify-center mt-8 space-x-2">
+            <button @click="prevPage()" :disabled="currentPage === 1"
+                class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition">
+                Vorige
+            </button>
+            <template x-for="page in totalPages" :key="page">
+                <button @click="currentPage = page"
+                    :class="currentPage === page ? 'bg-pink-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'"
+                    class="px-4 py-2 rounded-lg transition" x-text="page">
+                </button>
+            </template>
+            <button @click="nextPage()" :disabled="currentPage === totalPages"
+                class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition">
+                Volgende
+            </button>
+        </div>
+    </main>
+
+    <div x-html="footerContent" class="mt-10"></div>
+
+    <script>
+        function repairExplorerTabs() {
+            return {
+                navContent: '',
+                footerContent: '',
+                data: {},
+                brands: [],
+                models: [],
+                selectedBrand: '',
+                selectedModel: '',
+                repairs: {}, // Holds repairs for the selected brand/model
+                allRepairs: [], // Holds all repairs for "All Brands" tab
+                searchQuery: '',
+                filteredRepairs: [], // Repairs after applying search filter
+                currentPage: 1,
+                itemsPerPage: 9, // Number of items per page
+
+                async initPage() {
+                    await this.fetchNav();
+                    await this.fetchFooter();
+                    await this.loadData();
+                    if (this.brands.length) {
+                        this.selectBrand('All Brands');
+                    }
+                    this.$watch('selectedBrand', () => {
+                        this.searchQuery = ''; // Clear search when brand changes
+                        this.currentPage = 1; // Reset page when brand changes
+                        this.filterRepairs(); // Re-filter to get correct initial state
+                    });
+                    this.$watch('selectedModel', () => {
+                        this.searchQuery = ''; // Clear search when model changes
+                        this.currentPage = 1; // Reset page when model changes
+                        this.filterRepairs(); // Re-filter to get correct initial state
+                    });
+                },
+
+                async fetchNav() {
+                    const res = await fetch('public/imports/navbar.html');
+                    this.navContent = await res.text();
+                },
+
+                async fetchFooter() {
+                    const res = await fetch('public/imports/footer.html');
+                    this.footerContent = await res.text();
+                },
+
+                async loadData() {
+                    const files = ['iphones.json', 'samsung.json', 'ipad.json'];
+                    const fetches = files.map(f => fetch(`public/data/${f}`).then(r => r.json()));
+                    const [iphone, samsung, ipad] = await Promise.all(fetches);
+
+                    this.data = {
+                        ...iphone,
+                        ...samsung,
+                        ...ipad
+                    };
+
+                    this.brands = Object.keys(this.data).map(key => key.replace(' Reparaties', ''));
+                    this.compileAllRepairs();
+                },
+
+                compileAllRepairs() {
+                    this.allRepairs = [];
+                    for (const brandKey in this.data) {
+                        const brand = brandKey.replace(' Reparaties', '');
+                        for (const model in this.data[brandKey]) {
+                            for (const type in this.data[brandKey][model]) {
+                                this.allRepairs.push({
+                                    brand: brand,
+                                    model: model,
+                                    type: type,
+                                    info: this.data[brandKey][model][type]
+                                });
+                            }
+                        }
+                    }
+                },
+
+                selectBrand(brand) {
+                    this.selectedBrand = brand;
+                    this.selectedModel = '';
+                    this.repairs = {};
+                    if (brand === 'All Brands') {
+                        this.models = [];
+                        this.filterRepairs(); // Filter all repairs
+                    } else {
+                        this.models = Object.keys(this.data[brand + ' Reparaties'] || {});
+                        // If there's only one model, auto-select it and load repairs for it
+                        if (this.models.length === 1) {
+                            this.selectedModel = this.models[0];
+                            this.loadRepairs();
+                        } else {
+                            this.filteredRepairs = []; // Clear repairs if no model selected yet
+                        }
+                    }
+                },
+
+                loadRepairs() {
+                    const key = this.selectedBrand + ' Reparaties';
+                    this.repairs = this.data[key]?.[this.selectedModel] || {};
+                    this.filterRepairs(); // Filter repairs for the selected model
+                },
+
+                filterRepairs() {
+                    const query = this.searchQuery.toLowerCase();
+                    let itemsToFilter = [];
+
+                    if (this.selectedBrand === 'All Brands') {
+                        itemsToFilter = this.allRepairs;
+                    } else if (this.selectedModel) {
+                        itemsToFilter = Object.entries(this.repairs).map(([type, info]) => ({
+                            brand: this.selectedBrand,
+                            model: this.selectedModel,
+                            type: type,
+                            info: info
+                        }));
+                    } else {
+                        // No model selected for a specific brand, so nothing to filter yet
+                        this.filteredRepairs = [];
+                        return;
+                    }
+
+                    this.filteredRepairs = itemsToFilter.filter(item => {
+                        const typeMatch = item.type.toLowerCase().includes(query);
+                        const descriptionMatch = item.info.Beschrijving.toLowerCase().includes(query);
+                        const brandMatch = (item.brand || '').toLowerCase().includes(query);
+                        const modelMatch = (item.model || '').toLowerCase().includes(query);
+                        return typeMatch || descriptionMatch || brandMatch || modelMatch;
+                    });
+                    this.currentPage = 1; // Reset to first page after filtering
+                },
+
+                defaultImage(brand) {
+                    if (brand === 'iPhone') return 'public/images/iphone.jpg';
+                    if (brand === 'Samsung') return 'public/images/samsung.jpg';
+                    if (brand === 'iPad') return 'public/images/ipad.jpg';
+                    return 'public/images/default-phone.jpg';
+                },
+
+                repairDetailsUrl(type, info, brand, model) {
+                    const params = new URLSearchParams({
+                        brand: brand,
+                        model: model,
+                        repairType: type,
+                        description: info.Beschrijving,
+                        time: info.Tijd,
+                        price: info.Prijs,
+                        assembly: info.Montage,
+                        total: info.Totaal,
+                        image: info.image || this.defaultImage(brand)
+                    });
+                    return `repair-details.html?${params.toString()}`;
+                },
+
+                // Pagination computed properties
+                get totalPages() {
+                    return Math.ceil(this.filteredRepairs.length / this.itemsPerPage);
+                },
+
+                get paginatedRepairs() {
+                    const start = (this.currentPage - 1) * this.itemsPerPage;
+                    const end = start + this.itemsPerPage;
+                    return this.filteredRepairs.slice(start, end);
+                },
+
+                nextPage() {
+                    if (this.currentPage < this.totalPages) {
+                        this.currentPage++;
+                    }
+                },
+
+                prevPage() {
+                    if (this.currentPage > 1) {
+                        this.currentPage--;
+                    }
+                }
+            };
+        }
+    </script>
 </body>
+
 </html>
