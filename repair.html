@@ -81,13 +81,12 @@
             <p class="text-center text-gray-500 text-lg mt-6">Geen reparatiegegevens gevonden.</p>
         </template>
 
-
-        <div x-show="totalPages > 1 && filteredRepairs.length > 0" class="flex justify-center mt-8 space-x-2">
+        <div x-show="totalPages > 1 && filteredRepairs.length > 0" class="flex flex-wrap justify-center mt-8 gap-2">
             <button @click="prevPage()" :disabled="currentPage === 1"
                 class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition">
                 Vorige
             </button>
-            <template x-for="page in totalPages" :key="page">
+            <template x-for="page in visiblePageNumbers" :key="page">
                 <button @click="currentPage = page"
                     :class="currentPage === page ? 'bg-pink-500 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'"
                     class="px-4 py-2 rounded-lg transition" x-text="page">
@@ -265,6 +264,32 @@
                     const start = (this.currentPage - 1) * this.itemsPerPage;
                     const end = start + this.itemsPerPage;
                     return this.filteredRepairs.slice(start, end);
+                },
+
+                // Nieuwe functie voor mobiele paginering
+                get visiblePageNumbers() {
+                    const maxNumbersMobile = 5;
+                    const total = this.totalPages;
+                    const current = this.currentPage;
+
+                    if (window.innerWidth >= 768) {
+                        // Desktop: toon alle pagina's
+                        return Array.from({ length: total }, (_, i) => i + 1);
+                    }
+
+                    // Mobiel: maximaal 5 pagina nummers rondom huidige pagina
+                    let start = Math.max(current - 2, 1);
+                    let end = Math.min(start + maxNumbersMobile - 1, total);
+
+                    if (end - start + 1 < maxNumbersMobile) {
+                        start = Math.max(end - maxNumbersMobile + 1, 1);
+                    }
+
+                    const pages = [];
+                    for (let i = start; i <= end; i++) {
+                        pages.push(i);
+                    }
+                    return pages;
                 },
 
                 nextPage() {
