@@ -48,7 +48,7 @@
                 class="w-full border-gray-300 rounded-lg shadow-sm p-3 focus:ring-pink-500 focus:border-pink-500">
         </div>
 
-        <template x-if="paginatedRepairs.length">
+        <template x-if="searchQuery !== '' && paginatedRepairs.length">
             <div class="fade-in grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <template x-for="item in paginatedRepairs" :key="item.type + (item.model || '') + (item.brand || '')">
                     <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
@@ -81,7 +81,7 @@
             <p class="text-center text-gray-500 text-lg mt-6">Geen reparatiegegevens gevonden.</p>
         </template>
 
-        <div x-show="totalPages > 1 && filteredRepairs.length > 0" class="flex flex-wrap justify-center mt-8 gap-2">
+        <div x-show="searchQuery !== '' && totalPages > 1" class="flex flex-wrap justify-center mt-8 gap-2">
             <button @click="prevPage()" :disabled="currentPage === 1"
                 class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition">
                 Vorige

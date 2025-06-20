@@ -14,6 +14,7 @@
         navContent: '',
         footerContent: '',
         selectedBrand: '',
+        selectedDevice: '', // This will now correctly capture 'iPhone' or 'iPad'
         selectedModel: '',
         repairsForModel: {},
         loading: true,
@@ -44,6 +45,7 @@
         parseUrlParams() {
             const params = new URLSearchParams(window.location.search);
             this.selectedBrand = params.get('brand');
+            this.selectedDevice = params.get('device'); // Parse the device parameter
             this.selectedModel = params.get('model');
         },
 
@@ -52,12 +54,22 @@
             this.error = null;
             try {
                 let filePath = '';
-                if (this.selectedBrand === 'iPhone') {
-                    filePath = 'public/data/iphones.json';
+                let dataKey = ''; // This will be like 'iPhone Reparaties', 'iPad Reparaties' or 'Samsung Reparaties'
+
+                if (this.selectedBrand === 'Apple') {
+                    // Use selectedDevice to determine the file and key for Apple
+                    if (this.selectedDevice === 'iPhone') {
+                        filePath = 'public/data/iphones.json';
+                        dataKey = 'iPhone Reparaties';
+                    } else if (this.selectedDevice === 'iPad') {
+                        filePath = 'public/data/ipad.json';
+                        dataKey = 'iPad Reparaties';
+                    } else {
+                        throw new Error('Onbekend Apple apparaattype geselecteerd.');
+                    }
                 } else if (this.selectedBrand === 'Samsung') {
                     filePath = 'public/data/samsung.json';
-                } else if (this.selectedBrand === 'iPad') {
-                    filePath = 'public/data/ipad.json';
+                    dataKey = 'Samsung Reparaties';
                 } else {
                     throw new Error('Onbekend merk geselecteerd.');
                 }
@@ -68,9 +80,9 @@
                 }
                 const data = await response.json();
 
-                const brandKey = this.selectedBrand + ' Reparaties';
-                if (data[brandKey] && data[brandKey][this.selectedModel]) {
-                    this.repairsForModel = data[brandKey][this.selectedModel];
+                // Now use dataKey to access the correct section of the JSON
+                if (data[dataKey] && data[dataKey][this.selectedModel]) {
+                    this.repairsForModel = data[dataKey][this.selectedModel];
                 } else {
                     this.repairsForModel = {};
                     this.error = `Geen reparatiegegevens gevonden voor ${this.selectedBrand} ${this.selectedModel}.`;
@@ -90,19 +102,21 @@
                 return repairDetails.image;
             }
 
-            if (this.selectedBrand === 'iPhone') {
+            // Fallback images based on the selectedDevice for Apple, or selectedBrand for others
+            if (this.selectedDevice === 'iPhone') { // Use selectedDevice for iPhone/iPad
                 return 'public/images/iphone.jpg';
-            } else if (this.selectedBrand === 'Samsung') {
-                return 'public/images/samsung.jpg';
-            } else if (this.selectedBrand === 'iPad') {
+            } else if (this.selectedDevice === 'iPad') {
                 return 'public/images/ipad.jpg';
+            } else if (this.selectedBrand === 'Samsung') { // Use selectedBrand for Samsung
+                return 'public/images/samsung.jpg';
             }
             return 'public/images/default-phone.jpg';
         },
 
         getRepairDetailsUrl(repairType, details) {
             const params = new URLSearchParams({
-                brand: this.selectedBrand,
+                brand: this.selectedBrand, // Keep 'Apple' as brand
+                device: this.selectedDevice, // Pass 'iPhone' or 'iPad' as device
                 model: this.selectedModel,
                 repairType: repairType,
                 description: details.Beschrijving,
