@@ -153,15 +153,29 @@
             <img src="public/images/phone.png" alt="telefoon icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
             <h3 class="text-xl font-semibold">Smart Phone Reparatie</h3>
         </div>
+
         <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
-            class="cursor-pointer bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+            class="cursor-pointer bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300"
+            data-tooltip-target="tooltip-tablet-repair" data-tooltip-placement="bottom">
             <img src="public/images/tablet.png" alt="tablet icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
             <h3 class="text-xl font-semibold">Tablet Reparatie</h3>
         </div>
+        <div id="tooltip-tablet-repair" role="tooltip"
+            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Vraag een offerte aan voor Samsung tablets!
+            <div class="tooltip-arrow" data-popper-arrow></div>
+        </div>
+
         <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
-            class="cursor-pointer bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
+            class="cursor-pointer bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300"
+            data-tooltip-target="tooltip-computer-repair" data-tooltip-placement="bottom">
             <img src="public/images/computer.png" alt="computer icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
             <h3 class="text-xl font-semibold">Computer Reparatie</h3>
+        </div>
+        <div id="tooltip-computer-repair" role="tooltip"
+            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+            Vraag een offerte aan voor Windows apparaten!
+            <div class="tooltip-arrow" data-popper-arrow></div>
         </div>
     </div>
 
@@ -202,7 +216,8 @@
                     </select>
                 </div>
 
-                <div class="mb-6" x-show="selectedDevice && brandDevices[selectedDevice] && brandDevices[selectedDevice].length > 0">
+                <div class="mb-6"
+                    x-show="selectedDevice && brandDevices[selectedDevice] && brandDevices[selectedDevice].length > 0">
                     <label for="model-select" class="block text-gray-700 text-sm font-bold mb-2">Selecteer
                         Model:</label>
                     <select id="model-select" x-model="selectedModel"
@@ -213,8 +228,8 @@
                         </template>
                     </select>
                 </div>
-                 <div class="mb-6 text-center text-gray-500"
-                 x-show="selectedDevice && (!brandDevices[selectedDevice] || brandDevices[selectedDevice].length === 0)">
+                <div class="mb-6 text-center text-gray-500"
+                    x-show="selectedDevice && (!brandDevices[selectedDevice] || brandDevices[selectedDevice].length === 0)">
                     Geen modellen gevonden voor dit apparaattype.
                 </div>
 

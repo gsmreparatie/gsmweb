@@ -1,0 +1,57 @@
+{
+  "Microsoft Reparaties": {
+    "Windows": {
+      "Windows 10 Installatie": {
+        "Beschrijving": "Installatie van Windows 10 op uw systeem.",
+        "image": "public/images/windows.png",
+        "Tijd": "1-2 uur",
+        "Prijs": 100,
+        "Totaal": 100
+      },
+      "Windows 11 Upgrade": {
+        "Beschrijving": "Upgrade van Windows 10 naar Windows 11.",
+        "image": "public/images/windows.png",
+        "Tijd": "1-2 uur",
+        "Prijs": 120,
+        "Totaal": 120
+      },
+      "Systeemherstel": {
+        "Beschrijving": "Herstellen van uw systeem naar een eerdere staat.",
+        "image": "public/images/windows.png",
+        "Tijd": "1 uur",
+        "Prijs": 80,
+        "Totaal": 80
+      },
+      "Virusverwijdering": {
+        "Beschrijving": "Verwijderen van virussen en malware van uw systeem.",
+        "image": "public/images/windows.png",
+        "Tijd": "1-2 uur",
+        "Prijs": 90,
+        "Totaal": 90
+      }
+    },
+    "Office": {
+      "Office Installatie": {
+        "Beschrijving": "Installatie van Microsoft Office op uw systeem.",
+        "image": "public/images/office.png",
+        "Tijd": "30-60 minuten",
+        "Prijs": 70,
+        "Totaal": 70
+      },
+      "Office Herstel": {
+        "Beschrijving": "Herstellen van Microsoft Office applicaties.",
+        "image": "public/images/office.png",
+        "Tijd": "30-60 minuten",
+        "Prijs": 60,
+        "Totaal": 60
+      },
+      "Licentie Activering": {
+        "Beschrijving": "Activeren van uw Microsoft Office licentie.",
+        "image": "public/images/office.png",
+        "Tijd": "30 minuten",
+        "Prijs": 50,
+        "Totaal": 50
+      }
+    }
+  }
+}

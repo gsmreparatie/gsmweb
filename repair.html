@@ -48,7 +48,8 @@
                 class="w-full border-gray-300 rounded-lg shadow-sm p-3 focus:ring-pink-500 focus:border-pink-500">
         </div>
 
-        <template x-if="searchQuery !== '' && paginatedRepairs.length">
+        <template
+            x-if="(selectedBrand !== 'All Brands' && paginatedRepairs.length) || (selectedBrand === 'All Brands' && searchQuery !== '' && paginatedRepairs.length)">
             <div class="fade-in grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <template x-for="item in paginatedRepairs" :key="item.type + (item.model || '') + (item.brand || '')">
                     <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition">
@@ -73,15 +74,19 @@
             </div>
         </template>
 
-        <template x-if="selectedBrand !== '' && !paginatedRepairs.length && searchQuery !== ''">
+        <template x-if="searchQuery !== '' && !paginatedRepairs.length">
             <p class="text-center text-gray-500 text-lg mt-6">Geen resultaten gevonden voor uw zoekopdracht.</p>
         </template>
-        <template
-            x-if="(selectedModel && !Object.keys(repairs).length && selectedBrand !== 'All Brands' && searchQuery === '') || (selectedBrand === 'All Brands' && !Object.keys(allRepairs).length && searchQuery === '')">
-            <p class="text-center text-gray-500 text-lg mt-6">Geen reparatiegegevens gevonden.</p>
+        <template x-if="selectedBrand !== 'All Brands' && selectedModel && !paginatedRepairs.length && searchQuery === ''">
+            <p class="text-center text-gray-500 text-lg mt-6">Geen reparatiegegevens gevonden voor het geselecteerde model.</p>
+        </template>
+         <template x-if="selectedBrand === 'All Brands' && searchQuery === ''">
+            <p class="text-center text-gray-500 text-lg mt-6">Begin met typen in de zoekbalk om reparaties te vinden.</p>
         </template>
 
-        <div x-show="searchQuery !== '' && totalPages > 1" class="flex flex-wrap justify-center mt-8 gap-2">
+
+        <div x-show=" (searchQuery !== '' && totalPages > 1) || (selectedBrand !== 'All Brands' && totalPages > 1) "
+            class="flex flex-wrap justify-center mt-8 gap-2">
             <button @click="prevPage()" :disabled="currentPage === 1"
                 class="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 disabled:opacity-50 transition">
                 Vorige
@@ -111,12 +116,12 @@
                 models: [],
                 selectedBrand: '',
                 selectedModel: '',
-                repairs: {}, // Holds repairs for the selected brand/model
-                allRepairs: [], // Holds all repairs for "All Brands" tab
+                repairs: {},
+                allRepairs: [],
                 searchQuery: '',
-                filteredRepairs: [], // Repairs after applying search filter
+                filteredRepairs: [],
                 currentPage: 1,
-                itemsPerPage: 9, // Number of items per page
+                itemsPerPage: 9,
 
                 async initPage() {
                     await this.fetchNav();
@@ -126,14 +131,14 @@
                         this.selectBrand('All Brands');
                     }
                     this.$watch('selectedBrand', () => {
-                        this.searchQuery = ''; // Clear search when brand changes
-                        this.currentPage = 1; // Reset page when brand changes
-                        this.filterRepairs(); // Re-filter to get correct initial state
+                        this.searchQuery = '';
+                        this.currentPage = 1;
+                        this.filterRepairs();
                     });
                     this.$watch('selectedModel', () => {
-                        this.searchQuery = ''; // Clear search when model changes
-                        this.currentPage = 1; // Reset page when model changes
-                        this.filterRepairs(); // Re-filter to get correct initial state
+                        this.searchQuery = '';
+                        this.currentPage = 1;
+                        this.loadRepairs();
                     });
                 },
 
@@ -149,15 +154,13 @@
 
                 async loadData() {
                     const files = ['iphones.json', 'samsung.json', 'ipad.json'];
-                    const fetches = files.map(f => fetch(`public/data/${f}`).then(r => r.json()));
+                    const fetches = files.map(f =>
+                        fetch(`public/data/${f}`)
+                            .then(response => response.ok ? response.json() : {})
+                            .catch(() => ({}))
+                    );
                     const [iphone, samsung, ipad] = await Promise.all(fetches);
-
-                    this.data = {
-                        ...iphone,
-                        ...samsung,
-                        ...ipad
-                    };
-
+                    this.data = { ...iphone, ...samsung, ...ipad };
                     this.brands = Object.keys(this.data).map(key => key.replace(' Reparaties', ''));
                     this.compileAllRepairs();
                 },
@@ -185,15 +188,16 @@
                     this.repairs = {};
                     if (brand === 'All Brands') {
                         this.models = [];
-                        this.filterRepairs(); // Filter all repairs
+                        // When "All Brands" is selected, clear search query and hide cards
+                        this.searchQuery = '';
+                        this.filteredRepairs = [];
                     } else {
                         this.models = Object.keys(this.data[brand + ' Reparaties'] || {});
-                        // If there's only one model, auto-select it and load repairs for it
                         if (this.models.length === 1) {
                             this.selectedModel = this.models[0];
                             this.loadRepairs();
                         } else {
-                            this.filteredRepairs = []; // Clear repairs if no model selected yet
+                            this.filteredRepairs = [];
                         }
                     }
                 },
@@ -201,7 +205,7 @@
                 loadRepairs() {
                     const key = this.selectedBrand + ' Reparaties';
                     this.repairs = this.data[key]?.[this.selectedModel] || {};
-                    this.filterRepairs(); // Filter repairs for the selected model
+                    this.filterRepairs();
                 },
 
                 filterRepairs() {
@@ -209,8 +213,10 @@
                     let itemsToFilter = [];
 
                     if (this.selectedBrand === 'All Brands') {
+                        // For "All Brands", filter from allRepairs based on query
                         itemsToFilter = this.allRepairs;
                     } else if (this.selectedModel) {
+                        // For specific brands/models, filter from current repairs
                         itemsToFilter = Object.entries(this.repairs).map(([type, info]) => ({
                             brand: this.selectedBrand,
                             model: this.selectedModel,
@@ -218,19 +224,26 @@
                             info: info
                         }));
                     } else {
-                        // No model selected for a specific brand, so nothing to filter yet
+                        // If no specific model is selected for a brand, hide cards
                         this.filteredRepairs = [];
                         return;
                     }
 
-                    this.filteredRepairs = itemsToFilter.filter(item => {
-                        const typeMatch = item.type.toLowerCase().includes(query);
-                        const descriptionMatch = item.info.Beschrijving.toLowerCase().includes(query);
-                        const brandMatch = (item.brand || '').toLowerCase().includes(query);
-                        const modelMatch = (item.model || '').toLowerCase().includes(query);
-                        return typeMatch || descriptionMatch || brandMatch || modelMatch;
-                    });
-                    this.currentPage = 1; // Reset to first page after filtering
+                    if (query === '') {
+                        // If no search query, for "All Brands" keep filteredRepairs empty,
+                        // for specific brands, show all repairs for selected model
+                        this.filteredRepairs = (this.selectedBrand === 'All Brands') ? [] : itemsToFilter;
+                    } else {
+                        this.filteredRepairs = itemsToFilter.filter(item => {
+                            const typeMatch = item.type.toLowerCase().includes(query);
+                            const descriptionMatch = item.info.Beschrijving.toLowerCase().includes(query);
+                            const brandMatch = (item.brand || '').toLowerCase().includes(query);
+                            const modelMatch = (item.model || '').toLowerCase().includes(query);
+                            return typeMatch || descriptionMatch || brandMatch || modelMatch;
+                        });
+                    }
+
+                    this.currentPage = 1;
                 },
 
                 defaultImage(brand) {
@@ -242,8 +255,8 @@
 
                 repairDetailsUrl(type, info, brand, model) {
                     const params = new URLSearchParams({
-                        brand: brand,
-                        model: model,
+                        brand,
+                        model,
                         repairType: type,
                         description: info.Beschrijving,
                         time: info.Tijd,
@@ -255,53 +268,33 @@
                     return `repair-details.html?${params.toString()}`;
                 },
 
-                // Pagination computed properties
                 get totalPages() {
                     return Math.ceil(this.filteredRepairs.length / this.itemsPerPage);
                 },
 
                 get paginatedRepairs() {
                     const start = (this.currentPage - 1) * this.itemsPerPage;
-                    const end = start + this.itemsPerPage;
-                    return this.filteredRepairs.slice(start, end);
+                    return this.filteredRepairs.slice(start, start + this.itemsPerPage);
                 },
 
-                // Nieuwe functie voor mobiele paginering
                 get visiblePageNumbers() {
-                    const maxNumbersMobile = 5;
+                    const maxMobile = 5;
                     const total = this.totalPages;
                     const current = this.currentPage;
+                    if (window.innerWidth >= 768) return Array.from({ length: total }, (_, i) => i + 1);
 
-                    if (window.innerWidth >= 768) {
-                        // Desktop: toon alle pagina's
-                        return Array.from({ length: total }, (_, i) => i + 1);
-                    }
-
-                    // Mobiel: maximaal 5 pagina nummers rondom huidige pagina
                     let start = Math.max(current - 2, 1);
-                    let end = Math.min(start + maxNumbersMobile - 1, total);
-
-                    if (end - start + 1 < maxNumbersMobile) {
-                        start = Math.max(end - maxNumbersMobile + 1, 1);
-                    }
-
-                    const pages = [];
-                    for (let i = start; i <= end; i++) {
-                        pages.push(i);
-                    }
-                    return pages;
+                    let end = Math.min(start + maxMobile - 1, total);
+                    if (end - start + 1 < maxMobile) start = Math.max(end - maxMobile + 1, 1);
+                    return Array.from({ length: end - start + 1 }, (_, i) => start + i);
                 },
 
                 nextPage() {
-                    if (this.currentPage < this.totalPages) {
-                        this.currentPage++;
-                    }
+                    if (this.currentPage < this.totalPages) this.currentPage++;
                 },
 
                 prevPage() {
-                    if (this.currentPage > 1) {
-                        this.currentPage--;
-                    }
+                    if (this.currentPage > 1) this.currentPage--;
                 }
             };
         }
