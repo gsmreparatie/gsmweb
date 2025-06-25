@@ -55,26 +55,29 @@
         this.loading = true;
         this.error = null;
         try {
-            const [iphonesResp, samsungResp, ipadResp] = await Promise.all([
+            const [iphonesResp, samsungResp, ipadResp, windowsResp] = await Promise.all([
                 fetch('public/data/iphones.json'),
                 fetch('public/data/samsung.json'),
-                fetch('public/data/ipad.json')
+                fetch('public/data/ipad.json'),
+                fetch('public/data/windows.json') // Fetch windows.json
             ]);
 
-            if (!iphonesResp.ok || !samsungResp.ok || !ipadResp.ok) {
+            if (!iphonesResp.ok || !samsungResp.ok || !ipadResp.ok || !windowsResp.ok) {
                 throw new Error('Failed to fetch one or more repair data files.');
             }
 
             const iphoneData = await iphonesResp.json();
             const samsungData = await samsungResp.json();
             const ipadData = await ipadResp.json();
+            const windowsData = await windowsResp.json(); // Parse windows.json
 
             this.allRepairData = {
                 Apple: {
                     iPhone: iphoneData['iPhone Reparaties'],
                     iPad: ipadData['iPad Reparaties']
                 },
-                Samsung: samsungData['Samsung Reparaties']
+                Samsung: samsungData['Samsung Reparaties'],
+                Microsoft: windowsData['Microsoft Reparaties'] // Add Microsoft data
             };
 
             this.brands = Object.keys(this.allRepairData);
@@ -94,7 +97,7 @@
         const brandData = this.allRepairData[this.selectedBrand];
 
         if (brandData) {
-            if (this.selectedBrand === 'Apple') {
+            if (this.selectedBrand === 'Apple' || this.selectedBrand === 'Microsoft') { // Include Microsoft here
                 Object.keys(brandData).forEach(deviceType => {
                     this.brandDevices[deviceType] = Object.keys(brandData[deviceType]);
                 });
@@ -125,14 +128,33 @@
 
     <div x-html="navContent"></div>
 
-    <section>
-        <div class="fade-in grid max-w-screen-xl px-4 py-8 mx-auto gap-8 lg:py-16 lg:grid-cols-12 items-center">
-            <div class="lg:col-span-7 text-center lg:text-left">
-                <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-black">
+    <header class="relative py-20 lg:py-32 overflow-hidden animate-gradient-background">
+        <div class="absolute inset-0 z-0 opacity-30">
+            <svg class="absolute top-0 left-0 w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+                <path fill="#e9d5ff" d="M0,0 L0,50 Q25,60 50,50 Q75,40 100,50 L100,0 Z" />
+                <path fill="#fbcfe8" d="M0,100 L0,50 Q25,40 50,50 Q75,60 100,50 L100,100 Z" />
+            </svg>
+            <div
+                class="absolute top-1/4 left-1/4 w-32 h-32 bg-pink-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob">
+            </div>
+            <div
+                class="absolute top-1/2 right-1/4 w-48 h-48 bg-purple-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000">
+            </div>
+            <div
+                class="absolute bottom-1/4 left-1/3 w-40 h-40 bg-indigo-300 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000">
+            </div>
+        </div>
+
+        <div class="fade-in container mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center relative z-10">
+            <div class="text-center lg:text-left">
+                <img src="public/images/gsmReparatiePurmerend.png" alt="GSM Reparatie Purmerend logo"
+                    class="mx-auto lg:mx-0 mb-4 w-40 md:w-48 lg:w-56 h-auto object-contain animate-fade-in-down" />
+                <h1
+                    class="max-w-2xl mb-6 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl text-gray-900 animate-fade-in-down animation-delay-500">
                     Snel en Vakkundig jouw toestel gerepareerd
                 </h1>
                 <a href="tel:+310299700264"
-                    class="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-white rounded-lg bg-pink-300 hover:bg-pink-400 focus:ring-4 focus:ring-offset-pink-950">
+                    class="inline-flex items-center justify-center px-6 py-3 text-lg font-medium text-white rounded-full bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:ring-offset-2 focus:ring-pink-300 transition duration-300 ease-in-out animate-fade-in-up animation-delay-1000">
                     +31 0299 700 264
                     <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20">
                         <path fill-rule="evenodd"
@@ -141,46 +163,52 @@
                     </svg>
                 </a>
             </div>
-            <div class="lg:col-span-5 flex justify-center lg:justify-end">
-                <img src="public/images/phone-girl.png" alt="blije vrouw met telefoon" class="max-w-full h-auto" />
+            <div class="flex justify-center lg:justify-end">
+                <img src="public/images/vecteezy_a-robot-holding-a-phone-and-looking-at-it_28172074.png"
+                    alt="robot met telefoon"
+                    class="max-w-full h-auto lg:max-w-xl animate-scale-in animation-delay-1500" />
+            </div>
+        </div>
+    </header>
+
+    <section class="relative z-20 -mt-20 mb-12">
+        <div class="scale-in max-w-screen-xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
+                class="cursor-pointer bg-white rounded-2xl shadow-xl p-6 text-center hover:shadow-2xl transition-shadow duration-300 relative lg:z-30 animate-fade-in-up animation-delay-200">
+                <img src="public/images/phone.png" alt="telefoon icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
+                <h3 class="text-xl font-semibold text-gray-800">Smart Phone Reparatie</h3>
+            </div>
+
+            <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
+                class="cursor-pointer bg-white rounded-2xl shadow-xl p-6 text-center hover:shadow-2xl transition-shadow duration-300 relative lg:z-20 lg:mx-8 animate-fade-in-up animation-delay-400"
+                data-tooltip-target="tooltip-tablet-repair" data-tooltip-placement="bottom">
+                <img src="public/images/tablet.png" alt="tablet icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
+                <h3 class="text-xl font-semibold text-gray-800">Tablet Reparatie</h3>
+                <div id="tooltip-tablet-repair" role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Vraag een offerte aan voor Samsung tablets!
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
+            </div>
+
+            <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
+                class="cursor-pointer bg-white rounded-2xl shadow-xl p-6 text-center hover:shadow-2xl transition-shadow duration-300 relative lg:z-10 lg:ml-8 animate-fade-in-up animation-delay-600"
+                data-tooltip-target="tooltip-laptop-repair" data-tooltip-placement="bottom">
+                <img src="public/images/computer.png" alt="computer icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
+                <h3 class="text-xl font-semibold text-gray-800">Laptop Reparatie</h3>
+                <div id="tooltip-laptop-repair" role="tooltip"
+                    class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                    Vraag een offerte aan voor Windows apparaten!
+                    <div class="tooltip-arrow" data-popper-arrow></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <div class="scale-in max-w-screen-xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
-            class="cursor-pointer bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300">
-            <img src="public/images/phone.png" alt="telefoon icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
-            <h3 class="text-xl font-semibold">Smart Phone Reparatie</h3>
-        </div>
+    <hr class="my-8 border-gray-200" />
 
-        <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
-            class="cursor-pointer bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300"
-            data-tooltip-target="tooltip-tablet-repair" data-tooltip-placement="bottom">
-            <img src="public/images/tablet.png" alt="tablet icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
-            <h3 class="text-xl font-semibold">Tablet Reparatie</h3>
-        </div>
-        <div id="tooltip-tablet-repair" role="tooltip"
-            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-            Vraag een offerte aan voor Samsung tablets!
-            <div class="tooltip-arrow" data-popper-arrow></div>
-        </div>
-
-        <div @click="document.getElementById('device-form').scrollIntoView({ behavior: 'smooth' })"
-            class="cursor-pointer bg-white rounded-4xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300"
-            data-tooltip-target="tooltip-computer-repair" data-tooltip-placement="bottom">
-            <img src="public/images/computer.png" alt="computer icon" class="mx-auto mb-4 max-w-[80px] h-auto" />
-            <h3 class="text-xl font-semibold">Computer Reparatie</h3>
-        </div>
-        <div id="tooltip-computer-repair" role="tooltip"
-            class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-            Vraag een offerte aan voor Windows apparaten!
-            <div class="tooltip-arrow" data-popper-arrow></div>
-        </div>
-    </div>
-
-    <main id="device-form" class="scale-in flex-grow container mx-auto px-4 py-8">
-        <h1 class="text-4xl font-bold text-center mb-12 text-gray-900">Kies uw apparaat voor reparatie</h1>
+    <main id="device-form" class="scale-in flex-grow container mx-auto px-4 py-8 bg-gray-50 rounded-lg shadow-inner">
+        <h2 class="text-4xl font-bold text-center mb-12 text-gray-900">Kies uw apparaat voor reparatie</h2>
 
         <div class="max-w-md mx-auto bg-white p-8 rounded-lg shadow-lg">
             <template x-if="loading">
@@ -234,7 +262,7 @@
                 </div>
 
                 <button @click="goToModelsPage()" :disabled="!selectedBrand || !selectedDevice || !selectedModel"
-                    class="w-full bg-pink-300 hover:bg-pink-400 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-150 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
+                    class="w-full bg-pink-500 hover:bg-pink-600 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline transition duration-150 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed">
                     Volgende
                 </button>
 
@@ -243,44 +271,50 @@
                     zodat we een
                     offerte op maat kunnen maken.
                 </p>
-                <a href="contact.html" class="text-pink-500 hover:underline mt-2 block text-center">Offerte
+                <a href="contact.html" class="text-pink-600 hover:underline mt-2 block text-center font-medium">Offerte
                     aanvragen</a>
             </div>
         </div>
     </main>
 
-    <section>
+    <hr class="my-8 border-gray-200" />
+
+    <section class="py-16 bg-blue-50">
         <div class="w-full max-w-4xl mx-auto px-4">
+            <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-8">Wat onze klanten zeggen</h2>
             <div class="elfsight-app-65a4b124-f4cd-4408-943a-0feee5735f56" data-elfsight-app-lazy></div>
         </div>
     </section>
 
-    <section class="bg-gray-50 py-20">
+    <hr class="my-8 border-gray-200" />
+
+    <section class="bg-gradient-to-br from-green-50 to-teal-50 py-20">
         <div class="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-extrabold text-gray-900">Onze Diensten</h2>
-                <p class="mt-4 text-gray-600 text-lg">Onderdelen met 6 maanden garantie en vakkundig personeel.</p>
+                <h2 class="text-3xl font-extrabold text-gray-900">Onze Diensten & Waarom Kiezen voor Ons</h2>
+                <p class="mt-4 text-gray-700 text-lg">Kwaliteit, snelheid en klanttevredenheid staan centraal.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-                <div class="rounded-xl overflow-hidden shadow-lg">
-                    <video autoplay loop muted playsinline class="w-full h-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-xl border border-gray-200">
+                    <video autoplay loop muted playsinline class="w-full h-auto object-cover">
                         <source src="public/images/Phone-Repair-Stock-Video.mp4" type="video/mp4" />
                         Uw browser ondersteunt het video-element niet.
                     </video>
                 </div>
-                <div class="text-left">
-                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Waarom kiezen voor ons?</h3>
-                    <ul class="space-y-3 text-gray-600 text-base">
-                        <li>✅ 6 maanden garantie op onderdelen</li>
-                        <li>✅ Snelle en betrouwbare service</li>
-                        <li>✅ Ervaren monteurs met passie</li>
-                        <li>✅ Transparante prijzen en duidelijke communicatie</li>
-                        <li>✅ Klanttevredenheid staat voorop</li>
-                        <li>✅ Gratis diagnose en advies</li>
+                <div class="text-left bg-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Waarom kiezen voor GSM Reparatie Purmerend?
+                    </h3>
+                    <ul class="space-y-3 text-gray-700 text-base list-disc list-inside">
+                        <li>**6 maanden garantie** op alle vervangen onderdelen.</li>
+                        <li>**Snelle en betrouwbare service** – Vaak klaar terwijl u wacht!</li>
+                        <li>**Ervaren monteurs met passie** voor elk type reparatie.</li>
+                        <li>**Transparante prijzen** en duidelijke communicatie zonder verborgen kosten.</li>
+                        <li>**Klanttevredenheid** staat bij ons voorop, altijd een glimlach.</li>
+                        <li>**Gratis diagnose en advies** voordat u een beslissing neemt.</li>
                     </ul>
-                    <a class="text-white rounded-lg bg-pink-500 hover:bg-pink-400 focus:ring-4 focus:ring-offset-pink-950 focus:outline-none focus:ring-pink-300 px-5 py-3 mt-6 inline-block"
-                        href="diensten.html">Lees meer</a>
+                    <a class="text-white rounded-full bg-pink-500 hover:bg-pink-600 focus:ring-4 focus:ring-offset-2 focus:ring-pink-300 px-6 py-3 mt-8 inline-block font-medium transition duration-300 ease-in-out"
+                        href="diensten.html">Ontdek al onze diensten</a>
                 </div>
             </div>
         </div>

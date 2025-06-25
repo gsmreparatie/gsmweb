@@ -6,6 +6,7 @@
         "image": "public/images/windows.png",
         "Tijd": "1-2 uur",
         "Prijs": 100,
+        "Montage": 0,
         "Totaal": 100
       },
       "Windows 11 Upgrade": {
@@ -13,6 +14,7 @@
         "image": "public/images/windows.png",
         "Tijd": "1-2 uur",
         "Prijs": 120,
+        "Montage": 0,
         "Totaal": 120
       },
       "Systeemherstel": {
@@ -20,6 +22,7 @@
         "image": "public/images/windows.png",
         "Tijd": "1 uur",
         "Prijs": 80,
+        "Montage": 0,
         "Totaal": 80
       },
       "Virusverwijdering": {
@@ -27,15 +30,17 @@
         "image": "public/images/windows.png",
         "Tijd": "1-2 uur",
         "Prijs": 90,
+        "Montage": 0,
         "Totaal": 90
       }
     },
-    "Office": {
+    "Office - Software": {
       "Office Installatie": {
         "Beschrijving": "Installatie van Microsoft Office op uw systeem.",
         "image": "public/images/office.png",
         "Tijd": "30-60 minuten",
         "Prijs": 70,
+        "Montage": 0,
         "Totaal": 70
       },
       "Office Herstel": {
@@ -43,6 +48,7 @@
         "image": "public/images/office.png",
         "Tijd": "30-60 minuten",
         "Prijs": 60,
+        "Montage": 15,
         "Totaal": 60
       },
       "Licentie Activering": {
@@ -50,6 +56,7 @@
         "image": "public/images/office.png",
         "Tijd": "30 minuten",
         "Prijs": 50,
+        "Montage": 0,
         "Totaal": 50
       }
     }

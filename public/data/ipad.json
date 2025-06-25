@@ -3,7 +3,7 @@
     "iPad 7 (2019)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 159,
         "Montage": 0,
@@ -11,7 +11,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -19,7 +19,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 109,
         "Montage": 0,
@@ -27,7 +27,7 @@
       },
       "Home knop vervangen": {
         "Beschrijving": "De home knop werkt niet meer, deze is defect of losgekomen.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/radio.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -35,7 +35,7 @@
       },
       "Camera vervangen": {
         "Beschrijving": "De camera werkt niet meer, deze is defect of losgekomen.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/photography.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -43,7 +43,7 @@
       },
       "Volume knop vervangen": {
         "Beschrijving": "De volume knop werkt niet meer, deze is defect of losgekomen.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/high-volume.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -51,7 +51,7 @@
       },
       "Oplaadpoort vervangen": {
         "Beschrijving": "De oplaadpoort werkt niet meer, deze is defect of losgekomen.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/portable-charger.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -59,7 +59,7 @@
       },
       "Speaker vervangen": {
         "Beschrijving": "De speaker werkt niet meer, deze is defect of losgekomen.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/mobile-marketing.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -67,7 +67,7 @@
       },
       "Microfoon vervangen": {
         "Beschrijving": "De microfoon werkt niet meer, deze is defect of losgekomen.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/mic-phone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -75,7 +75,7 @@
       },
       "Achterkant vervangen": {
         "Beschrijving": "De achterkant van uw iPad is gebarsten of beschadigd.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/apple.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -83,7 +83,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-7-2019.jpg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -93,7 +93,7 @@
     "iPad 8 (2020)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-8-2020.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 159,
         "Montage": 0,
@@ -101,7 +101,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-8-2020.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -109,7 +109,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-8-2020.jpg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -117,7 +117,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-8-2020.jpg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -127,7 +127,7 @@
     "iPad 9 (2021)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-9-2021.jpeg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -135,7 +135,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-9-2021.jpeg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -143,7 +143,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-9-2021.jpeg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -151,7 +151,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-9-2021.jpeg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -161,6 +161,7 @@
     "iPad 10 (2022)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -168,6 +169,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -175,6 +177,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -182,6 +185,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -191,7 +195,7 @@
     "iPad Air 4 (2020)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-air-4-2020.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -199,7 +203,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-air-4-2020.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -207,7 +211,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-air-4-2020.jpg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -215,7 +219,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-air-4-2020.jpg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -225,7 +229,7 @@
     "iPad Air 5 (2022)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-air-5-2022.jpeg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -233,7 +237,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-air-5-2022.jpeg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -241,7 +245,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-air-5-2022.jpeg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -249,7 +253,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-air-5-2022.jpeg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -259,7 +263,7 @@
     "iPad Air M2 (2024)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-m2-2024.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -267,7 +271,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-m2-2024.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -275,7 +279,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-m2-2024.jpg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -283,7 +287,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-m2-2024.jpg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -293,7 +297,7 @@
     "iPad mini 6 (2021)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-mini-6-2021.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -301,7 +305,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-mini-6-2021.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -309,7 +313,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-mini-6-2021.jpg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -317,7 +321,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-mini-6-2021.jpg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -327,7 +331,7 @@
     "iPad Pro 11-inch (3rd gen 2021)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-pro-11-2021.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -335,7 +339,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-pro-11-2021.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -343,7 +347,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-pro-11-2021.jpg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -351,7 +355,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-pro-11-2021.jpg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -361,7 +365,7 @@
     "iPad Pro 12.9-inch (5th gen 2021)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-pro-12-2021.png",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -369,7 +373,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-pro-12-2021.png",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -377,7 +381,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-pro-12-2021.png",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -385,7 +389,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-pro-12-2021.png",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -395,7 +399,7 @@
     "iPad Pro 11-inch (4th gen 2022)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-pro-11-in-4th.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -403,7 +407,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-pro-11-in-4th.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -411,7 +415,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-pro-11-in-4th.jpg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -419,7 +423,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-pro-11-in-4th.jpg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -429,7 +433,7 @@
     "iPad Pro 12.9-inch (6th gen 2022)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-pro-12.9.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -437,7 +441,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-pro-12.9.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -445,7 +449,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-pro-12.9.jpg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -453,7 +457,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-pro-12.9.jpg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,
@@ -463,7 +467,7 @@
     "iPad Pro M4 (2024)": {
       "Scherm vervangen – Origineel": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-pro-13-zilver.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -471,7 +475,7 @@
       },
       "Scherm vervangen – AA+": {
         "Beschrijving": "Glas van uw iPad is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-        "image": "public/images/ipad-pro-13-zilver.jpg",
+        "image": "public/images/cracked-smartphone.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -479,7 +483,7 @@
       },
       "Batterij vervangen": {
         "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-        "image": "public/images/ipad-pro-13-zilver.jpg",
+        "image": "public/images/empty-battery.png",
         "Tijd": "30 minuten",
         "Prijs": 0,
         "Montage": 0,
@@ -487,7 +491,7 @@
       },
       "Waterschade herstel": {
         "Beschrijving": "Uw iPad heeft waterschade opgelopen. Wij reinigen en herstellen waar mogelijk.",
-        "image": "public/images/ipad-pro-13-zilver.jpg",
+        "image": "public/images/water-damage.png",
         "Tijd": "Op aanvraag",
         "Prijs": 0,
         "Montage": 0,

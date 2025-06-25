@@ -3,7 +3,7 @@
       "iPhone 11": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-11.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 250,
           "Montage": 25,
@@ -11,7 +11,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-11.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 145,
           "Montage": 25,
@@ -19,7 +19,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-11.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -27,7 +27,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-11.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 120,
           "Montage": 25,
@@ -35,7 +35,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-11.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 100,
           "Montage": 25,
@@ -44,7 +44,7 @@
 
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-11.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 80,
           "Montage": 25,
@@ -52,7 +52,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-11.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 150,
           "Montage": 25,
@@ -62,7 +62,7 @@
       "iPhone 12": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-12.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 320,
           "Montage": 25,
@@ -70,7 +70,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-12.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 180,
           "Montage": 25,
@@ -78,7 +78,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-12.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -86,7 +86,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-12.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 130,
           "Montage": 25,
@@ -94,7 +94,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-12.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 110,
           "Montage": 25,
@@ -102,7 +102,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-12.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 90,
           "Montage": 25,
@@ -110,7 +110,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-12.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 160,
           "Montage": 25,
@@ -120,7 +120,7 @@
       "iPhone 12 Mini": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-12-mini.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 300,
           "Montage": 25,
@@ -128,7 +128,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-12-mini.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 170,
           "Montage": 25,
@@ -136,7 +136,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-12-mini.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -144,7 +144,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-12-mini.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 120,
           "Montage": 25,
@@ -152,7 +152,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-12-mini.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 100,
           "Montage": 25,
@@ -160,7 +160,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-12-mini.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 80,
           "Montage": 25,
@@ -168,7 +168,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-12-mini.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 150,
           "Montage": 25,
@@ -178,7 +178,7 @@
       "iPhone 13": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-13.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 400,
           "Montage": 25,
@@ -186,7 +186,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-13.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 230,
           "Montage": 25,
@@ -194,7 +194,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-13.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -202,7 +202,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-13.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 140,
           "Montage": 25,
@@ -210,7 +210,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-13.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 120,
           "Montage": 25,
@@ -218,7 +218,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-13.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 100,
           "Montage": 25,
@@ -226,7 +226,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-13.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 170,
           "Montage": 25,
@@ -236,7 +236,7 @@
       "iPhone 13 Pro": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-13-pro.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 475,
           "Montage": 25,
@@ -244,7 +244,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-13-pro.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 240,
           "Montage": 25,
@@ -252,7 +252,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-13-pro.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -260,7 +260,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-13-pro.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 150,
           "Montage": 25,
@@ -268,7 +268,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-13-pro.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 130,
           "Montage": 25,
@@ -276,7 +276,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-13-pro.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 110,
           "Montage": 25,
@@ -284,7 +284,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-13-pro.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 180,
           "Montage": 25,
@@ -294,7 +294,7 @@
       "iPhone 13 Pro Max": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-13-pro-max.png",        
+          "image": "public/images/cracked-smartphone.png",        
           "Tijd": "30 minuten",
           "Prijs": 525,
           "Montage": 25,
@@ -302,7 +302,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-13-pro-max.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 275,
           "Montage": 25,
@@ -310,7 +310,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-13-pro-max.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -318,7 +318,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-13-pro-max.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 160,
           "Montage": 25,
@@ -326,7 +326,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-13-pro-max.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 140,
           "Montage": 25,
@@ -342,7 +342,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-13-pro-max.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 200,
           "Montage": 25,
@@ -352,7 +352,7 @@
       "iPhone 14": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-14.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 360,
           "Montage": 25,
@@ -360,7 +360,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-14.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 180,
           "Montage": 25,
@@ -368,7 +368,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-14.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -376,7 +376,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-14.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 130,
           "Montage": 25,
@@ -384,7 +384,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-14.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 110,
           "Montage": 25,
@@ -392,7 +392,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-14.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 90,
           "Montage": 25,
@@ -400,7 +400,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-14.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 160,
           "Montage": 25,
@@ -410,7 +410,7 @@
       "iPhone 14 Pro": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-14-pro.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 470,
           "Montage": 25,
@@ -418,7 +418,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-14-pro.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 230,
           "Montage": 25,
@@ -426,7 +426,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-14-pro.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -434,7 +434,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-14-pro.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 150,
           "Montage": 25,
@@ -442,7 +442,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-14-pro.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 130,
           "Montage": 25,
@@ -450,7 +450,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-14-pro.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 110,
           "Montage": 25,
@@ -458,7 +458,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-14-pro.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 180,
           "Montage": 25,
@@ -468,7 +468,7 @@
       "iPhone 14 Pro Max": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-14-pro-max.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 520,
           "Montage": 25,
@@ -476,7 +476,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-14-pro-max.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 250,
           "Montage": 25,
@@ -484,7 +484,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-14-pro-max.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -492,7 +492,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-14-pro-max.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 160,
           "Montage": 25,
@@ -500,7 +500,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-14-pro-max.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 140,
           "Montage": 25,
@@ -508,7 +508,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-14-pro-max.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 120,
           "Montage": 25,
@@ -516,7 +516,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-14-pro-max.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 200,
           "Montage": 25,
@@ -526,7 +526,7 @@
       "iPhone 15": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-15.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 540,
           "Montage": 25,
@@ -534,7 +534,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-15.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 220,
           "Montage": 25,
@@ -542,7 +542,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-15.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -550,7 +550,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-15.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 120,
           "Montage": 25,
@@ -558,7 +558,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-15.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 100,
           "Montage": 25,
@@ -566,7 +566,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-15.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 80,
           "Montage": 25,
@@ -574,7 +574,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-15.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 150,
           "Montage": 25,
@@ -584,7 +584,7 @@
       "iPhone 15 Pro": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-15-pro.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 520,
           "Montage": 25,
@@ -592,7 +592,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-15-pro.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 250,
           "Montage": 25,
@@ -600,7 +600,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-15-pro.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -608,7 +608,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-15-pro.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 150,
           "Montage": 25,
@@ -616,7 +616,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-15-pro.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 130,
           "Montage": 25,
@@ -624,7 +624,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-15-pro.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 110,
           "Montage": 25,
@@ -632,7 +632,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-15-pro.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 180,
           "Montage": 25,
@@ -642,7 +642,7 @@
       "iPhone 15 Plus": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-15-plus.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 580,
           "Montage": 25,
@@ -650,7 +650,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-15-plus.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 270,
           "Montage": 25,
@@ -658,7 +658,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-15-plus.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -666,7 +666,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-15-plus.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 120,
           "Montage": 25,
@@ -674,7 +674,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-15-plus.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 100,
           "Montage": 25,
@@ -682,7 +682,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-15-plus.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 80,
           "Montage": 25,
@@ -690,7 +690,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-15-plus.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 150,
           "Montage": 25,
@@ -700,7 +700,7 @@
       "iPhone 16": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-16.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 720,
           "Montage": 25,
@@ -708,7 +708,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-16.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 370,
           "Montage": 25,
@@ -716,7 +716,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-16.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -724,7 +724,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-16.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 150,
           "Montage": 25,
@@ -732,7 +732,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-16.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 130,
           "Montage": 25,
@@ -740,7 +740,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-16.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 110,
           "Montage": 25,
@@ -748,7 +748,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-16.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 200,
           "Montage": 25,
@@ -758,7 +758,7 @@
       "iPhone 16 Pro": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-16-pro.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 800,
           "Montage": 25,
@@ -766,7 +766,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-16-pro.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 420,
           "Montage": 25,
@@ -774,7 +774,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-16-pro.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -782,7 +782,7 @@
         },
         "Camera vervangen": {
           "Beschrijving": "De camera van uw iPhone maakt geen foto's meer of is niet scherp.",
-          "image": "public/images/iphone-16-pro.png",
+          "image": "public/images/photography.png",
           "Tijd": "30 minuten",
           "Prijs": 160,
           "Montage": 25,
@@ -790,7 +790,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-16-pro.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 140,
           "Montage": 25,
@@ -798,7 +798,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-16-pro.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 120,
           "Montage": 25,
@@ -806,7 +806,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-16-pro.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 200,
           "Montage": 25,
@@ -816,7 +816,7 @@
       "iPhone 16 Pro Max": {
         "Scherm vervangen – Origineel": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-16-pro-max.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 1000,
           "Montage": 25,
@@ -824,7 +824,7 @@
         },
         "Scherm vervangen – AA+": {
           "Beschrijving": "Glas van uw iPhone is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-          "image": "public/images/iphone-16-pro-max.png",
+          "image": "public/images/cracked-smartphone.png",
           "Tijd": "30 minuten",
           "Prijs": 500,
           "Montage": 25,
@@ -832,7 +832,7 @@
         },
         "Batterij vervangen": {
           "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-          "image": "public/images/iphone-16-pro-max.png",
+          "image": "public/images/empty-battery.png",
           "Tijd": "30 minuten",
           "Prijs": 95,
           "Montage": 25,
@@ -848,7 +848,7 @@
         },
         "Oplaadpoort vervangen": {
           "Beschrijving": "De oplaadpoort van uw iPhone werkt niet meer, de iPhone laadt niet meer op.",
-          "image": "public/images/iphone-16-pro-max.png",
+          "image": "public/images/portable-charger.png",
           "Tijd": "30 minuten",
           "Prijs": 160,
           "Montage": 25,
@@ -856,7 +856,7 @@
         },
         "Speaker vervangen": {
           "Beschrijving": "De speaker van uw iPhone werkt niet meer, u hoort geen geluid meer.",
-          "image": "public/images/iphone-16-pro-max.png",
+          "image": "public/images/mobile-marketing.png",
           "Tijd": "30 minuten",
           "Prijs": 140,
           "Montage": 25,
@@ -864,7 +864,7 @@
         },
         "water schade": {
           "Beschrijving": "Uw iPhone is in contact gekomen met water en werkt niet meer.",
-          "image": "public/images/iphone-16-pro-max.png",
+          "image": "public/images/water-damage.png",
           "Tijd": "30 minuten",
           "Prijs": 250,
           "Montage": 25,

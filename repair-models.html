@@ -14,7 +14,7 @@
         navContent: '',
         footerContent: '',
         selectedBrand: '',
-        selectedDevice: '', // This will now correctly capture 'iPhone' or 'iPad'
+        selectedDevice: '',
         selectedModel: '',
         repairsForModel: {},
         loading: true,
@@ -45,56 +45,80 @@
         parseUrlParams() {
             const params = new URLSearchParams(window.location.search);
             this.selectedBrand = params.get('brand');
-            this.selectedDevice = params.get('device'); // Parse the device parameter
+            this.selectedDevice = params.get('device');
             this.selectedModel = params.get('model');
         },
 
-        async fetchRepairData() {
-            this.loading = true;
-            this.error = null;
-            try {
-                let filePath = '';
-                let dataKey = ''; // This will be like 'iPhone Reparaties', 'iPad Reparaties' or 'Samsung Reparaties'
+async fetchRepairData() {
+    this.loading = true;
+    this.error = null;
+    try {
+        let filePath = '';
+        let dataKey = '';
 
-                if (this.selectedBrand === 'Apple') {
-                    // Use selectedDevice to determine the file and key for Apple
-                    if (this.selectedDevice === 'iPhone') {
-                        filePath = 'public/data/iphones.json';
-                        dataKey = 'iPhone Reparaties';
-                    } else if (this.selectedDevice === 'iPad') {
-                        filePath = 'public/data/ipad.json';
-                        dataKey = 'iPad Reparaties';
-                    } else {
-                        throw new Error('Onbekend Apple apparaattype geselecteerd.');
-                    }
-                } else if (this.selectedBrand === 'Samsung') {
-                    filePath = 'public/data/samsung.json';
-                    dataKey = 'Samsung Reparaties';
-                } else {
-                    throw new Error('Onbekend merk geselecteerd.');
-                }
-
-                const response = await fetch(filePath);
-                if (!response.ok) {
-                    throw new Error(`Bestand niet gevonden of fout bij het ophalen van ${filePath}`);
-                }
-                const data = await response.json();
-
-                // Now use dataKey to access the correct section of the JSON
-                if (data[dataKey] && data[dataKey][this.selectedModel]) {
-                    this.repairsForModel = data[dataKey][this.selectedModel];
-                } else {
-                    this.repairsForModel = {};
-                    this.error = `Geen reparatiegegevens gevonden voor ${this.selectedBrand} ${this.selectedModel}.`;
-                }
-                this.loading = false;
-
-            } catch (e) {
-                console.error('Fout bij het laden van reparatiegegevens:', e);
-                this.error = 'Kon reparatiegegevens niet laden. Probeer het later opnieuw.';
-                this.loading = false;
+        if (this.selectedBrand === 'Apple') {
+            if (this.selectedDevice === 'iPhone') {
+                filePath = 'public/data/iphones.json';
+                dataKey = 'iPhone Reparaties';
+            } else if (this.selectedDevice === 'iPad') {
+                filePath = 'public/data/ipad.json';
+                dataKey = 'iPad Reparaties';
+            } else {
+                throw new Error('Onbekend Apple apparaattype geselecteerd.');
             }
-        },
+        } else if (this.selectedBrand === 'Samsung') {
+            filePath = 'public/data/samsung.json';
+            dataKey = 'Samsung Reparaties';
+        } else if (this.selectedBrand === 'Microsoft') {
+            filePath = 'public/data/windows.json';
+            dataKey = 'Microsoft Reparaties';
+        } else {
+            throw new Error('Onbekend merk geselecteerd.');
+        }
+
+        const response = await fetch(filePath);
+        if (!response.ok) {
+            throw new Error(`Bestand niet gevonden of fout bij het ophalen van ${filePath}`);
+        }
+        const data = await response.json();
+
+        let targetData = null;
+
+        if (this.selectedBrand === 'Apple') {
+            // For Apple, get repairs directly under the selected model
+            if (data[dataKey] && data[dataKey][this.selectedModel]) {
+                targetData = data[dataKey][this.selectedModel];
+            }
+        } else if (this.selectedBrand === 'Microsoft') {
+            // For Microsoft, get all repairs under the selected device (Windows, Office)
+            if (data[dataKey] && data[dataKey][this.selectedDevice]) {
+                targetData = data[dataKey][this.selectedDevice];
+            }
+        } else if (this.selectedBrand === 'Samsung') {
+            // For Samsung, same as before
+            if (data[dataKey] && data[dataKey][this.selectedModel]) {
+                targetData = data[dataKey][this.selectedModel];
+            } else if (data[dataKey] && data[dataKey][this.selectedDevice] && data[dataKey][this.selectedDevice][this.selectedModel]) {
+                targetData = data[dataKey][this.selectedDevice][this.selectedModel];
+            }
+        }
+
+        if (targetData) {
+            this.repairsForModel = targetData;
+        } else {
+            this.repairsForModel = {};
+            this.error = `Geen reparatiegegevens gevonden voor ${this.selectedBrand} ${this.selectedDevice} ${this.selectedModel}. Controleer de JSON-structuur.`;
+        }
+
+        this.loading = false;
+
+    } catch (e) {
+        console.error('Fout bij het laden van reparatiegegevens:', e);
+        this.error = `Kon reparatiegegevens niet laden: ${e.message}. Probeer het later opnieuw.`;
+        this.loading = false;
+    }
+},
+
 
         getRepairImage(repairType) {
             const repairDetails = this.repairsForModel[repairType];
@@ -102,28 +126,40 @@
                 return repairDetails.image;
             }
 
-            // Fallback images based on the selectedDevice for Apple, or selectedBrand for others
-            if (this.selectedDevice === 'iPhone') { // Use selectedDevice for iPhone/iPad
-                return 'public/images/iphone.jpg';
-            } else if (this.selectedDevice === 'iPad') {
-                return 'public/images/ipad.jpg';
-            } else if (this.selectedBrand === 'Samsung') { // Use selectedBrand for Samsung
+            if (this.selectedBrand === 'Apple') {
+                if (this.selectedDevice === 'iPhone') {
+                    return 'public/images/iphone.jpg';
+                } else if (this.selectedDevice === 'iPad') {
+                    return 'public/images/ipad.jpg';
+                }
+            } else if (this.selectedBrand === 'Samsung') {
                 return 'public/images/samsung.jpg';
+            } else if (this.selectedBrand === 'Microsoft') {
+                if (this.selectedDevice === 'Windows') {
+                    return 'public/images/windows_default.jpg';
+                } else if (this.selectedDevice === 'Office') {
+                    return 'public/images/office_default.jpg';
+                }
+                return 'public/images/windows.jpg';
             }
             return 'public/images/default-phone.jpg';
         },
 
         getRepairDetailsUrl(repairType, details) {
+            const price = typeof details.Prijs === 'number' ? details.Prijs : 0;
+            const montage = typeof details.Montage === 'number' ? details.Montage : 0;
+            const total = typeof details.Totaal === 'number' ? details.Totaal : 0;
+
             const params = new URLSearchParams({
-                brand: this.selectedBrand, // Keep 'Apple' as brand
-                device: this.selectedDevice, // Pass 'iPhone' or 'iPad' as device
+                brand: this.selectedBrand,
+                device: this.selectedDevice,
                 model: this.selectedModel,
                 repairType: repairType,
                 description: details.Beschrijving,
                 time: details.Tijd,
-                price: details.Prijs,
-                assembly: details.Montage,
-                total: details.Totaal,
+                price: price.toFixed(2),
+                assembly: montage.toFixed(2),
+                total: total.toFixed(2),
                 image: this.getRepairImage(repairType)
             }).toString();
             return `repair-details.html?${params}`;
@@ -149,11 +185,11 @@
                             <div class="space-y-1 text-gray-800 w-full mt-auto">
                                 <p><strong class="font-medium">Duur:</strong> <span x-text="details.Tijd"></span></p>
                                 <p><strong class="font-medium">Kosten onderdelen:</strong> €<span
-                                        x-text="details.Prijs.toFixed(2)"></span></p>
+                                        x-text="typeof details.Prijs === 'number' ? details.Prijs.toFixed(2) : 'N/A'"></span></p>
                                 <p><strong class="font-medium">Montagekosten:</strong> €<span
-                                        x-text="details.Montage.toFixed(2)"></span></p>
+                                        x-text="typeof details.Montage === 'number' ? details.Montage.toFixed(2) : 'N/A'"></span></p>
                                 <p class="text-lg font-bold"><strong class="font-medium">Totaalprijs:</strong> €<span
-                                        x-text="details.Totaal.toFixed(2)"></span></p>
+                                        x-text="typeof details.Totaal === 'number' ? details.Totaal.toFixed(2) : 'N/A'"></span></p>
                             </div>
                         </div>
                     </a>

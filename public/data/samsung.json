@@ -3,7 +3,7 @@
         "Samsung Galaxy A20e": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-a20e.png",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -11,7 +11,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-a20e.png",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -19,7 +19,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-                "image": "public/images/galaxy-a20e.png",
+                "image": "public/images/empty-battery.png",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -27,7 +27,7 @@
             },
             "Camera vervanging": {
                 "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
-                "image": "public/images/galaxy-a20e.png",
+                "image": "public/images/photography.png",
                 "Tijd": "30 minuten",
                 "Prijs": 65,
                 "Montage": 25,
@@ -35,7 +35,7 @@
             },
             "Speaker vervanging": {
                 "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
-                "image": "public/images/galaxy-a20e.png",
+                "image": "public/images/mobile-marketing.png",
                 "Tijd": "30 minuten",
                 "Prijs": 55,
                 "Montage": 25,
@@ -43,7 +43,7 @@
             },
             "Waterschade reparatie": {
                 "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
-                "image": "public/images/galaxy-a20e.png",
+                "image": "public/images/water-damage.png",
                 "Tijd": "1-2 werkdagen",
                 "Prijs": 35,
                 "Montage": 0,
@@ -53,7 +53,7 @@
         "Samsung Galaxy A30": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-a30.jpg",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -61,7 +61,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-a30.jpg",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -69,7 +69,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-                "image": "public/images/galaxy-a30.jpg",
+                "image": "public/images/empty-battery.png",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -77,7 +77,7 @@
             },
             "Camera vervanging": {
                 "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
-                "image": "public/images/galaxy-a30.jpg",
+                "image": "public/images/photography.png",
                 "Tijd": "30 minuten",
                 "Prijs": 65,
                 "Montage": 25,
@@ -85,7 +85,7 @@
             },
             "Speaker vervanging": {
                 "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
-                "image": "public/images/galaxy-a30.jpg",
+                "image": "public/images/mobile-marketing.png",
                 "Tijd": "30 minuten",
                 "Prijs": 55,
                 "Montage": 25,
@@ -93,7 +93,7 @@
             },
             "Waterschade reparatie": {
                 "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
-                "image": "public/images/galaxy-a30.jpg",
+                "image": "public/images/water-damage.png",
                 "Tijd": "1-2 werkdagen",
                 "Prijs": 35,
                 "Montage": 0,
@@ -103,7 +103,7 @@
         "Samsung Galaxy A50": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-a50.jpg",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -111,7 +111,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-a50.jpg",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -119,7 +119,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-                "image": "public/images/galaxy-a50.jpg",
+                "image": "public/images/empty-battery.png",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -127,7 +127,7 @@
             },
             "Camera vervanging": {
                 "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
-                "image": "public/images/galaxy-a50.jpg",
+                "image": "public/images/photography.png",
                 "Tijd": "30 minuten",
                 "Prijs": 65,
                 "Montage": 25,
@@ -135,7 +135,7 @@
             },
             "Speaker vervanging": {
                 "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
-                "image": "public/images/galaxy-a50.jpg",
+                "image": "public/images/mobile-marketing.png",
                 "Tijd": "30 minuten",
                 "Prijs": 55,
                 "Montage": 25,
@@ -143,7 +143,7 @@
             },
             "Waterschade reparatie": {
                 "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
-                "image": "public/images/galaxy-a50.jpg",
+                "image": "public/images/water-damage.png",
                 "Tijd": "1-2 werkdagen",
                 "Prijs": 35,
                 "Montage": 0,
@@ -153,7 +153,7 @@
         "Samsung Galaxy A70": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-a70.jpg",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -161,7 +161,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-a70.jpg",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -169,7 +169,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-                "image": "public/images/galaxy-a70.jpg",
+                "image": "public/images/empty-battery.png",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -177,7 +177,7 @@
             },
             "Camera vervanging": {
                 "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
-                "image": "public/images/galaxy-a70.jpg",
+                "image": "public/images/photography.png",
                 "Tijd": "30 minuten",
                 "Prijs": 65,
                 "Montage": 25,
@@ -185,7 +185,7 @@
             },
             "Speaker vervanging": {
                 "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
-                "image": "public/images/galaxy-a70.jpg",
+                "image": "public/images/mobile-marketing.png",
                 "Tijd": "30 minuten",
                 "Prijs": 55,
                 "Montage": 25,
@@ -193,7 +193,7 @@
             },
             "Waterschade reparatie": {
                 "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
-                "image": "public/images/galaxy-a70.jpg",
+                "image": "public/images/water-damage.png",
                 "Tijd": "1-2 werkdagen",
                 "Prijs": 35,
                 "Montage": 0,
@@ -203,7 +203,7 @@
         "Samsung Galaxy S20": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-s20.jpg",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -211,7 +211,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-s20.jpg",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -219,7 +219,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-                "image": "public/images/galaxy-s20.jpg",
+                "image": "public/images/empty-battery.png",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -227,7 +227,7 @@
             },
             "Camera vervanging": {
                 "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
-                "image": "public/images/galaxy-s20.jpg",
+                "image": "public/images/photography.png",
                 "Tijd": "30 minuten",
                 "Prijs": 65,
                 "Montage": 25,
@@ -235,7 +235,7 @@
             },
             "Speaker vervanging": {
                 "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
-                "image": "public/images/galaxy-s20.jpg",
+                "image": "public/images/mobile-marketing.png",
                 "Tijd": "30 minuten",
                 "Prijs": 55,
                 "Montage": 25,
@@ -243,7 +243,7 @@
             },
             "Waterschade reparatie": {
                 "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
-                "image": "public/images/galaxy-s20.jpg",
+                "image": "public/images/water-damage.png",
                 "Tijd": "1-2 werkdagen",
                 "Prijs": 35,
                 "Montage": 0,
@@ -253,7 +253,7 @@
         "Samsung Galaxy S21": {
             "Scherm vervangen – Origineel": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-s21.png",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 74.99,
                 "Montage": 25,
@@ -261,7 +261,7 @@
             },
             "Scherm vervangen – AA+": {
                 "Beschrijving": "Glas van uw Samsung is stuk gevallen of gebarsten, het scherm reageert niet meer.",
-                "image": "public/images/galaxy-s21.png",
+                "image": "public/images/cracked-smartphone.png",
                 "Tijd": "30 minuten",
                 "Prijs": 145,
                 "Montage": 25,
@@ -269,7 +269,7 @@
             },
             "Batterij vervangen": {
                 "Beschrijving": "De batterij is na normaal gebruik binnen een dag leeg.",
-                "image": "public/images/galaxy-s21.png",
+                "image": "public/images/empty-battery.png",
                 "Tijd": "30 minuten",
                 "Prijs": 95,
                 "Montage": 25,
@@ -277,7 +277,7 @@
             },
             "Camera vervanging": {
                 "Beschrijving": "De camera werkt niet meer of maakt onscherpe foto's.",
-                "image": "public/images/galaxy-s21.png",
+                "image": "public/images/photography.png",
                 "Tijd": "30 minuten",
                 "Prijs": 65,
                 "Montage": 25,
@@ -285,7 +285,7 @@
             },
             "Speaker vervanging": {
                 "Beschrijving": "Het geluid van de speaker is slecht of werkt niet meer.",
-                "image": "public/images/galaxy-s21.png",
+                "image": "public/images/mobile-marketing.png",
                 "Tijd": "30 minuten",
                 "Prijs": 55,
                 "Montage": 25,
@@ -293,7 +293,7 @@
             },
             "Waterschade reparatie": {
                 "Beschrijving": "Uw toestel heeft waterschade opgelopen. Wij reinigen en drogen het toestel grondig.",
-                "image": "public/images/galaxy-s21.png",
+                "image": "public/images/water-damage.png",
                 "Tijd": "1-2 werkdagen",
                 "Prijs": 35,
                 "Montage": 0,

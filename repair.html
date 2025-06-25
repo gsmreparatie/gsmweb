@@ -80,7 +80,7 @@
         <template x-if="selectedBrand !== 'All Brands' && selectedModel && !paginatedRepairs.length && searchQuery === ''">
             <p class="text-center text-gray-500 text-lg mt-6">Geen reparatiegegevens gevonden voor het geselecteerde model.</p>
         </template>
-         <template x-if="selectedBrand === 'All Brands' && searchQuery === ''">
+           <template x-if="selectedBrand === 'All Brands' && searchQuery === ''">
             <p class="text-center text-gray-500 text-lg mt-6">Begin met typen in de zoekbalk om reparaties te vinden.</p>
         </template>
 
@@ -171,11 +171,26 @@
                         const brand = brandKey.replace(' Reparaties', '');
                         for (const model in this.data[brandKey]) {
                             for (const type in this.data[brandKey][model]) {
+                                const info = this.data[brandKey][model][type];
+                                // Ensure Prijs and Totaal are numbers for calculations
+                                const price = parseFloat(info.Prijs) || 0;
+                                const total = parseFloat(info.Totaal) || 0;
+
+                                // Calculate Montage if not explicitly provided, or ensure it's a number
+                                const montage = (info.Montage !== undefined && typeof info.Montage === 'number')
+                                    ? info.Montage
+                                    : (total - price); // Calculate if missing
+
                                 this.allRepairs.push({
                                     brand: brand,
                                     model: model,
                                     type: type,
-                                    info: this.data[brandKey][model][type]
+                                    info: {
+                                        ...info, // Keep existing info properties
+                                        Prijs: price, // Ensure price is a number
+                                        Totaal: total // Ensure total is a number
+                                    },
+                                    Montage: montage // Add Montage as a direct property for easier access
                                 });
                             }
                         }
@@ -204,6 +219,8 @@
 
                 loadRepairs() {
                     const key = this.selectedBrand + ' Reparaties';
+                    // This `repairs` object is used when a specific brand/model is selected
+                    // It will be transformed into `filteredRepairs` by `filterRepairs`
                     this.repairs = this.data[key]?.[this.selectedModel] || {};
                     this.filterRepairs();
                 },
@@ -216,13 +233,25 @@
                         // For "All Brands", filter from allRepairs based on query
                         itemsToFilter = this.allRepairs;
                     } else if (this.selectedModel) {
-                        // For specific brands/models, filter from current repairs
-                        itemsToFilter = Object.entries(this.repairs).map(([type, info]) => ({
-                            brand: this.selectedBrand,
-                            model: this.selectedModel,
-                            type: type,
-                            info: info
-                        }));
+                        // For specific brands/models, iterate over the `this.repairs` object
+                        itemsToFilter = Object.entries(this.repairs).map(([type, info]) => {
+                            const price = parseFloat(info.Prijs) || 0;
+                            const total = parseFloat(info.Totaal) || 0;
+                            const montage = (info.Montage !== undefined && typeof info.Montage === 'number')
+                                ? info.Montage
+                                : (total - price);
+                            return {
+                                brand: this.selectedBrand,
+                                model: this.selectedModel,
+                                type: type,
+                                info: {
+                                    ...info,
+                                    Prijs: price,
+                                    Totaal: total
+                                },
+                                Montage: montage
+                            };
+                        });
                     } else {
                         // If no specific model is selected for a brand, hide cards
                         this.filteredRepairs = [];
@@ -236,7 +265,8 @@
                     } else {
                         this.filteredRepairs = itemsToFilter.filter(item => {
                             const typeMatch = item.type.toLowerCase().includes(query);
-                            const descriptionMatch = item.info.Beschrijving.toLowerCase().includes(query);
+                            // Ensure Beschrijving exists before calling toLowerCase
+                            const descriptionMatch = (item.info.Beschrijving || '').toLowerCase().includes(query);
                             const brandMatch = (item.brand || '').toLowerCase().includes(query);
                             const modelMatch = (item.model || '').toLowerCase().includes(query);
                             return typeMatch || descriptionMatch || brandMatch || modelMatch;
@@ -254,15 +284,23 @@
                 },
 
                 repairDetailsUrl(type, info, brand, model) {
+                    // Ensure Montage is passed correctly, either from item.Montage or calculated again here
+                    // It's safer to pass the already processed `Montage` property of the `item`
+                    // or re-calculate it to ensure consistency. Given it's calculated in compileAllRepairs
+                    // and filterRepairs, passing item.Montage directly is best.
+                    const montageValue = (info.Totaal !== undefined && info.Prijs !== undefined)
+                        ? (info.Totaal - info.Prijs)
+                        : (this.filteredRepairs.find(rep => rep.type === type && rep.brand === brand && rep.model === model)?.Montage || 0);
+
                     const params = new URLSearchParams({
                         brand,
                         model,
                         repairType: type,
-                        description: info.Beschrijving,
-                        time: info.Tijd,
-                        price: info.Prijs,
-                        assembly: info.Montage,
-                        total: info.Totaal,
+                        description: info.Beschrijving || '', // Ensure description exists
+                        time: info.Tijd || '', // Ensure time exists
+                        price: info.Prijs || 0,
+                        assembly: montageValue, // Use the calculated montageValue
+                        total: info.Totaal || 0,
                         image: info.image || this.defaultImage(brand)
                     });
                     return `repair-details.html?${params.toString()}`;
