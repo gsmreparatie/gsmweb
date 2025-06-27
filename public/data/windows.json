@@ -3,7 +3,7 @@
     "Windows": {
       "Windows 10 Installatie": {
         "Beschrijving": "Installatie van Windows 10 op uw systeem.",
-        "image": "public/images/windows.png",
+        "image": "public/images/downloading.png",
         "Tijd": "1-2 uur",
         "Prijs": 100,
         "Montage": 0,
@@ -11,7 +11,7 @@
       },
       "Windows 11 Upgrade": {
         "Beschrijving": "Upgrade van Windows 10 naar Windows 11.",
-        "image": "public/images/windows.png",
+        "image": "public/images/upgrade.png",
         "Tijd": "1-2 uur",
         "Prijs": 120,
         "Montage": 0,
@@ -19,7 +19,7 @@
       },
       "Systeemherstel": {
         "Beschrijving": "Herstellen van uw systeem naar een eerdere staat.",
-        "image": "public/images/windows.png",
+        "image": "public/images/settings.png",
         "Tijd": "1 uur",
         "Prijs": 80,
         "Montage": 0,
@@ -27,7 +27,7 @@
       },
       "Virusverwijdering": {
         "Beschrijving": "Verwijderen van virussen en malware van uw systeem.",
-        "image": "public/images/windows.png",
+        "image": "public/images/antivirus.png",
         "Tijd": "1-2 uur",
         "Prijs": 90,
         "Montage": 0,

@@ -247,10 +247,10 @@
                 <div class="mb-6"
                     x-show="selectedDevice && brandDevices[selectedDevice] && brandDevices[selectedDevice].length > 0">
                     <label for="model-select" class="block text-gray-700 text-sm font-bold mb-2">Selecteer
-                        Model:</label>
+                        Model of service:</label>
                     <select id="model-select" x-model="selectedModel"
                         class="block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-pink-500 focus:border-pink-500 sm:text-sm">
-                        <option value="" disabled selected>Kies een model</option>
+                        <option value="" disabled selected>Kies een model of service</option>
                         <template x-for="model in brandDevices[selectedDevice]" :key="model">
                             <option :value="model" x-text="model"></option>
                         </template>
