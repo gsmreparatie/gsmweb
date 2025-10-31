@@ -1925,9 +1925,6 @@
   .overflow-y-auto {
     overflow-y: auto;
   }
-  .rounded {
-    border-radius: 0.25rem;
-  }
   .rounded-2xl {
     border-radius: var(--radius-2xl);
   }
@@ -2183,12 +2180,6 @@
   }
   .bg-gray-700 {
     background-color: var(--color-gray-700);
-  }
-  .bg-gray-800\/70 {
-    background-color: color-mix(in srgb, #1F2937 70%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-gray-800) 70%, transparent);
-    }
   }
   .bg-gray-900 {
     background-color: var(--color-gray-900);
